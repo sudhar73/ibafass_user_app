@@ -1,0 +1,281 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:ibafass/view/payslipgenerator/payroll.dart';
+import 'package:ibafass/view/payslipgenerator/salarydetails.dart';
+import 'package:percent_indicator/percent_indicator.dart';
+
+class PaySlip extends StatefulWidget {
+  const PaySlip({Key? key}) : super(key: key);
+
+  @override
+  _PaySlipState createState() => _PaySlipState();
+}
+
+class _PaySlipState extends State<PaySlip> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: HexColor('#F0F4FD'),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              decoration:BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(40.0),bottomLeft: Radius.circular(40.0)),
+              ),
+              height: MediaQuery.of(context).size.height/3.5,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: [
+                  SizedBox(height: 40,),
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: Row(
+                      children: [
+                        Flexible(
+                          flex: 0,
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10.0),
+                            child: Icon(
+                              Icons.arrow_back_sharp,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 2,
+                          child: Center(
+                            child: Text(
+                              'Payslip',
+                              style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 0,
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 10.0),
+                            child: Icon(
+                              Icons.settings,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                 SizedBox(height:10),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: CircleAvatar(
+                          radius: 35,
+                          child:ClipOval(
+                            child: Image(
+                              image: AssetImage('assets/directory/profilepicture.jpg'),
+                              height: 70,
+                              width: 70,
+                            ),
+                          )
+                        ),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Welcome Mani',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,color: HexColor('#0F46B3')),),
+                          Text('Good Morning',style: TextStyle(fontSize: 14,color: Colors.black),)
+                        ],
+                      )
+                    ],
+
+                  )
+
+                ],
+              ),
+
+            ),
+            SizedBox(height: 10,),
+            Container(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                    offset: Offset(0,4.0),
+                    blurRadius: 3,
+                  ),
+                ],
+                color: Colors.white,
+                borderRadius: BorderRadius.all(Radius.circular(20.0)),
+              ),
+              height: MediaQuery.of(context).size.height/2,
+              width: MediaQuery.of(context).size.width/1.10,
+child: Column(
+  children: [
+    Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0,left: 20.0,),
+            child: Text('Pay Period :',style: TextStyle(fontSize: 16,color: Colors.black),),
+          ),
+          SizedBox(width: 5,),
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Text(' 01 Mar 2021-10 Mar 2021',style: TextStyle(fontSize: 17,color: Colors.black,fontWeight: FontWeight.bold),),
+          ),
+        ],
+    ),
+    SizedBox(height: 20,),
+        Container(
+          height: MediaQuery.of(context).size.height/3,
+          width: MediaQuery.of(context).size.width,
+          color: HexColor('#2A9FDB'),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start,mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+              Row(children: [
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: CircularPercentIndicator(radius: 130.0,
+                    backgroundColor: HexColor('FFF700'),
+                    progressColor: HexColor('FF8C41'),
+                    lineWidth: 15.0,
+                    percent: 0.3,
+                    circularStrokeCap: CircularStrokeCap.round,
+                  ),
+                ),
+Spacer(),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Container(
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.center,
+
+                      children: [
+                      Text('NET PAY',style: TextStyle(fontSize:16,color: Colors.white ),),
+                      Text('₹ 25,000',style: TextStyle(fontWeight:FontWeight.bold,fontSize:28,color: HexColor('FFF700') ),),
+                      SizedBox(height: 20,),
+                      Text('DEDUCTION',style: TextStyle(fontSize:14,color: Colors.white ),),
+                      Text('₹ 1,500',style: TextStyle(fontWeight:FontWeight.bold,fontSize:28,color: HexColor('FF8C41') ),),
+                    ],),
+                  ),
+                )
+              ],),
+             Padding(
+               padding: const EdgeInsets.only(left: 20.0,),
+               child: Container(
+                 child: Row(
+                   children: [
+
+                       Text("Total Gross Pay",style:TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color:Colors.white)),
+                       SizedBox(width: 15,),
+                       Text("₹ 23,500",style:TextStyle(fontWeight:FontWeight.bold,fontSize: 28,color:HexColor('FFF700'))),
+
+                   ],
+                 ),
+               ),
+             )
+            ],
+          ),
+        ),
+    Padding(
+      padding: const EdgeInsets.only(left: 20.0,right: 20.0,top: 10.0),
+      child: Container(
+        child: Row(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Pay for Mar 2021",style:TextStyle(fontWeight:FontWeight.bold,fontSize: 16,color:Colors.black)),
+                SizedBox(height: 5,),
+                Text("Paid Days 31",style:TextStyle(fontSize: 14,color:Colors.black)),
+              ],
+            ),
+            Spacer(),
+            Container(
+              decoration: BoxDecoration(color: HexColor('#6EEDFC'),borderRadius: BorderRadius.all(Radius.circular(12.0))),
+              height: 30,
+              width: 70,
+              child:Center(child: Text("View",style:TextStyle(fontSize: 14,color:Colors.black))),
+            ),
+          ],
+        ),
+      ),
+    )
+
+  ],
+),
+            ),
+            SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+
+                InkWell(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SalaryDetails()),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    height: MediaQuery.of(context).size.height/6,
+                    width: MediaQuery.of(context).size.width/3.5,
+                    child:Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image(
+                          image: AssetImage('assets/payslipgenerator/salarydetails.png'),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text("Salary Detils",style:TextStyle(fontWeight:FontWeight.bold,fontSize: 14,color:Colors.black))
+                      ],
+                    )
+
+                  ),
+                ),
+                SizedBox(width: 20,),
+
+                InkWell(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Payroll()),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration( color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    height: MediaQuery.of(context).size.height/6,
+                    width: MediaQuery.of(context).size.width/3.5,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+    Image(
+    image: AssetImage('assets/payslipgenerator/payroll.png'),),
+                        SizedBox(height: 10,),
+                        Text("Payroll",style:TextStyle(fontWeight:FontWeight.bold,fontSize: 14,color:Colors.black))
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+          ],
+        ),
+      ),
+
+    );
+  }
+}

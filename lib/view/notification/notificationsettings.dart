@@ -38,227 +38,230 @@ class _NotificationSettingsState extends State<NotificationSettings> {
           ),
         ),
         backgroundColor: HexColor('#DCF4F9'),
-        body: Column(children: [
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 40.0,
-              left: 25.0,
-              right: 25.0,
-              bottom: 20.0,
-            ),
-            child: ListTile(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                tileColor: Colors.white,
-                leading: Image(
-                  image: AssetImage('assets/notification/employee.png'),
-                  height: 35,
-                  width: 35,
-                ),
-                title: Text(
-                  'Employee',
-                  style: TextStyle(
-                    fontSize: 18,
+        body: SingleChildScrollView(
+
+          child: Column(children: [
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 40.0,
+                left: 25.0,
+                right: 25.0,
+                bottom: 20.0,
+              ),
+              child: ListTile(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  tileColor: Colors.white,
+                  leading: Image(
+                    image: AssetImage('assets/notification/employee.png'),
+                    height: 35,
+                    width: 35,
                   ),
-                ),
-                trailing: GFToggle(
-                  onChanged: (val) {},
-                  value: true,
-                  disabledTrackColor: Colors.red,
-                  enabledTrackColor: Colors.green,
-                  type: GFToggleType.ios,
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 25.0,
-              right: 25.0,
-              bottom: 20.0,
+                  title: Text(
+                    'Employee',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  trailing: GFToggle(
+                    onChanged: (val) {},
+                    value: true,
+                    disabledTrackColor: Colors.red,
+                    enabledTrackColor: Colors.green,
+                    type: GFToggleType.ios,
+                  )),
             ),
-            child: ListTile(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                tileColor: Colors.white,
-                leading: Image(
-                  image: AssetImage('assets/notification/holidays.png'),
-                  height: 35,
-                  width: 35,
-                ),
-                title: Text(
-                  'Holidays',
-                  style: TextStyle(fontSize: 18),
-                ),
-                trailing: GFToggle(
-                  onChanged: (val) {},
-                  value: true,
-                  disabledTrackColor: Colors.red,
-                  enabledTrackColor: Colors.green,
-                  type: GFToggleType.ios,
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 25.0,
-              right: 25.0,
-              bottom: 20.0,
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 25.0,
+                right: 25.0,
+                bottom: 20.0,
+              ),
+              child: ListTile(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  tileColor: Colors.white,
+                  leading: Image(
+                    image: AssetImage('assets/notification/holidays.png'),
+                    height: 35,
+                    width: 35,
+                  ),
+                  title: Text(
+                    'Holidays',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  trailing: GFToggle(
+                    onChanged: (val) {},
+                    value: true,
+                    disabledTrackColor: Colors.red,
+                    enabledTrackColor: Colors.green,
+                    type: GFToggleType.ios,
+                  )),
             ),
-            child: ListTile(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                tileColor: Colors.white,
-                leading: Image(
-                  image: AssetImage('assets/notification/leaves.png'),
-                  height: 35,
-                  width: 35,
-                ),
-                title: Text(
-                  'Leaves',
-                  style: TextStyle(fontSize: 18),
-                ),
-                trailing: GFToggle(
-                  onChanged: (val) {},
-                  value: true,
-                  disabledTrackColor: Colors.red,
-                  enabledTrackColor: Colors.green,
-                  type: GFToggleType.ios,
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 25.0,
-              right: 25.0,
-              bottom: 20.0,
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 25.0,
+                right: 25.0,
+                bottom: 20.0,
+              ),
+              child: ListTile(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  tileColor: Colors.white,
+                  leading: Image(
+                    image: AssetImage('assets/notification/leaves.png'),
+                    height: 35,
+                    width: 35,
+                  ),
+                  title: Text(
+                    'Leaves',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  trailing: GFToggle(
+                    onChanged: (val) {},
+                    value: true,
+                    disabledTrackColor: Colors.red,
+                    enabledTrackColor: Colors.green,
+                    type: GFToggleType.ios,
+                  )),
             ),
-            child: ListTile(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                tileColor: Colors.white,
-                leading: Image(
-                  image: AssetImage('assets/notification/Events.png'),
-                  height: 35,
-                  width: 35,
-                ),
-                title: Text(
-                  'Events',
-                  style: TextStyle(fontSize: 18),
-                ),
-                trailing: GFToggle(
-                  onChanged: (val) {},
-                  value: true,
-                  disabledTrackColor: Colors.red,
-                  enabledTrackColor: Colors.green,
-                  type: GFToggleType.ios,
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 25.0,
-              right: 25.0,
-              bottom: 20.0,
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 25.0,
+                right: 25.0,
+                bottom: 20.0,
+              ),
+              child: ListTile(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  tileColor: Colors.white,
+                  leading: Image(
+                    image: AssetImage('assets/notification/Events.png'),
+                    height: 35,
+                    width: 35,
+                  ),
+                  title: Text(
+                    'Events',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  trailing: GFToggle(
+                    onChanged: (val) {},
+                    value: true,
+                    disabledTrackColor: Colors.red,
+                    enabledTrackColor: Colors.green,
+                    type: GFToggleType.ios,
+                  )),
             ),
-            child: ListTile(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                tileColor: Colors.white,
-                leading: Image(
-                  image:
-                      AssetImage('assets/notification/companyannouncement.png'),
-                  height: 35,
-                  width: 35,
-                ),
-                title: Text(
-                  'Company Announcement',
-                  style: TextStyle(fontSize: 18),
-                ),
-                trailing: GFToggle(
-                  onChanged: (val) {},
-                  value: true,
-                  disabledTrackColor: Colors.red,
-                  enabledTrackColor: Colors.green,
-                  type: GFToggleType.ios,
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 25.0,
-              right: 25.0,
-              bottom: 20.0,
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 25.0,
+                right: 25.0,
+                bottom: 20.0,
+              ),
+              child: ListTile(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  tileColor: Colors.white,
+                  leading: Image(
+                    image:
+                        AssetImage('assets/notification/companyannouncement.png'),
+                    height: 35,
+                    width: 35,
+                  ),
+                  title: Text(
+                    'Company Announcement',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  trailing: GFToggle(
+                    onChanged: (val) {},
+                    value: true,
+                    disabledTrackColor: Colors.red,
+                    enabledTrackColor: Colors.green,
+                    type: GFToggleType.ios,
+                  )),
             ),
-            child: ListTile(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                tileColor: Colors.white,
-                leading: Image(
-                  image: AssetImage('assets/notification/Chats.png'),
-                  height: 35,
-                  width: 35,
-                ),
-                title: Text(
-                  'Chats',
-                  style: TextStyle(fontSize: 18),
-                ),
-                trailing: GFToggle(
-                  onChanged: (val) {},
-                  value: true,
-                  disabledTrackColor: Colors.red,
-                  enabledTrackColor: Colors.green,
-                  type: GFToggleType.ios,
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 25.0,
-              right: 25.0,
-              bottom: 20.0,
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 25.0,
+                right: 25.0,
+                bottom: 20.0,
+              ),
+              child: ListTile(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  tileColor: Colors.white,
+                  leading: Image(
+                    image: AssetImage('assets/notification/Chats.png'),
+                    height: 35,
+                    width: 35,
+                  ),
+                  title: Text(
+                    'Chats',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  trailing: GFToggle(
+                    onChanged: (val) {},
+                    value: true,
+                    disabledTrackColor: Colors.red,
+                    enabledTrackColor: Colors.green,
+                    type: GFToggleType.ios,
+                  )),
             ),
-            child: ListTile(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                tileColor: Colors.white,
-                leading: Image(
-                  image: AssetImage('assets/notification/jobs.png'),
-                  height: 35,
-                  width: 35,
-                ),
-                title: Text(
-                  'Jobs',
-                  style: TextStyle(fontSize: 18),
-                ),
-                trailing: GFToggle(
-                  onChanged: (val) {},
-                  value: true,
-                  disabledTrackColor: Colors.red,
-                  enabledTrackColor: Colors.green,
-                  type: GFToggleType.ios,
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 25.0,
-              right: 25.0,
-              bottom: 20.0,
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 25.0,
+                right: 25.0,
+                bottom: 20.0,
+              ),
+              child: ListTile(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  tileColor: Colors.white,
+                  leading: Image(
+                    image: AssetImage('assets/notification/jobs.png'),
+                    height: 35,
+                    width: 35,
+                  ),
+                  title: Text(
+                    'Jobs',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  trailing: GFToggle(
+                    onChanged: (val) {},
+                    value: true,
+                    disabledTrackColor: Colors.red,
+                    enabledTrackColor: Colors.green,
+                    type: GFToggleType.ios,
+                  )),
             ),
-            child: ListTile(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                tileColor: Colors.white,
-                leading: Image(
-                  image: AssetImage('assets/notification/salarycredited.png'),
-                  height: 35,
-                  width: 35,
-                ),
-                title: Text(
-                  'Salary Credited',
-                  style: TextStyle(fontSize: 18),
-                ),
-                trailing: GFToggle(
-                  onChanged: (val) {},
-                  value: true,
-                  disabledTrackColor: Colors.red,
-                  enabledTrackColor: Colors.green,
-                  type: GFToggleType.ios,
-                )),
-          ),
-        ]));
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 25.0,
+                right: 25.0,
+                bottom: 20.0,
+              ),
+              child: ListTile(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  tileColor: Colors.white,
+                  leading: Image(
+                    image: AssetImage('assets/notification/salarycredited.png'),
+                    height: 35,
+                    width: 35,
+                  ),
+                  title: Text(
+                    'Salary Credited',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  trailing: GFToggle(
+                    onChanged: (val) {},
+                    value: true,
+                    disabledTrackColor: Colors.red,
+                    enabledTrackColor: Colors.green,
+                    type: GFToggleType.ios,
+                  )),
+            ),
+          ]),
+        ));
   }
 }

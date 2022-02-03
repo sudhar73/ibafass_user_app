@@ -15,6 +15,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  buttons_tabbar:
+    dependency: "direct main"
+    description:
+      name: buttons_tabbar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.3.3"
   calendar_timeline:
     dependency: "direct main"
     description:
@@ -22,6 +29,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
+  carousel_slider:
+    dependency: "direct main"
+    description:
+      name: carousel_slider
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.0"
   characters:
     dependency: transitive
     description:
@@ -83,6 +97,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
+  flutter_carousel_slider:
+    dependency: "direct main"
+    description:
+      name: flutter_carousel_slider
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.8"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -113,7 +134,7 @@ packages:
       name: hexcolor
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.5"
+    version: "2.0.6"
   intl:
     dependency: transitive
     description:
@@ -156,6 +177,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
+  percent_indicator:
+    dependency: "direct main"
+    description:
+      name: percent_indicator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.0"
   scrollable_positioned_list:
     dependency: transitive
     description:
@@ -225,5 +253,5 @@ packages:
     source: hosted
     version: "2.1.1"
 sdks:
-  dart: ">=2.14.0 <3.0.0"
+  dart: ">=2.15.0 <3.0.0"
   flutter: ">=2.0.1"

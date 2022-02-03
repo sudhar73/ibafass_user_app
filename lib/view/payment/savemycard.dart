@@ -59,7 +59,7 @@ class _SaveMyCardState extends State<SaveMyCard> {
                       height: 40,
                       width: 40,
                       child: Icon(
-                        Icons.airline_seat_legroom_reduced,
+                        Icons.add,
                         size: 40,
                         color: HexColor('#0F46B3'),
                       ),

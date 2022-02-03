@@ -15,10 +15,10 @@ class _SettingProfileState extends State<SettingProfile> {
       child: Column(
         children: [
           ListTile(
-            contentPadding: EdgeInsets.only(top: 50.0),
+            contentPadding: EdgeInsets.only(top: 50.0,left: 10.0),
             leading: Icon(
               Icons.arrow_back,
-              size: 40,
+              color: Colors.black,
             ),
           ),
           ListTile(
