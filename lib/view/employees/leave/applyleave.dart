@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:ibafass/view/employees/leave/leaveappliedsuccessfully.dart';
 class ApplyLeave extends StatefulWidget {
   const ApplyLeave({Key? key}) : super(key: key);
 
@@ -199,6 +200,10 @@ class _ApplyLeaveState extends State<ApplyLeave> {
                 width: MediaQuery.of(context).size.width / 1.15,
                 child: RaisedButton(
                   onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const LeaveappliedSuccessfully()),
+                    );
 
                   },
                   color: HexColor('#0F46B3'),

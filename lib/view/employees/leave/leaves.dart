@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:ibafass/view/employees/leave/applyleave.dart';
 class Leaves extends StatefulWidget {
   const Leaves({Key? key}) : super(key: key);
 
@@ -117,7 +118,13 @@ class _LeavesState extends State<Leaves> {
 
             ],
           ),
-          FloatingActionButton(onPressed: (){},
+          FloatingActionButton(onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const ApplyLeave()),
+            );
+
+          },
             backgroundColor: HexColor('#0F46B3'),
             child: Icon(
               Icons.add,

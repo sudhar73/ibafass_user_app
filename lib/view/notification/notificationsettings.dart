@@ -22,7 +22,7 @@ class _NotificationSettingsState extends State<NotificationSettings> {
             title: Text(
               'Notification Settings',
               style: TextStyle(
-                fontSize: 20,
+
               ),
             ),
             actions: [
@@ -32,7 +32,7 @@ class _NotificationSettingsState extends State<NotificationSettings> {
               onPressed: () {},
               icon: Icon(
                 Icons.arrow_back,
-                size: 30,
+
               ),
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:ibafass/view/employees/attendance/employeeattendancedetails.dart';
 class EmployeeAttendance extends StatefulWidget {
   const EmployeeAttendance({Key? key}) : super(key: key);
 
@@ -55,27 +56,35 @@ class _EmployeeAttendanceState extends State<EmployeeAttendance> {
                       ),
                       SizedBox(height: 20,),
                       Center(
-                        child: Container(
-                          height: 100,
-                          width: mywidth/1.20,
-                          decoration: BoxDecoration( color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                          child: Center(
-                            child: ListTile(
-                              leading: CircleAvatar(
-                              radius: 20,
-                              child: ClipOval(
-                                child: Image(
-                                  image: AssetImage('assets/payment/profilepic.jpg'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const EmployeeAttendancePerformance()),
+                            );
+                          },
+                          child: Container(
+                            height: 100,
+                            width: mywidth/1.20,
+                            decoration: BoxDecoration( color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                            child: Center(
+                              child: ListTile(
+                                leading: CircleAvatar(
+                                radius: 20,
+                                child: ClipOval(
+                                  child: Image(
+                                    image: AssetImage('assets/payment/profilepic.jpg'),
+                                    fit: BoxFit.cover,
+                                    height: 40,
+                                    width: 40,
+                                  ),
                                 ),
                               ),
-                            ),
-                              title: Text('Mani',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
-                              subtitle:Text('UI Designer',
-                                style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,color: Colors.grey),),
-                              trailing: Icon(Icons.more_vert,color: Colors.black,),
+                                title: Text('Mani',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
+                                subtitle:Text('UI Designer',
+                                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,color: Colors.grey),),
+                                trailing: Icon(Icons.more_vert,color: Colors.black,),
+                              ),
                             ),
                           ),
                         ),

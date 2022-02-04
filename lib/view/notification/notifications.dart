@@ -27,7 +27,6 @@ class _NotificationsState extends State<Notifications> with TickerProviderStateM
           title: Text(
             'Notifications',
             style: TextStyle(
-              fontSize: 25,
             ),
           ),
           actions: [IconButton(onPressed: (
@@ -40,7 +39,6 @@ class _NotificationsState extends State<Notifications> with TickerProviderStateM
             onPressed: () {},
             icon: Icon(
               Icons.arrow_back,
-              size: 30,
             ),
           ),
         ),

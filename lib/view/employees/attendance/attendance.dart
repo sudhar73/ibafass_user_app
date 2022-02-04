@@ -1,6 +1,7 @@
  import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:ibafass/view/employees/attendance/employeeattendance.dart';
 class Attendance extends StatefulWidget {
   const Attendance({Key? key}) : super(key: key);
 
@@ -24,7 +25,12 @@ class _AttendanceState extends State<Attendance> {
        centerTitle: true,
        leading: Icon(Icons.arrow_back),
        actions: [
-         IconButton(onPressed: (){}, icon: Icon(Icons.calendar_today,color: Colors.white,))
+         IconButton(onPressed: (){
+           Navigator.push(
+             context,
+             MaterialPageRoute(builder: (context) => const EmployeeAttendance()),
+           );
+         }, icon: Icon(Icons.calendar_today,color: Colors.white,))
        ],
      ),
       body:SingleChildScrollView(
