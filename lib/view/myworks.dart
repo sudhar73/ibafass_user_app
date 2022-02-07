@@ -19,48 +19,38 @@ class _MyWorksState extends State<MyWorks> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70.0),
         child: AppBar(
+          elevation: 0.0,
           shape: RoundedRectangleBorder(borderRadius: BorderRadiusDirectional.only(bottomEnd: Radius.circular(35.0),bottomStart: Radius.circular(35.0))),
             backgroundColor: Colors.white,
 
-            title: Text('My works',style: TextStyle(color: Colors.black),),
+            title: Text('My works',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black),),
             leading: Icon(
               Icons.arrow_back,
               color: Colors.black,
-              size: myheight/25,
-            ),
+                         ),
             actions: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.notifications,
-                      color: Colors.black, size: myheight / 25),
-                  SizedBox(
-                    width: mywidth / 15,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      print("Inside the Image");
-                    },
-                    child:CircleAvatar(
-                      radius: 30,
-                      child: ClipOval(
-                        child: Image(
-                          image: AssetImage('assets/payment/profilepic.jpg'),
-                          fit: BoxFit.cover,
-                          height: 60,
-                          width: 60,
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
+              Padding(
+                padding: const EdgeInsets.only(top: 10,),
+                child: Icon(Icons.notifications,
+                    color: Colors.black, size: 25),
+              ),
+              SizedBox(
+                width: mywidth / 15,
+              ),
+              InkWell(
+                onTap: () {
+                  print("Inside the Image");
+                },
+                child:Padding(
+                  padding: const EdgeInsets.only(right: 20,top: 10),
+                  child: CircleAvatar(
+                    radius: 25,
 
-                    },
-                    child: Icon(Icons.arrow_drop_down,
-                        color: Colors.black, size: myheight / 25),
+                     backgroundImage:  AssetImage('assets/payment/profilepic.jpg'),
+
+
                   ),
-                ],
+                ),
               )
             ],
         ),
@@ -103,8 +93,8 @@ class _MyWorksState extends State<MyWorks> {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: SizedBox(
-                      height: 40.0,
-                      width: 40.0,
+                      height: 35.0,
+                      width: 35.0,
                       child: FittedBox(
                         child: FloatingActionButton(
                           backgroundColor: HexColor('#0F46B3'),

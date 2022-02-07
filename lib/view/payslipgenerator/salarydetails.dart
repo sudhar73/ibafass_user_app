@@ -13,92 +13,23 @@ class _SalaryDetailsState extends State<SalaryDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor('#F0F4FD'),
+      appBar:PreferredSize(
+        preferredSize: Size.fromHeight(60.0),
+        child: AppBar(
+          elevation: 0.0,
+          backgroundColor: Colors.white,
+          title: Text('Salary Details',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+          centerTitle: true,
+          leading: Icon(Icons.arrow_back,color: Colors.black,),
+          actions: [
+            IconButton(onPressed: (){}, icon: Icon(Icons.settings,color: Colors.black,)),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
-
         child: Column(
           children: [
-            Container(
-              decoration:BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(40.0),bottomLeft: Radius.circular(40.0)),
-              ),
-              height: MediaQuery.of(context).size.height/3.5,
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                children: [
-                  SizedBox(height: 40,),
-                  Align(
-                    alignment: Alignment.topCenter,
-                    child: Row(
-                      children: [
-                        Flexible(
-                          flex: 0,
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 10.0),
-                            child: Icon(
-                              Icons.arrow_back_sharp,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                        Flexible(
-                          flex: 2,
-                          child: Center(
-                            child: Text(
-                              'Salary Details',
-                              style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                          ),
-                        ),
-                        Flexible(
-                          flex: 0,
-                          child: Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
-                            child: Icon(
-                              Icons.settings,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height:10),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: CircleAvatar(
-                            radius: 35,
-                            child:ClipOval(
-                              child: Image(
-                                image: AssetImage('assets/directory/profilepicture.jpg'),
-                                height: 70,
-                                width: 70,
-                              ),
-                            )
-                        ),
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Welcome Mani',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,color: HexColor('#0F46B3')),),
-                          Text('Good Morning',style: TextStyle(fontSize: 14,color: Colors.black),)
-                        ],
-                      )
-                    ],
-
-                  )
-
-                ],
-              ),
-
-            ),
-            SizedBox(height: 10,),
+            SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
 

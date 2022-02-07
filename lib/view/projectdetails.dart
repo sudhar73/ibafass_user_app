@@ -19,7 +19,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
     child: AppBar(
     elevation: 0.0,
     backgroundColor: HexColor('#0F46B3'),
-    title: Text('Subscription',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+    title: Text('ProjectsDetails',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
     centerTitle: true,
     leading: Icon(Icons.arrow_back,color: Colors.white,),
     actions: [

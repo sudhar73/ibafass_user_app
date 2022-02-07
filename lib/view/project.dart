@@ -30,7 +30,6 @@ class _ProjectsState extends State<Projects> {
         ),),
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery.of(context).size.height/1,
           width: MediaQuery.of(context).size.width,
 
           decoration: BoxDecoration(
@@ -72,7 +71,7 @@ class _ProjectsState extends State<Projects> {
 
                 },
                 child: Container(
-                  height: MediaQuery.of(context).size.height/3.8,
+                  height: MediaQuery.of(context).size.height/3.5,
                   width: MediaQuery.of(context).size.width/1.20,
                   decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
                   child: Column(
@@ -152,7 +151,7 @@ class _ProjectsState extends State<Projects> {
               ),
               SizedBox(height: 20,),
               Container(
-                height: MediaQuery.of(context).size.height/3.8,
+                height: MediaQuery.of(context).size.height/3.5,
                 width: MediaQuery.of(context).size.width/1.20,
                 decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
                 child: Column(
@@ -192,8 +191,8 @@ class _ProjectsState extends State<Projects> {
                         ),
                         Spacer(),
                         Padding(
-                          padding: const EdgeInsets.only(top: 10.0,right: 20.0),
-                          child: CircularPercentIndicator(radius: 50.0,
+                          padding: const EdgeInsets.only(top: 5.0,right: 20.0),
+                          child: CircularPercentIndicator(radius: 40.0,
                             backgroundColor: HexColor('#E4FFF5'),
                             progressColor: HexColor('#17D213'),
                             lineWidth: 5.0,
@@ -209,7 +208,7 @@ class _ProjectsState extends State<Projects> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Text('Our Website company related services are...',style: TextStyle(color: Colors.grey,fontSize: 12),),
                     ),
-                    SizedBox(height: 20,),
+                    SizedBox(height: 10,),
                     Row(
                       children: [
                         SizedBox(width: 20,),
@@ -232,7 +231,7 @@ class _ProjectsState extends State<Projects> {
               ),
               SizedBox(height: 20.0,),
               Container(
-                height: MediaQuery.of(context).size.height/3.8,
+                height: MediaQuery.of(context).size.height/3.5,
                 width: MediaQuery.of(context).size.width/1.20,
                 decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
                 child: Column(
@@ -272,8 +271,8 @@ class _ProjectsState extends State<Projects> {
                         ),
                         Spacer(),
                         Padding(
-                          padding: const EdgeInsets.only(top: 10.0,right: 20.0),
-                          child: CircularPercentIndicator(radius: 50.0,
+                          padding: const EdgeInsets.only(top: 5.0,right: 20.0),
+                          child: CircularPercentIndicator(radius: 40.0,
                             backgroundColor: HexColor('#F9D6D6'),
                             progressColor: HexColor('#DF3535'),
                             lineWidth: 5.0,
@@ -289,7 +288,7 @@ class _ProjectsState extends State<Projects> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Text('Our Website company related services are...',style: TextStyle(color: Colors.grey,fontSize: 12),),
                     ),
-                    SizedBox(height: 20,),
+                    SizedBox(height: 10,),
                     Row(
                       children: [
                         SizedBox(width: 20,),
@@ -310,6 +309,7 @@ class _ProjectsState extends State<Projects> {
                   ],
                 ),
               ),
+              SizedBox(height: 20,)
             ],
           ),
         ),

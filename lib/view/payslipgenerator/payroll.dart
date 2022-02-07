@@ -12,64 +12,33 @@ class _PayrollState extends State<Payroll> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor('#F0F4FD'),
-      body: SingleChildScrollView(
-        child: DefaultTabController(
-          length: 3,
+      appBar:AppBar(
+        elevation: 0.0,
+        backgroundColor: Colors.white,
+        title: Text('Payroll',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+        centerTitle: true,
+        leading: Icon(Icons.arrow_back,color: Colors.black,),
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.settings,color: Colors.black,)),
+        ],
+      ),
+      body: DefaultTabController(
+        length: 3,
+        child: SingleChildScrollView(
           child: Column(children: [
             Container(
               decoration:BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(40.0),bottomLeft: Radius.circular(40.0)),
               ),
-              height: MediaQuery.of(context).size.height/3.5,
+              height: MediaQuery.of(context).size.height/7,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
-                  SizedBox(height: 40,),
-                  Align(
-                    alignment: Alignment.topCenter,
-                    child: Row(
-                      children: [
-                        Flexible(
-                          flex: 0,
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 10.0),
-                            child: Icon(
-                              Icons.arrow_back_sharp,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                        Flexible(
-                          flex: 2,
-                          child: Center(
-                            child: Text(
-                              'Salary Details',
-                              style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                          ),
-                        ),
-                        Flexible(
-                          flex: 0,
-                          child: Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
-                            child: Icon(
-                              Icons.settings,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height:10),
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: const EdgeInsets.only(left: 20.0,right: 20,top: 10),
                         child: CircleAvatar(
                             radius: 35,
                             child:ClipOval(
@@ -120,25 +89,27 @@ class _PayrollState extends State<Payroll> {
                       ],
                     ),
                   ),
-                  body: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20.0),
-                        child: Container(
-                          height: MediaQuery.of(context).size.height/2,
-                          width: MediaQuery.of(context).size.width,
+                  body: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20.0),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height/2,
+                            width: MediaQuery.of(context).size.width,
 
-                          decoration: BoxDecoration( color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(15.0),)),
-                          child: TabBarView(
-                            children: [
-                              Addition(),
-                              Overtime(),
-                              Deduction()
-                            ],
+                            decoration: BoxDecoration( color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(15.0),)),
+                            child: TabBarView(
+                              children: [
+                                Addition(),
+                                Overtime(),
+                                Deduction()
+                              ],
+                            ),
                           ),
-                        ),
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),

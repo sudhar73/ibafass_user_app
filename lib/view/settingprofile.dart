@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:ibafass/view/editprofile.dart';
 import 'package:ibafass/view/settings/approvalsettings/expensesapproval.dart';
 import 'package:ibafass/view/settings/changepasswordsettings.dart';
 import 'package:ibafass/view/settings/companysettings.dart';
@@ -44,6 +45,7 @@ class _SettingProfileState extends State<SettingProfile> {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
             ),
             subtitle: Text("@mani95"),
+
           ),
           Padding(
             padding: EdgeInsets.only(left: 20.0, right: 20.0),
@@ -73,7 +75,7 @@ class _SettingProfileState extends State<SettingProfile> {
                 height: 40,
                 width: 40,
                 child: Image(
-                  image: AssetImage('assets/profile/myprofile.png'),
+                  image: AssetImage('assets/profile/My Profile.png'),
                 ),
               ),
             ),
@@ -93,7 +95,7 @@ class _SettingProfileState extends State<SettingProfile> {
                 height: 40,
                 width: 40,
                 child: Image(
-                  image: AssetImage('assets/profile/notification.png'),
+                  image: AssetImage('assets/profile/Notification.png'),
 
                 ),
               ),
@@ -113,13 +115,19 @@ class _SettingProfileState extends State<SettingProfile> {
                 height: 40,
                 width: 40,
                 child: Image(
-                  image: AssetImage('assets/profile/forums.png'),
+                  image: AssetImage('assets/profile/Forums.png'),
                 ),
               ),
             ),
           ),
           Center(
-            child: ExpansionTile(
+            child: ListTile(
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const EditProfile()),
+                );
+              },
               title: Text(
                 'Edit profile',
                 style: TextStyle(
@@ -132,7 +140,7 @@ class _SettingProfileState extends State<SettingProfile> {
                 height: 40,
                 width: 40,
                 child: Image(
-                  image: AssetImage('assets/profile/editprofile.png'),
+                  image: AssetImage('assets/profile/Edit Profile.png'),
                 ),
               ),
             ),
@@ -151,7 +159,7 @@ class _SettingProfileState extends State<SettingProfile> {
                 height: 40,
                 width: 40,
                 child: Image(
-                  image: AssetImage('assets/profile/search.png'),
+                  image: AssetImage('assets/profile/Search.png'),
                 ),
               ),
             ),
@@ -168,12 +176,21 @@ class _SettingProfileState extends State<SettingProfile> {
               children: [
                 ListTile(
                   title: Text('Change Password'),
+                  leading: Container(
+                    decoration: BoxDecoration(color: HexColor('#C3F4F8'),
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                    height: 40,
+                    width: 40,
+                    child: Image(
+                      image: AssetImage('assets/profile/setting/Change password.png'),
+                    ),
+                  ),
                   onTap: (){
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const ChangePassword()),
                     );
-                  },
+                                      },
                 ),
                 ListTile(
                   onTap: (){
@@ -183,6 +200,16 @@ class _SettingProfileState extends State<SettingProfile> {
                     );
                   },
                   title: Text('Company Settings'),
+                  leading: Container(
+                    decoration: BoxDecoration(color: HexColor('#D3FFDF'
+  ),
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                    height: 40,
+                    width: 40,
+                    child: Image(
+                      image: AssetImage('assets/profile/setting/Company Settings.png'),
+                    ),
+                  ),
                 ),
                 ListTile(
                   onTap: (){
@@ -193,6 +220,16 @@ class _SettingProfileState extends State<SettingProfile> {
 
                   },
                   title: Text('Localization'),
+                  leading: Container(
+                    decoration: BoxDecoration(color: HexColor('#FFE8BA'
+    ),
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                    height: 40,
+                    width: 40,
+                    child: Image(
+                      image: AssetImage('assets/profile/setting/Localization.png'),
+                    ),
+                  ),
                 ),
                 ListTile(
                   onTap: (){
@@ -203,6 +240,16 @@ class _SettingProfileState extends State<SettingProfile> {
 
                   },
                   title: Text('Email Settings'),
+                  leading: Container(
+                    decoration: BoxDecoration(color: HexColor('#C5F8FD'
+    ),
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                    height: 40,
+                    width: 40,
+                    child: Image(
+                      image: AssetImage('assets/profile/setting/Email Settings.png'),
+                    ),
+                  ),
                 ),
                 ListTile(
                   onTap: (){
@@ -213,6 +260,15 @@ class _SettingProfileState extends State<SettingProfile> {
 
                   },
                   title: Text('Invoice Settings'),
+                  leading: Container(
+                    decoration: BoxDecoration(color: HexColor('#FCE6E0'),
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                    height: 40,
+                    width: 40,
+                    child: Image(
+                      image: AssetImage('assets/profile/setting/Invoice Settings.png'),
+                    ),
+                  ),
                 ),
                 ListTile(
                   onTap: (){
@@ -223,9 +279,28 @@ class _SettingProfileState extends State<SettingProfile> {
 
                   },
                   title: Text('Salary Settings'),
+                  leading: Container(
+                    decoration: BoxDecoration(color: HexColor('#F6E6FF'),
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                    height: 40,
+                    width: 40,
+                    child: Image(
+                      image: AssetImage('assets/profile/setting/Salary Settings.png'),
+                    ),
+                  ),
                 ),
                 ListTile(
                   title: Text('Approval Settings'),
+                  leading: Container(
+                    decoration: BoxDecoration(color: HexColor('#FFDEE9'
+    ),
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                    height: 40,
+                    width: 40,
+                    child: Image(
+                      image: AssetImage('assets/profile/setting/Approval Settings.png'),
+                    ),
+                  ),
                   onTap: (){
                     Navigator.push(
                       context,
@@ -246,7 +321,7 @@ class _SettingProfileState extends State<SettingProfile> {
                 height: 40,
                 width: 40,
                 child: Image(
-                  image: AssetImage('assets/profile/setting.png'),
+                  image: AssetImage('assets/profile/Setting.png'),
                 ),
               ),
             ),
@@ -265,7 +340,7 @@ class _SettingProfileState extends State<SettingProfile> {
                 height: 40,
                 width: 40,
                 child: Image(
-                  image: AssetImage('assets/profile/aboutus.png'),
+                  image: AssetImage('assets/profile/About Us.png'),
                 ),
               ),
             ),
@@ -284,7 +359,7 @@ class _SettingProfileState extends State<SettingProfile> {
                 height: 40,
                 width: 40,
                 child: Image(
-                  image: AssetImage('assets/profile/language.png'),
+                  image: AssetImage('assets/profile/Language.png'),
                 ),
               ),
             ),
@@ -310,7 +385,7 @@ class _SettingProfileState extends State<SettingProfile> {
                 height: 40,
                 width: 40,
                 child: Image(
-                  image: AssetImage('assets/profile/logout.png'),
+                  image: AssetImage('assets/profile/Log Out.png'),
                 ),
               ),
             ),

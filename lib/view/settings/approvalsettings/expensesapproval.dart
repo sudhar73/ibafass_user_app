@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:ibafass/view/settingprofile.dart';
+import 'package:ibafass/view/settings/approvalsettings/leaveapproval.dart';
+import 'package:ibafass/view/settings/approvalsettings/offerapproval.dart';
+import 'package:ibafass/view/settings/approvalsettings/resignationnotice.dart';
 
 
 class ExpensesApproval extends StatefulWidget {
@@ -25,7 +29,14 @@ class _ExpensesApprovalState extends State<ExpensesApproval> {
             color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold
         ),),
         centerTitle: true,
-        leading: Icon(Icons.arrow_back),
+        leading: IconButton(
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SettingProfile()),
+            );
+          },
+           icon: Icon(Icons.arrow_back)),
         actions: [
           IconButton(onPressed: (){}, icon: Icon(Icons.more_vert,color: Colors.white,))
         ],
@@ -61,20 +72,28 @@ class _ExpensesApprovalState extends State<ExpensesApproval> {
                                     TextStyle(color: Colors.white,fontWeight:FontWeight.bold,fontSize: 12),),
                                   ])
                            ),
-                           Container(
-                             height: MediaQuery.of(context).size.height/5,
-                             width: MediaQuery.of(context).size.width/3,
-                             decoration: BoxDecoration(
-                                 boxShadow: [BoxShadow(offset: Offset(0,3.0),blurRadius: 6,color: Colors.grey)],
-                                 color: Colors.white,
-                                 borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                             child:  Column(
-                                 mainAxisAlignment: MainAxisAlignment.center,
-                                 children: [Image(image: AssetImage('assets/settings/leaveapproval.png')),
-                                   SizedBox(height: 10,),
-                                   Text('Leave Approval',style:
-                                   TextStyle(color: Colors.black,fontWeight:FontWeight.bold,fontSize: 12),),
-                                 ]),
+                           InkWell(
+                             onTap: (){
+                               Navigator.push(
+                                 context,
+                                 MaterialPageRoute(builder: (context) => const LeaveApproval()),
+                               );
+                             },
+                             child: Container(
+                               height: MediaQuery.of(context).size.height/5,
+                               width: MediaQuery.of(context).size.width/3,
+                               decoration: BoxDecoration(
+                                   boxShadow: [BoxShadow(offset: Offset(0,3.0),blurRadius: 6,color: Colors.grey)],
+                                   color: Colors.white,
+                                   borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                               child:  Column(
+                                   mainAxisAlignment: MainAxisAlignment.center,
+                                   children: [Image(image: AssetImage('assets/settings/leaveapproval.png')),
+                                     SizedBox(height: 10,),
+                                     Text('Leave Approval',style:
+                                     TextStyle(color: Colors.black,fontWeight:FontWeight.bold,fontSize: 12),),
+                                   ]),
+                             ),
                            )
                          ],
                        ),
@@ -82,39 +101,55 @@ class _ExpensesApprovalState extends State<ExpensesApproval> {
                        Row(
                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                          children: [
-                           Container(
-                             height: MediaQuery.of(context).size.height/5,
-                             width: MediaQuery.of(context).size.width/3,
-                             decoration: BoxDecoration(
-                               boxShadow: [BoxShadow(offset: Offset(0,3.0),blurRadius: 6,color: Colors.grey)],
-                                 color: Colors.white,
-                                 borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                             child: Column(
-                               mainAxisAlignment: MainAxisAlignment.center,
-                               children: [
-                                 Image(image: AssetImage('assets/settings/offerapproval.png')),
-                                 SizedBox(height: 10,),
-                                 Text('Offer Approval',style:
-                                 TextStyle(color: Colors.black,fontWeight:FontWeight.bold,fontSize: 12),),
+                           InkWell(
+                             onTap: (){
+                               Navigator.push(
+                                 context,
+                                 MaterialPageRoute(builder: (context) => const OfferApproval()),
+                               );
+                             },
+                             child: Container(
+                               height: MediaQuery.of(context).size.height/5,
+                               width: MediaQuery.of(context).size.width/3,
+                               decoration: BoxDecoration(
+                                 boxShadow: [BoxShadow(offset: Offset(0,3.0),blurRadius: 6,color: Colors.grey)],
+                                   color: Colors.white,
+                                   borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                               child: Column(
+                                 mainAxisAlignment: MainAxisAlignment.center,
+                                 children: [
+                                   Image(image: AssetImage('assets/settings/offerapproval.png')),
+                                   SizedBox(height: 10,),
+                                   Text('Offer Approval',style:
+                                   TextStyle(color: Colors.black,fontWeight:FontWeight.bold,fontSize: 12),),
 
-                               ],
+                                 ],
+                               ),
                              ),
                            ),
-                           Container(
-                             height: MediaQuery.of(context).size.height/5,
-                             width: MediaQuery.of(context).size.width/3,
-                             decoration: BoxDecoration(
-                                 boxShadow: [BoxShadow(offset: Offset(0,3.0),blurRadius: 6,color: Colors.grey)],
-                                 color: Colors.white,
-                                 borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                             child:  Column(
-                                 mainAxisAlignment: MainAxisAlignment.center,
-                                 children: [Image(image: AssetImage('assets/settings/resignationnotice.png')),
-                                   SizedBox(height: 10,),
-                                   Text('Resignation Approval',style:
-                                   TextStyle(color: Colors.black,fontWeight:FontWeight.bold,fontSize: 12),),
-                                 ]),
+                           InkWell(
+                             onTap: (){
+                               Navigator.push(
+                                 context,
+                                 MaterialPageRoute(builder: (context) => const ResignationNotice()),
+                               );
+                             },
+                             child: Container(
+                               height: MediaQuery.of(context).size.height/5,
+                               width: MediaQuery.of(context).size.width/3,
+                               decoration: BoxDecoration(
+                                   boxShadow: [BoxShadow(offset: Offset(0,3.0),blurRadius: 6,color: Colors.grey)],
+                                   color: Colors.white,
+                                   borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                               child:  Column(
+                                   mainAxisAlignment: MainAxisAlignment.center,
+                                   children: [Image(image: AssetImage('assets/settings/resignationnotice.png')),
+                                     SizedBox(height: 10,),
+                                     Text('Resignation Approval',style:
+                                     TextStyle(color: Colors.black,fontWeight:FontWeight.bold,fontSize: 12),),
+                                   ]),
 
+                             ),
                            ),
                          ],
                        ),

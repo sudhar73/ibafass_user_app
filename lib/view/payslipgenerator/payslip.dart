@@ -17,6 +17,16 @@ class _PaySlipState extends State<PaySlip> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor('#F0F4FD'),
+      appBar:AppBar(
+        elevation: 0.0,
+        backgroundColor: Colors.white,
+        title: Text('Pay Slip',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+        centerTitle: true,
+        leading: Icon(Icons.arrow_back,color: Colors.black,),
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.settings,color: Colors.black,)),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -25,55 +35,14 @@ class _PaySlipState extends State<PaySlip> {
                 color: Colors.white,
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(40.0),bottomLeft: Radius.circular(40.0)),
               ),
-              height: MediaQuery.of(context).size.height/3.5,
+              height: MediaQuery.of(context).size.height/7,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
-                  SizedBox(height: 40,),
-                  Align(
-                    alignment: Alignment.topCenter,
-                    child: Row(
-                      children: [
-                        Flexible(
-                          flex: 0,
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 10.0),
-                            child: Icon(
-                              Icons.arrow_back_sharp,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                        Flexible(
-                          flex: 2,
-                          child: Center(
-                            child: Text(
-                              'Payslip',
-                              style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                          ),
-                        ),
-                        Flexible(
-                          flex: 0,
-                          child: Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
-                            child: Icon(
-                              Icons.settings,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                 SizedBox(height:10),
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: const EdgeInsets.only(left: 20,right: 20,top: 10),
                         child: CircleAvatar(
                           radius: 35,
                           child:ClipOval(
@@ -131,17 +100,16 @@ child: Column(
           ),
         ],
     ),
-    SizedBox(height: 20,),
-        Container(
-          height: MediaQuery.of(context).size.height/3,
-          width: MediaQuery.of(context).size.width,
-          color: HexColor('#2A9FDB'),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start,mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-              Row(children: [
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: CircularPercentIndicator(radius: 130.0,
+               SizedBox(height: 10,),
+                  Container(
+                     height: MediaQuery.of(context).size.height/3,
+                     width: MediaQuery.of(context).size.width,
+                      color: HexColor('#2A9FDB'),
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start,mainAxisAlignment: MainAxisAlignment.start,
+                      children: [Row(children: [
+                          Padding(
+                    padding: const EdgeInsets.all(10.0),
+                  child: CircularPercentIndicator(radius: 70.0,
                     backgroundColor: HexColor('FFF700'),
                     progressColor: HexColor('FF8C41'),
                     lineWidth: 15.0,
@@ -149,9 +117,9 @@ child: Column(
                     circularStrokeCap: CircularStrokeCap.round,
                   ),
                 ),
-Spacer(),
+                    Spacer(),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.only(left: 20,right: 20),
                   child: Container(
                     child: Column(crossAxisAlignment: CrossAxisAlignment.end,
                       mainAxisAlignment: MainAxisAlignment.center,

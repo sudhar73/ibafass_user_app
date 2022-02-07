@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:ibafass/view/payment/payment.dart';
 
 class Subscription extends StatefulWidget {
   const Subscription({Key? key}) : super(key: key);
@@ -327,7 +328,12 @@ class _data1State extends State<data1> {
               height: 50,
               width: MediaQuery.of(context).size.width / 1.6,
               child: RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Payment()),
+                  );
+                },
                 color: HexColor('#069914'),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
