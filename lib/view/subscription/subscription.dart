@@ -300,7 +300,7 @@ class _data1State extends State<data1> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: myheight*0.08,),
+          SizedBox(height: myheight*0.06,),
           Center(child: Text('Standard',
             style: TextStyle(color: Colors.black,fontSize: 19,fontWeight: FontWeight.bold),)),
           SizedBox(height: myheight*0.01,),
@@ -315,14 +315,46 @@ class _data1State extends State<data1> {
               ],
           ),
           SizedBox(height: myheight*0.01,),
-          Text('1 user',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: Row(
+                children: [
+                  Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                  SizedBox(width: 10,),
+                  Text('1 user',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                ]),
+          ),
           SizedBox(height: myheight*0.01,),
-          Text('5 Projects',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: Row(
+                children: [
+                  Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                  SizedBox(width: 10,),
+                  Text('5 Projects',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                ]),
+          ),
           SizedBox(height: myheight*0.01,),
-          Text('5 GB Storage',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: Row(
+                children: [
+                  Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                  SizedBox(width: 10,),
+                  Text('5 GB Storage',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                ]),
+          ),
           SizedBox(height: myheight*0.01,),
-          Text('Unlimited Message',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-          SizedBox(height: myheight*0.08,),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: Row(
+                children: [
+                  Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                  SizedBox(width: 10,),
+                  Text('Unlimited Message',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                ]),
+          ),
+          SizedBox(height: 30,),
           Center(
             child: Container(
               height: 50,
@@ -379,7 +411,7 @@ class _data2State extends State<data2> {
                 ),
               ),
             ),
-            SizedBox(height: myheight*0.04,),
+            SizedBox(height: myheight*0.03,),
             Center(child: Text('Professional',
               style: TextStyle(color: Colors.black,fontSize: 19,fontWeight: FontWeight.bold),)),
             SizedBox(height: myheight*0.01,),
@@ -394,16 +426,56 @@ class _data2State extends State<data2> {
               ],
             ),
             SizedBox(height: myheight*0.01,),
-            Text('1 user',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                  children: [
+                    Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                    SizedBox(width: 10,),
+                    Text('30 user',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                  ]),
+            ),
             SizedBox(height: myheight*0.01,),
-            Text('50 Projects',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                  children: [
+                    Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                    SizedBox(width: 10,),
+                    Text('50 Projects',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                  ]),
+            ),
             SizedBox(height: myheight*0.01,),
-            Text('100 GB Storage',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                  children: [
+                    Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                    SizedBox(width: 10,),
+                    Text('100 GB Storage',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                  ]),
+            ),
             SizedBox(height: myheight*0.01,),
-            Text('Unlimited Message',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                  children: [
+                    Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                    SizedBox(width: 10,),
+                    Text('Unlimited Message',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                  ]),
+            ),
             SizedBox(height: myheight*0.01,),
-            Text('24/7 Customer Support',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-            SizedBox(height: myheight*0.04,),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                  children: [
+                    Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                    SizedBox(width: 10,),
+                    Text('24/7 Customer Support',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                  ]),
+            ),
+            SizedBox(height: myheight*0.03,),
             Center(
               child: Container(
                 height: 50,
@@ -459,17 +531,65 @@ class _data3State extends State<data3> {
               ],
             ),
             SizedBox(height: myheight*0.01,),
-            Text('1 user',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                  children: [
+                    Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                    SizedBox(width: 10,),
+                    Text('Unlimited Users',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                  ]),
+            ),
             SizedBox(height: myheight*0.01,),
-            Text('5 Projects',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                  children: [
+                    Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                    SizedBox(width: 10,),
+                    Text('Unlimited Projects',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                  ]),
+            ),
             SizedBox(height: myheight*0.01,),
-            Text('5 GB Storage',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                  children: [
+                    Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                    SizedBox(width: 10,),
+                    Text('500 GB Storage',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                  ]),
+            ),
             SizedBox(height: myheight*0.01,),
-            Text('Unlimited Message',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                  children: [
+                    Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                    SizedBox(width: 10,),
+                    Text('Unlimited Message',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                  ]),
+            ),
             SizedBox(height: myheight*0.01,),
-            Text('24/7 Customer Support',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                  children: [
+                    Icon(Icons.done,color:HexColor('00DC25'),size: 20,),
+                    SizedBox(width: 10,),
+                    Text('24/7 Customer Support',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                  ]),
+            ),
             SizedBox(height: myheight*0.01,),
-            Text('Voice & Video Call',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Row(
+                  children: [
+                    Icon(Icons.done,color:HexColor('00DC25'),size:20,),
+                    SizedBox(width: 10,),
+                    Text('Voice & Video Call',style: TextStyle(color:HexColor('#FF6600'),fontSize: 16,fontWeight: FontWeight.bold),),
+                  ]),
+            ),
             SizedBox(height: myheight*0.04,),
             Center(
               child: Container(

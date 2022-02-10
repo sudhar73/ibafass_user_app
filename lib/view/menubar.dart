@@ -11,6 +11,7 @@ import 'package:ibafass/view/employees/expenses.dart';
 import 'package:ibafass/view/employees/holiday.dart';
 import 'package:ibafass/view/employees/leave/leaves.dart';
 import 'package:ibafass/view/employees/schedule.dart';
+import 'package:ibafass/view/employees/timesheet.dart';
 import 'package:ibafass/view/kpi.dart';
 import 'package:ibafass/view/myworks.dart';
 import 'package:ibafass/view/notification/notifications.dart';
@@ -43,7 +44,7 @@ class _MenuBarState extends State<MenuBar> {
               child: Icon(
                 Icons.menu,
                 color: Colors.white,
-                size: 25,
+
               ),
             ),
             actions: [
@@ -56,7 +57,7 @@ class _MenuBarState extends State<MenuBar> {
                       MaterialPageRoute(builder: (context) =>  const Notifications()),
                     );
                   },
-                  icon: Icon(Icons.notifications,color: Colors.white,size: 25,),
+                  icon: Icon(Icons.notifications,color: Colors.white,),
                 )
               ),
               InkWell(
@@ -87,17 +88,27 @@ class _MenuBarState extends State<MenuBar> {
       body: SingleChildScrollView(
         child: Column(children: [
           SizedBox(height: 10,),
-          ListTile(
-            title: Text(
-              'MENU',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            ),
-            trailing: Icon(
-              (Icons.cancel_outlined),
-              size: 25.0,
-              color: Colors.black,
-            ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  'MENU',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: Icon(
+                  (Icons.cancel_outlined),
+                  size: 25.0,
+                  color: Colors.black,
+                ),
+              ),
+            ],
           ),
+          SizedBox(height: 5,),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: Divider(
@@ -280,8 +291,11 @@ class _MenuBarState extends State<MenuBar> {
                 Padding(
                   padding: const EdgeInsets.only(left: 70.0, right: 10.0),
                   child: ListTile(
-                    onTap: () {
-
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const TimeSheet()),
+                      );
                     },
                     title: Text(
                       'Time Sheet',
@@ -422,7 +436,7 @@ class _MenuBarState extends State<MenuBar> {
 
             },
             title: Text(
-              'My work',
+              'My Work',
               style: TextStyle(fontSize: 20),
             ),
             leading: Container(
@@ -469,7 +483,7 @@ class _MenuBarState extends State<MenuBar> {
 
             },
             title: Text(
-              'task',
+              'Task',
               style: TextStyle(
                 fontSize: 20,
               ),

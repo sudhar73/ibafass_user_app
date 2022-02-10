@@ -18,13 +18,14 @@ class _PaySlipState extends State<PaySlip> {
     return Scaffold(
       backgroundColor: HexColor('#F0F4FD'),
       appBar:AppBar(
+
         elevation: 0.0,
         backgroundColor: Colors.white,
-        title: Text('Pay Slip',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+        title: Text('PaySlip',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
         centerTitle: true,
         leading: Icon(Icons.arrow_back,color: Colors.black,),
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.settings,color: Colors.black,)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.settings_outlined,color: Colors.black,)),
         ],
       ),
       body: SingleChildScrollView(
@@ -42,7 +43,7 @@ class _PaySlipState extends State<PaySlip> {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 20,right: 20,top: 10),
+                        padding: const EdgeInsets.only(left: 20,right: 20,top: 5),
                         child: CircleAvatar(
                           radius: 35,
                           child:ClipOval(
@@ -58,7 +59,9 @@ class _PaySlipState extends State<PaySlip> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Welcome Mani',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,color: HexColor('#0F46B3')),),
+                          Text('Welcome Mani',
+                            style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,color: HexColor('#0F46B3')),),
+                          SizedBox(height: 5,),
                           Text('Good Morning',style: TextStyle(fontSize: 14,color: Colors.black),)
                         ],
                       )
@@ -83,24 +86,24 @@ class _PaySlipState extends State<PaySlip> {
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(20.0)),
               ),
-              height: MediaQuery.of(context).size.height/2,
+              height: 50,
               width: MediaQuery.of(context).size.width/1.10,
 child: Column(
   children: [
     Row(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 10.0,left: 20.0,),
+            padding: const EdgeInsets.only(top: 20.0,left: 20.0,),
             child: Text('Pay Period :',style: TextStyle(fontSize: 16,color: Colors.black),),
           ),
           SizedBox(width: 5,),
           Padding(
-            padding: const EdgeInsets.only(top: 10.0),
+                padding: const EdgeInsets.only(top: 20.0),
             child: Text(' 01 Mar 2021-10 Mar 2021',style: TextStyle(fontSize: 17,color: Colors.black,fontWeight: FontWeight.bold),),
           ),
         ],
     ),
-               SizedBox(height: 10,),
+               SizedBox(height: 20,),
                   Container(
                      height: MediaQuery.of(context).size.height/3,
                      width: MediaQuery.of(context).size.width,

@@ -22,6 +22,13 @@ import 'package:ibafass/view/employees/leave/leaves.dart';
 import 'package:ibafass/view/employees/schedule.dart';
 import 'package:ibafass/view/homepage.dart';
 import 'package:ibafass/view/kpi.dart';
+import 'package:ibafass/view/loginscreens/forgotpassword.dart';
+import 'package:ibafass/view/loginscreens/forgotphone.dart/forgotphonen.dart';
+import 'package:ibafass/view/loginscreens/forgotphone.dart/verifyphone.dart';
+import 'package:ibafass/view/loginscreens/newpassword.dart';
+import 'package:ibafass/view/loginscreens/signin.dart';
+import 'package:ibafass/view/loginscreens/signup.dart';
+import 'package:ibafass/view/loginscreens/verifyemail.dart';
 import 'package:ibafass/view/myprofile/myprofile.dart';
 import 'package:ibafass/view/myworks.dart';
 import 'package:ibafass/view/notification/notificationall.dart';
@@ -83,6 +90,6 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         debugShowCheckedModeBanner: false,
-        home: MenuBar());
+        home: Signin());
   }
 }

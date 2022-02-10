@@ -13,22 +13,61 @@ class _SalaryDetailsState extends State<SalaryDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor('#F0F4FD'),
-      appBar:PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
-        child: AppBar(
-          elevation: 0.0,
-          backgroundColor: Colors.white,
-          title: Text('Salary Details',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
-          centerTitle: true,
-          leading: Icon(Icons.arrow_back,color: Colors.black,),
-          actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.settings,color: Colors.black,)),
-          ],
-        ),
+      appBar:AppBar(
+        elevation: 0.0,
+        backgroundColor: Colors.white,
+        title: Text('Salary Details',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+        centerTitle: true,
+        leading: Icon(Icons.arrow_back,color: Colors.black,),
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.settings,color: Colors.black,)),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Container(
+              decoration:BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(40.0),bottomLeft: Radius.circular(40.0)),
+              ),
+              height: MediaQuery.of(context).size.height/7,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20,right: 20,top: 10),
+                        child: CircleAvatar(
+                            radius: 35,
+                            child:ClipOval(
+                              child: Image(
+                                image: AssetImage('assets/directory/profilepicture.jpg'),
+                                height: 70,
+                                width: 70,
+                              ),
+                            )
+                        ),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Welcome Mani',
+                            style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,color: HexColor('#0F46B3')),),
+                          SizedBox(height: 5,),
+                          Text('Good Morning',style: TextStyle(fontSize: 14,color: Colors.black),)
+                        ],
+                      )
+                    ],
+
+                  )
+
+                ],
+              ),
+
+            ),
             SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

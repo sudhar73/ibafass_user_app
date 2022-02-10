@@ -17,51 +17,72 @@ class KpiState extends State<Kpi> {
     final myWidth = MediaQuery.of(context).size.width;
     // TODO: implement build
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
-        child: AppBar(
-          backgroundColor: HexColor('0F46B3'),
-          elevation: 0.0,
-          leading: Icon(
-            Icons.arrow_back,
-            size: 20,
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: HexColor('0F46B3'),
+        elevation: 0.0,
+        leading: Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+        ),
+        title: Text(
+          'KPI',
+          style: TextStyle(
+
+              fontWeight: FontWeight.bold,
+              color: Colors.white),
+        ),
+        centerTitle: true,
+        actions: [
+          Icon(
+            Icons.more_vert,
             color: Colors.white,
           ),
-          title: Text(
-            'KPI',
-            style: TextStyle(
-                fontSize: 16.6,
-                fontWeight: FontWeight.bold,
-                color: Colors.white),
-          ),
-          centerTitle: true,
-          actions: [
-            Icon(
-              Icons.more_vert,
-              size: 20,
-              color: Colors.white,
-            ),
-            SizedBox(
-              width: 20,
-            )
-          ],
-        ),
+
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Row(
-              children: [
-                Container(
-                  height: myHeight / 4,
-                  width: myWidth,
-                  decoration: BoxDecoration(
-                      color: HexColor('0F46B3'),
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(50),
-                          bottomRight: Radius.circular(50))),
-                ),
-              ],
+            Container(
+              decoration:BoxDecoration(
+                color: HexColor('0F46B3'),
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(40.0),bottomLeft: Radius.circular(40.0)),
+              ),
+              height: MediaQuery.of(context).size.height/7,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20,right: 20,top: 5),
+                        child: CircleAvatar(
+                            radius: 35,
+                            child:ClipOval(
+                              child: Image(
+                                image: AssetImage('assets/directory/profilepicture.jpg'),
+                                height: 70,
+                                width: 70,
+                              ),
+                            )
+                        ),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Mani',style: TextStyle(fontSize: 32,fontWeight:FontWeight.bold,color: Colors.white),),
+                          Text('UI Designer',style: TextStyle(fontSize: 12,color: Colors.white),)
+                        ],
+                      )
+                    ],
+
+                  )
+
+                ],
+              ),
+
             ),
             SizedBox(
               height: 10,
@@ -125,7 +146,6 @@ class KpiState extends State<Kpi> {
                     height: 20,
                   ),
                   Container(
-                    height: 590,
                     width: MediaQuery.of(context).size.width - 50,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),

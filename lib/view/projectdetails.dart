@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 class ProjectDetails extends StatefulWidget {
   const ProjectDetails({Key? key}) : super(key: key);
 
@@ -65,11 +66,10 @@ class _ProjectDetailsState extends State<ProjectDetails> {
         child: Text(' OS IT COMPANY',style: TextStyle(fontSize:17,color:HexColor('#595959')),),
 
           ),
-
         SizedBox(width: 30),
-
-        Text('10 Task',style: TextStyle(fontSize: 12,color: HexColor('#9C59D2')),)
-
+            Icon(Icons.work_outline,color: HexColor('#9C59D2'),size: 15,),
+             SizedBox(width: 5,),
+             Text('10 Task',style: TextStyle(fontSize: 12,color: HexColor('#9C59D2')),),
           ],
 
         ),
@@ -251,6 +251,18 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                       ),
 
                     ),
+                    SizedBox(width: 5,),
+                    SizedBox(
+                      height: 40.0,
+                      width: 40.0,
+                      child: FittedBox(
+                        child: FloatingActionButton(
+                          backgroundColor: HexColor('#9C59D2'),
+                          child: Icon(Icons.add),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
 
                   ],
 
@@ -274,48 +286,22 @@ class _ProjectDetailsState extends State<ProjectDetails> {
 
                   padding: const EdgeInsets.only(left: 20.0,),
 
-                  child: Text('Team Members:',style: TextStyle(color:Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
-
+                  child: Text('Progress :',style: TextStyle(color:Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
                 ),
-
-                Padding(
-
-                  padding: const EdgeInsets.only(left: 20.0,),
-
-                  child: Text('Team Members:',style: TextStyle(color:Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
-
+              Padding(
+                padding: const EdgeInsets.only(top: 20.0,left: 20.0),
+                child: CircularPercentIndicator(radius: 40.0,
+                  backgroundColor: HexColor('#F8F1FF'),
+                  progressColor: HexColor('#9C59D2'),
+                  lineWidth: 5.0,
+                  percent: 0.5,
+                  circularStrokeCap: CircularStrokeCap.round,
+                  center: Text('50%',style: TextStyle(color: Colors.black,fontSize: 14),),
                 ),
-
-                Padding(
-
-                  padding: const EdgeInsets.only(left: 20.0,),
-
-                  child: Text('Team Members:',style: TextStyle(color:Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
-
-                ),
-
-                Padding(
-
-                  padding: const EdgeInsets.only(left: 20.0,),
-
-                  child: Text('Team Members:',style: TextStyle(color:Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
-
-                ),
-
-
-
-                Padding(
-
-                  padding: const EdgeInsets.only(left: 20.0,),
-
-                  child: Text('Team Members:',style: TextStyle(color:Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
-
-                ),
-
+              ),
+              SizedBox(height: 30,),
             ],
-
             ),
-
         ),
       )
     );

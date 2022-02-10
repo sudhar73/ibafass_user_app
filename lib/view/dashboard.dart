@@ -19,34 +19,35 @@ class _DashboardState extends State<Dashboard> {
     // TODO: implement build
     return Scaffold(
       backgroundColor: HexColor('F0F4FD'),
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
-        child: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0.0,
-          title: Text(
-            'Dashboard',
-            style: TextStyle(
-                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
-          ),
-          actions: [
-            CircleAvatar(
-              backgroundImage: AssetImage('assets/user-04.jpg'),
-            ),
-            Icon(
-              Icons.arrow_drop_down,
-              size: 20,
-              color: Colors.black,
-            ),
-            SizedBox(
-              width: 10,
-            )
-          ],
-        ),
-      ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Container(
+              color: Colors.white,
+              child: Row(
+                children: [
+                  SizedBox(height:myheight/12 ,),
+            Padding(
+            padding: const EdgeInsets.only(top: 10,left: 20),
+        child: Text(
+          'Dashboard',
+          style: TextStyle(
+              fontSize: 23, fontWeight: FontWeight.bold, color: Colors.black),
+        ),
+      ),
+        Spacer(),
+
+        Padding(
+          padding: const EdgeInsets.only(right: 20,top: 10),
+          child: CircleAvatar(
+            radius: 25,
+            backgroundImage: AssetImage('assets/dashboard/profilepic.jpg',),
+          ),
+        ),
+      ]
+              ),
+            ),
             Container(
               height: myheight / 3,
               width: mywidth,
@@ -75,13 +76,13 @@ class _DashboardState extends State<Dashboard> {
                     show: false,
                   ),
                   sectionsSpace: 0,
-                  centerSpaceRadius: 30,
+                  centerSpaceRadius: 40,
                   sections: getSections(),
                 ),
               ),
             ),
             SizedBox(
-              height: 30.0,
+              height: 20.0,
             ),
             Column(
               children: [
@@ -91,7 +92,7 @@ class _DashboardState extends State<Dashboard> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   height: 70,
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery.of(context).size.width/1.15,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,7 +107,7 @@ class _DashboardState extends State<Dashboard> {
                           height: 50,
                           width: 50,
                           child: Image(
-                            image: AssetImage('assets/Group 103.png'),
+                            image: AssetImage('assets/dashboard/clients.png'),
                           ),
                         ),
                       ),
@@ -147,7 +148,7 @@ class _DashboardState extends State<Dashboard> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   height: 70,
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery.of(context).size.width/1.15,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -163,7 +164,7 @@ class _DashboardState extends State<Dashboard> {
                           width: 50,
                           child: Image(
                             image: AssetImage(
-                                'assets/3533402_business_management_plan_project_report_icon.png'),
+                                'assets/dashboard/projects.png'),
                           ),
                         ),
                       ),
@@ -204,7 +205,7 @@ class _DashboardState extends State<Dashboard> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   height: 70,
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery.of(context).size.width/1.15,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -220,7 +221,7 @@ class _DashboardState extends State<Dashboard> {
                           width: 50,
                           child: Image(
                             image: AssetImage(
-                                'assets/2620515_employee_job_laptop_seeker_unemployee_icon.png'),
+                                'assets/dashboard/employees.png'),
                           ),
                         ),
                       ),
@@ -261,7 +262,7 @@ class _DashboardState extends State<Dashboard> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   height: 70,
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery.of(context).size.width/1.15,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -277,7 +278,7 @@ class _DashboardState extends State<Dashboard> {
                           width: 50,
                           child: Image(
                             image: AssetImage(
-                                'assets/4172166_bill_cash_money_payment_receipt_icon.png'),
+                                'assets/dashboard/invoices.png'),
                           ),
                         ),
                       ),

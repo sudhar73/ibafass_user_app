@@ -38,7 +38,7 @@ class _PayrollState extends State<Payroll> {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 20.0,right: 20,top: 10),
+                        padding: const EdgeInsets.only(left: 20.0,right: 20,top: 5),
                         child: CircleAvatar(
                             radius: 35,
                             child:ClipOval(
@@ -54,7 +54,9 @@ class _PayrollState extends State<Payroll> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Welcome Mani',style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,color: HexColor('#0F46B3')),),
+                          Text('Welcome Mani',
+                            style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,color: HexColor('#0F46B3')),),
+                          SizedBox(height: 5,),
                           Text('Good Morning',style: TextStyle(fontSize: 14,color: Colors.black),)
                         ],
                       )

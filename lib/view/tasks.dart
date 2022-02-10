@@ -55,7 +55,6 @@ class _TasksState extends State<Tasks> {
           child: Column
             (
             children: [
-
               Container(
                  height: 70,
                  width: MediaQuery.of(context).size.width,
