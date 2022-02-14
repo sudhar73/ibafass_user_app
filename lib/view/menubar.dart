@@ -87,7 +87,7 @@ class _MenuBarState extends State<MenuBar> {
       ),
       body: SingleChildScrollView(
         child: Column(children: [
-          SizedBox(height: 10,),
+          SizedBox(height: 20),
           Row(
             children: [
               Padding(
@@ -108,9 +108,9 @@ class _MenuBarState extends State<MenuBar> {
               ),
             ],
           ),
-          SizedBox(height: 5,),
+
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 5),
             child: Divider(
               thickness: 1,
               color: Colors.grey,

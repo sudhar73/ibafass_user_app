@@ -29,7 +29,11 @@ class _NotificationSettingsState extends State<NotificationSettings> {
               IconButton(onPressed: () {}, icon: Icon(Icons.more_vert))
             ],
             leading: IconButton(
-              onPressed: () {},
+              onPressed: () {
+
+                  Navigator.of(context).pop();
+
+              },
               icon: Icon(
                 Icons.arrow_back,
 

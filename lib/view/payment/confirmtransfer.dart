@@ -13,53 +13,35 @@ class _ConfirmTransferState extends State<ConfirmTransfer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: HexColor('#0F46B3'),
+        elevation: 0.0,
+        title: Text('Confirm Transfer',style: TextStyle(fontWeight: FontWeight.bold,
+            fontSize: 20,
+            color: Colors.white),),
+        leading:IconButton(
+          onPressed: (){
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back_sharp,
+            color: Colors.white,
+          ),
+        ) ,
+        actions: [
+          Icon(
+            Icons.more_vert,
+            color: Colors.white,
+          ),
+        ],
+      ),
       body: Stack(
         children: [
           Container(
             child: Column(
               children: [
-                SizedBox(
-                  height: 40,
-                ),
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: Row(
-                    children: [
-                      Flexible(
-                        flex: 0,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
-                          child: Icon(
-                            Icons.arrow_back_sharp,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      Flexible(
-                        flex: 2,
-                        child: Center(
-                          child: Text(
-                            'Confirm Transfer',
-                            style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                        ),
-                      ),
-                      Flexible(
-                        flex: 0,
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 10.0),
-                          child: Icon(
-                            Icons.more_vert,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+
                 SizedBox(
                   height: 30,
                 ),
@@ -118,7 +100,7 @@ class _ConfirmTransferState extends State<ConfirmTransfer> {
                   ),
                 ),
                 Container(
-                  color: Colors.grey,
+                color: Color(0xFF0E3311).withOpacity(0.1),
                   height: 50,
                   child: Row(
                     children: const [

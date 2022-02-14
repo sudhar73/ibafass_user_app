@@ -36,7 +36,11 @@ class _NotificationsState extends State<Notifications> with TickerProviderStateM
               MaterialPageRoute(builder: (context) => NotificationSettings(),));
           },icon: Icon(Icons.settings))],
           leading: IconButton(
-            onPressed: () {},
+
+              onPressed: () {
+                Navigator.of(context).pop();
+
+            },
             icon: Icon(
               Icons.arrow_back,
             ),

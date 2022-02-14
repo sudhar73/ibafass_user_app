@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ibafass/view/payment/creditcard.dart';
 import 'package:ibafass/view/payment/paymentone.dart';
-
+import 'package:ibafass/view/payment/upi.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
 
@@ -14,75 +15,54 @@ class _PaymentState extends State<Payment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(children: [
-      Column(children: [
-        Container(
-          child: Column(children: [
-            SizedBox(
-              height: 40,
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: HexColor('#0F46B3'),
+          elevation: 0.0,
+          title: Text('Select Method',style: TextStyle(fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: Colors.white),),
+          leading:IconButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_sharp,
+              color: Colors.white,
             ),
-            Align(
-              alignment: Alignment.topCenter,
-              child: Row(
-                children: [
-                  Flexible(
-                    flex: 0,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Icon(
-                        Icons.arrow_back_sharp,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Flexible(
-                    flex: 2,
-                    child: Center(
-                      child: Text(
-                        'Select Method',
-                        style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ),
-                  ),
-                  Flexible(
-                    flex: 0,
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 10.0),
-                      child: Icon(
-                        Icons.more_vert,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+          ) ,
+          actions: [
+            Icon(
+              Icons.more_vert,
+              color: Colors.white,
             ),
-            SizedBox(
-              height: 50,
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.only(left: 20.0, top: 10.0, bottom: 20.0),
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  'Select top up methods',
-                  style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
-              ),
-            ),
-          ]),
-          color: HexColor('#0F46B3'),
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
+          ],
         ),
-      ]),
+        body: Stack(children: [
+      Container(
+        child: Column(children: [
+          SizedBox(
+            height: 50,
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.only(left: 20.0, top: 10.0, bottom: 20.0),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                'Select top up methods',
+                style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+            ),
+          ),
+        ]),
+        color: HexColor('#0F46B3'),
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+      ),
       Positioned(
         bottom: 0,
         child: Container(
@@ -215,7 +195,14 @@ class _PaymentState extends State<Payment> {
                     ),
                     Spacer(),
                     IconButton(
-                        onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
+                        onPressed: () {
+                          showMaterialModalBottomSheet(
+                            shape:RoundedRectangleBorder( borderRadius:
+                            BorderRadius.only(topLeft: Radius.circular(40),topRight: Radius.circular(40)),),
+                            context: context,
+                            builder: (context) =>UPI()
+                          );
+                        }, icon: Icon(Icons.arrow_forward_ios)),
                   ]),
                 ),
               ),

@@ -20,7 +20,7 @@ class _PaymentOneState extends State<PaymentOne> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 40,
+                    height: 50,
                   ),
                   Align(
                     alignment: Alignment.topCenter,
@@ -29,10 +29,15 @@ class _PaymentOneState extends State<PaymentOne> {
                         Flexible(
                           flex: 0,
                           child: Padding(
-                            padding: const EdgeInsets.only(left: 10.0),
-                            child: Icon(
-                              Icons.arrow_back_sharp,
-                              color: Colors.white,
+                            padding: const EdgeInsets.only(left:10.0),
+                            child: IconButton(
+                              onPressed: (){
+                                Navigator.pop(context);
+                              },
+                              icon: Icon(
+                                Icons.arrow_back_sharp,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
@@ -51,7 +56,7 @@ class _PaymentOneState extends State<PaymentOne> {
                         Flexible(
                           flex: 0,
                           child: Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
+                            padding: const EdgeInsets.only(right:10.0),
                             child: Icon(
                               Icons.more_vert,
                               color: Colors.white,

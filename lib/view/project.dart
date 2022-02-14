@@ -17,13 +17,17 @@ class _ProjectsState extends State<Projects> {
     return Scaffold(
       backgroundColor: HexColor('#0F46B3'),
       appBar:PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
+        preferredSize: Size.fromHeight(70.0),
         child: AppBar(
           elevation: 0.0,
           backgroundColor: HexColor('#0F46B3'),
-          title: Text('Project',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          title: Text('Projects',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
           centerTitle: true,
-          leading: Icon(Icons.arrow_back,color: Colors.white,),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+              icon: Icon(Icons.arrow_back,color: Colors.white,)),
           actions: [
             IconButton(onPressed: (){}, icon: Icon(Icons.more_vert,color: Colors.white,)),
           ],
@@ -44,14 +48,16 @@ class _ProjectsState extends State<Projects> {
                 height: 60,
                 width: MediaQuery.of(context).size.width/1.20,
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.only(left: 10,right: 10),
                   child: TextField(
                     decoration: InputDecoration(
                         labelText: 'Project Name',
                         focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                         enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                        suffixIcon: Padding(
-                          padding: const EdgeInsets.all(4.0),
+                        suffixIcon: Container(
+                          decoration: BoxDecoration( color: HexColor('E2E5FC'),borderRadius: BorderRadius.all(Radius.circular(10))),
+                          height: 5,
+                            width: 5,
                           child: IconButton(
                               onPressed: (){},
                               icon: Icon(Icons.search,color: Colors.black,)
@@ -61,7 +67,7 @@ class _ProjectsState extends State<Projects> {
                   ),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 20,),
               InkWell(
                 onTap: (){
                   Navigator.push(
@@ -71,13 +77,16 @@ class _ProjectsState extends State<Projects> {
 
                 },
                 child: Container(
-                  height: MediaQuery.of(context).size.height/3.5,
+
                   width: MediaQuery.of(context).size.width/1.20,
                   decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
+                      SizedBox(height: 5,),
                       Row(
+
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 20.0),
@@ -111,7 +120,7 @@ class _ProjectsState extends State<Projects> {
                           Spacer(),
                           Padding(
                             padding: const EdgeInsets.only(top: 5.0,right: 20.0),
-                            child: CircularPercentIndicator(radius: 40.0,
+                            child: CircularPercentIndicator(radius: 30.0,
                               backgroundColor: HexColor('#F8F1FF'),
                               progressColor: HexColor('#9C59D2'),
                               lineWidth: 5.0,
@@ -144,7 +153,8 @@ class _ProjectsState extends State<Projects> {
                           ),
 
                         ],
-                      )
+                      ),
+                      SizedBox(height: 20,)
                     ],
                   ),
                 ),
@@ -156,6 +166,8 @@ class _ProjectsState extends State<Projects> {
                 decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+
+
                   children: [
                     Row(
 

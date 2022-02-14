@@ -17,17 +17,23 @@ class _MyWorksState extends State<MyWorks> {
     return Scaffold(
       backgroundColor: color,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70.0),
+        preferredSize: Size.fromHeight(80.0),
         child: AppBar(
           elevation: 0.0,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadiusDirectional.only(bottomEnd: Radius.circular(35.0),bottomStart: Radius.circular(35.0))),
+          shape: RoundedRectangleBorder(borderRadius:
+          BorderRadiusDirectional.only(bottomEnd: Radius.circular(50.0),bottomStart: Radius.circular(50.0))),
             backgroundColor: Colors.white,
 
-            title: Text('My works',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black),),
-            leading: Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-                         ),
+            title: Text('My Works',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black),),
+            leading: IconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              icon: Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+              ),
+            ),
             actions: [
               Padding(
                 padding: const EdgeInsets.only(top: 10,),
@@ -59,52 +65,26 @@ class _MyWorksState extends State<MyWorks> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20,),
-            Center(
-              child: Container(decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
 
-                height: 60,
-                width: MediaQuery.of(context).size.width/1.10,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        labelText: 'Project Name',
-                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                        enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                        suffixIcon: Padding(
-                          padding: const EdgeInsets.all(4.0),
-                          child: IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.search,color: Colors.black,)
-                          ),
-                        )
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 10,),
+            SizedBox(height: 20,),
             Row(
-                children: [Padding(
+
+              children: [
+                Padding(
                   padding: const EdgeInsets.only(left: 20.0),
-                  child: Text('My work orders',style: TextStyle(fontSize: 18),),
+                  child: Text('My Work Orders',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                 ),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: SizedBox(
-                      height: 35.0,
-                      width: 35.0,
-                      child: FittedBox(
-                        child: FloatingActionButton(
-                          backgroundColor: HexColor('#0F46B3'),
-                          child: Icon(Icons.add),
-                          onPressed: () {},
-                        ),
-                      ),
-                    ),
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.only(right: 20),
+                  child: IconButton(
+
+                    icon:Icon(Icons.search,color: Colors.black,), onPressed: () {  },
                   ),
-                ]),
+                )
+              ],
+            ),
+            SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -153,12 +133,12 @@ class _MyWorksState extends State<MyWorks> {
                 ),
               ],
             ),
-            SizedBox(height: 10,),
+            SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.only(left: 20.0,),
               child: Text('Team Members:',style: TextStyle(color:Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
             ),
-            SizedBox(height: 10,),
+            SizedBox(height: 15,),
             Row(
               children: [
                 SizedBox(width: 20,),
@@ -167,25 +147,25 @@ class _MyWorksState extends State<MyWorks> {
                   child:ClipOval(child: Image(image: AssetImage('assets/directory/profilepicture.jpg'),height: 60,width: 60,fit: BoxFit.fill,),
                   ),
                 ),
-                SizedBox(width: 5,),
+                SizedBox(width: 10,),
                 CircleAvatar(
                   radius: 30,
                   child:ClipOval(child: Image(image: AssetImage('assets/directory/profilepicture.jpg'),height: 60,width: 60,fit: BoxFit.fill,),
                   ),
                 ),
-                SizedBox(width: 5,),
+                SizedBox(width: 10,),
                 CircleAvatar(
                   radius: 30,
                   child:ClipOval(child: Image(image: AssetImage('assets/directory/profilepicture.jpg'),height: 60,width: 60,fit: BoxFit.fill,)
                   ),
                 ),
-                SizedBox(width: 5,),
+                SizedBox(width: 10,),
                 CircleAvatar(
                   radius: 30,
                   child:ClipOval(child: Image(image: AssetImage('assets/directory/profilepicture.jpg'),height: 60,width: 60,fit: BoxFit.fill,),
                   ),
                 ),
-                SizedBox(width: 5,),
+                SizedBox(width: 10,),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: SizedBox(
@@ -204,29 +184,193 @@ class _MyWorksState extends State<MyWorks> {
             ),
             SizedBox(height: 20,),
             Container(
-              height: myheight,
+
               width: mywidth,
               decoration: BoxDecoration(color:Colors.white,
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(40.0),topRight: Radius.circular(40.0))),
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(60.0),topRight: Radius.circular(60.0))),
               child: Column(
                 children: [
-                  SizedBox(height: 20,),
+                  SizedBox(height: 25,),
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
+                        padding: const EdgeInsets.only(left: 30.0),
                         child: Text('Recently Assigned',style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
                       ),
                       Spacer(),
                       Padding(
-                        padding: const EdgeInsets.only(right: 20.0),
+                        padding: const EdgeInsets.only(right: 30.0),
                         child: Text('View All',style: TextStyle(color: HexColor('#0F46B3'),fontSize: 16,fontWeight: FontWeight.bold),),
                       )
 
                     ],
                   ),
                   SizedBox(height: 40,),
-                  Stack(
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Stack(
+                      overflow: Overflow.visible,
+                      children: [
+                        Container(
+                          height: myheight/2.5,
+                          width: mywidth/1.10,
+                          decoration: BoxDecoration(
+                              boxShadow:[BoxShadow(blurRadius: 4.0,color: Colors.grey,offset: Offset(0,3.0))],color: Colors.white,
+                              borderRadius: BorderRadius.all(Radius.circular(15.0))),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 50,),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20.0),
+                                child: Text('Webpage Design',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
+
+                              ),
+                              SizedBox(height: 10,),
+                               Padding(
+                                 padding: const EdgeInsets.only(left: 20.0),
+                                 child: Container(
+                                   width: mywidth/1.4,
+                                   child: Text("Lorem ipsum is simply dummy text of the printing and type setting industry",
+                                     style: TextStyle(color: Colors.black,fontSize: 12,),),
+                                 ),
+                               ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 10.0),
+                                child: Divider(
+                                  thickness: 1,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              Row(
+
+                                children: [
+                                  Column( crossAxisAlignment:CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 20.0),
+                                        child: Text('Project Name:',style: TextStyle(color: Colors.black,fontSize: 14,),),
+                                      ),
+                                      SizedBox(height: 5,),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 20.0),
+                                        child: Text('Webpage Design',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 20.0,top: 20.0),
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          children: [
+                                            CircleAvatar(
+                                              radius: 25,
+                                              child:ClipOval(child:
+                                              Image(image: AssetImage('assets/directory/profilepicture.jpg'),
+                                                height: 50,width: 50,fit: BoxFit.fill,),
+                                              ),
+                                            ),
+
+                                            Column(
+                                              mainAxisAlignment: MainAxisAlignment.start,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Padding(
+                                                  padding: const EdgeInsets.only(left: 10.0),
+                                                  child: Text('ASSIGNEE',style: TextStyle(color: Colors.black,fontSize: 14),),
+                                                ),
+                                                SizedBox(height: 5,),
+                                                Padding(
+                                                  padding: const EdgeInsets.only(left: 10.0),
+                                                  child: Text('ARUN KUMAR',style: TextStyle(color: HexColor('#0F46B3'),fontSize: 14,),),
+                                                ),
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  Column( crossAxisAlignment:CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 20.0),
+                                        child: Text('Time Duration:',style: TextStyle(color: Colors.black,fontSize: 14,),),
+
+                                      ),
+                                      SizedBox(height: 5,),
+                                      Row(
+
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 15.0),
+                                            child: Icon(Icons.timer,color: Colors.black,size: 25,),
+                                          ),
+                                          SizedBox(width: 5,),
+                                          Text('10 A.M-5 P.M',style: TextStyle(color: HexColor('#0F46B3'),fontSize: 14,fontWeight: FontWeight.bold),)
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 20.0,top: 20.0),
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          children: [
+                                            CircleAvatar(
+                                              radius: 25,
+                                              child:ClipOval(child: Image(image: AssetImage('assets/directory/profilepicture.jpg'),height: 50,width: 50,fit: BoxFit.fill,),
+                                              ),
+                                            ),
+
+                                            Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Padding(
+                                                  padding: const EdgeInsets.only(left: 10.0),
+                                                  child: Text('CREATED BY',style: TextStyle(color: Colors.black,fontSize: 14),),
+                                                ),
+                                                SizedBox(height: 5,),
+                                                Padding(
+                                                  padding: const EdgeInsets.only(left: 10.0),
+                                                  child: Text('ARUN KUMAR',style: TextStyle(color: HexColor('#0F46B3'),fontSize: 14,),),
+                                                ),
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        Positioned(
+                          top: -20,
+                            left: 20,
+                            child: Container(
+                          height: 50,
+                          width: mywidth/3,
+                          decoration: BoxDecoration(color:HexColor('#0F46B3'),borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                              child: Center(child: Text('In Process',style: TextStyle(color: Colors.white,fontSize: 20),)),
+                        )),
+                        Positioned(
+                          left: 0,
+
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 20.0,bottom: 20.0),
+                              child: Container(
+                                height: myheight/3,
+                                width: 3,
+                                color: HexColor('#0F46B3'),
+                              ),
+                            )
+                        )
+                      ],
+                    ),
+                  ),
+                 SizedBox(height: 40,),
+                 Stack(
                     overflow: Overflow.visible,
                     children: [
                       Container(
@@ -241,14 +385,18 @@ class _MyWorksState extends State<MyWorks> {
                             SizedBox(height: 50,),
                             Padding(
                               padding: const EdgeInsets.only(left: 20.0),
-                              child: Text('WebPage Design',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
+                              child: Text('Webpage Design',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
 
                             ),
                             SizedBox(height: 10,),
-                             Padding(
-                               padding: const EdgeInsets.only(left: 20.0),
-                               child: Text("Lorem ipsum is simply dummy text of the printing and type setting industry",style: TextStyle(color: Colors.black,fontSize: 12,),),
-                             ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20.0),
+                              child: Container(
+                                width: mywidth/1.4,
+                                child: Text("Lorem ipsum is simply dummy text of the printing and type setting industry",
+                                  style: TextStyle(color: Colors.black,fontSize: 12,),),
+                              ),
+                            ),
                             Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 10.0),
                               child: Divider(
@@ -268,7 +416,7 @@ class _MyWorksState extends State<MyWorks> {
                                     SizedBox(height: 5,),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 20.0),
-                                      child: Text('WebPage Design',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
+                                      child: Text('Webpage Design',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 20.0,top: 20.0),
@@ -278,21 +426,24 @@ class _MyWorksState extends State<MyWorks> {
                                         children: [
                                           CircleAvatar(
                                             radius: 25,
-                                            child:ClipOval(child: Image(image: AssetImage('assets/directory/profilepicture.jpg'),height: 50,width: 50,fit: BoxFit.fill,),
+                                            child:ClipOval(child:
+                                            Image(image: AssetImage('assets/directory/profilepicture.jpg'),
+                                              height: 50,width: 50,fit: BoxFit.fill,),
                                             ),
                                           ),
 
                                           Column(
+                                            mainAxisAlignment: MainAxisAlignment.start,
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsets.only(left: 20.0),
-                                                child: Text('ASSIGNE',style: TextStyle(color: Colors.black,fontSize: 14),),
+                                                padding: const EdgeInsets.only(left: 10.0),
+                                                child: Text('ASSIGNEE',style: TextStyle(color: Colors.black,fontSize: 14),),
                                               ),
                                               SizedBox(height: 5,),
                                               Padding(
-                                                padding: const EdgeInsets.only(left: 20.0),
-                                                child: Text('ARUN KUMAR',style: TextStyle(color: HexColor('#0F46B3'),fontSize: 14,),),
+                                                padding: const EdgeInsets.only(left: 10.0),
+                                                child: Text('ARUN KUMAR',style: TextStyle(color: HexColor('#007614'),fontSize: 14,),),
                                               ),
                                             ],
                                           )
@@ -317,7 +468,7 @@ class _MyWorksState extends State<MyWorks> {
                                           child: Icon(Icons.timer,color: Colors.black,size: 25,),
                                         ),
                                         SizedBox(width: 5,),
-                                        Text('10 A.M-5 P.M',style: TextStyle(color: HexColor('#0F46B3'),fontSize: 14,fontWeight: FontWeight.bold),)
+                                        Text('10 A.M-5 P.M',style: TextStyle(color: HexColor('#007614'),fontSize: 14,fontWeight: FontWeight.bold),)
                                       ],
                                     ),
                                     Padding(
@@ -336,13 +487,13 @@ class _MyWorksState extends State<MyWorks> {
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsets.only(left: 20.0),
+                                                padding: const EdgeInsets.only(left: 10.0),
                                                 child: Text('CREATED BY',style: TextStyle(color: Colors.black,fontSize: 14),),
                                               ),
                                               SizedBox(height: 5,),
                                               Padding(
-                                                padding: const EdgeInsets.only(left: 20.0),
-                                                child: Text('ARUN KUMAR',style: TextStyle(color: HexColor('#0F46B3'),fontSize: 14,),),
+                                                padding: const EdgeInsets.only(left: 10.0),
+                                                child: Text('ARUN KUMAR',style: TextStyle(color: HexColor('#007614'),fontSize: 14,),),
                                               ),
                                             ],
                                           )
@@ -357,16 +508,16 @@ class _MyWorksState extends State<MyWorks> {
                         ),
                       ),
                       Positioned(
-                        top: -20,
+                          top: -20,
                           left: 20,
                           child: Container(
-                        height: 50,
-                        width: mywidth/3,
-                        decoration: BoxDecoration(color:HexColor('#0F46B3'),borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                            child: Center(child: Text('In process',style: TextStyle(color: Colors.white,fontSize: 20),)),
-                      )),
+                            height: 50,
+                            width: mywidth/3,
+                            decoration: BoxDecoration(color:HexColor('#007614'),borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                            child: Center(child: Text('In Process',style: TextStyle(color: Colors.white,fontSize: 20),)),
+                          )),
                       Positioned(
-                        left: 0,
+                          left: 0,
 
                           child: Padding(
                             padding: const EdgeInsets.only(top: 20.0,bottom: 20.0),
@@ -379,6 +530,168 @@ class _MyWorksState extends State<MyWorks> {
                       )
                     ],
                   ),
+                  SizedBox(height: 40,),
+                  Stack(
+                    overflow: Overflow.visible,
+                    children: [
+                      Container(
+                        height: myheight/2.5,
+                        width: mywidth/1.10,
+                        decoration: BoxDecoration(
+                            boxShadow:[BoxShadow(blurRadius: 4.0,color: Colors.grey,offset: Offset(0,3.0))],color: Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(15.0))),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 50,),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20.0),
+                              child: Text('Webpage Design',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
+
+                            ),
+                            SizedBox(height: 10,),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20.0),
+                              child: Container(
+                                width: mywidth/1.4,
+                                child: Text("Lorem ipsum is simply dummy text of the printing and type setting industry",
+                                  style: TextStyle(color: Colors.black,fontSize: 12,),),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 10.0),
+                              child: Divider(
+                                thickness: 1,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            Row(
+
+                              children: [
+                                Column( crossAxisAlignment:CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 20.0),
+                                      child: Text('Project Name:',style: TextStyle(color: Colors.black,fontSize: 14,),),
+                                    ),
+                                    SizedBox(height: 5,),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 20.0),
+                                      child: Text('Webpage Design',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 20.0,top: 20.0),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          CircleAvatar(
+                                            radius: 25,
+                                            child:ClipOval(child:
+                                            Image(image: AssetImage('assets/directory/profilepicture.jpg'),
+                                              height: 50,width: 50,fit: BoxFit.fill,),
+                                            ),
+                                          ),
+
+                                          Column(
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsets.only(left: 10.0),
+                                                child: Text('ASSIGNEE',style: TextStyle(color: Colors.black,fontSize: 14),),
+                                              ),
+                                              SizedBox(height: 5,),
+                                              Padding(
+                                                padding: const EdgeInsets.only(left: 10.0),
+                                                child: Text('ARUN KUMAR',style: TextStyle(color: HexColor('#DB002C'),fontSize: 14,),),
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Column( crossAxisAlignment:CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 20.0),
+                                      child: Text('Time Duration:',style: TextStyle(color: Colors.black,fontSize: 14,),),
+
+                                    ),
+                                    SizedBox(height: 5,),
+                                    Row(
+
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 15.0),
+                                          child: Icon(Icons.timer,color: Colors.black,size: 25,),
+                                        ),
+                                        SizedBox(width: 5,),
+                                        Text('10 A.M-5 P.M',style: TextStyle(color: HexColor('#DB002C'),fontSize: 14,fontWeight: FontWeight.bold),)
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 20.0,top: 20.0),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          CircleAvatar(
+                                            radius: 25,
+                                            child:ClipOval(child: Image(image: AssetImage('assets/directory/profilepicture.jpg'),height: 50,width: 50,fit: BoxFit.fill,),
+                                            ),
+                                          ),
+
+                                          Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsets.only(left: 10.0),
+                                                child: Text('CREATED BY',style: TextStyle(color: Colors.black,fontSize: 14),),
+                                              ),
+                                              SizedBox(height: 5,),
+                                              Padding(
+                                                padding: const EdgeInsets.only(left: 10.0),
+                                                child: Text('ARUN KUMAR',style: TextStyle(color: HexColor('#DB002C'),fontSize: 14,),),
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                          top: -20,
+                          left: 20,
+                          child: Container(
+                            height: 50,
+                            width: mywidth/3,
+                            decoration: BoxDecoration(color:HexColor('#DB002C'),borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                            child: Center(child: Text('In Process',style: TextStyle(color: Colors.white,fontSize: 20),)),
+                          )),
+                      Positioned(
+                          left: 0,
+
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 20.0,bottom: 20.0),
+                            child: Container(
+                              height: myheight/3,
+                              width: 3,
+                              color: HexColor('#DB002C'),
+                            ),
+                          )
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 20,),
                 ],
               ),
             ),

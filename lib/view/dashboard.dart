@@ -25,15 +25,19 @@ class _DashboardState extends State<Dashboard> {
           children: [
             Container(
               color: Colors.white,
-              child: Row(
+
+              child: Column(
                 children: [
-                  SizedBox(height:myheight/12 ,),
-            Padding(
+                  SizedBox(height:myheight/19 ,),
+                  Row(
+                    children: [
+
+                                Padding(
             padding: const EdgeInsets.only(top: 10,left: 20),
         child: Text(
           'Dashboard',
           style: TextStyle(
-              fontSize: 23, fontWeight: FontWeight.bold, color: Colors.black),
+                  fontSize: 23, fontWeight: FontWeight.bold, color: Colors.black),
         ),
       ),
         Spacer(),
@@ -46,10 +50,13 @@ class _DashboardState extends State<Dashboard> {
           ),
         ),
       ]
-              ),
+                  ),
+                  SizedBox(height: 10,),
+                ],
+                              ),
             ),
             Container(
-              height: myheight / 3,
+              height: myheight/2.7,
               width: mywidth,
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -57,27 +64,30 @@ class _DashboardState extends State<Dashboard> {
                     bottomLeft: Radius.circular(50),
                     bottomRight: Radius.circular(50)),
               ),
-              child: PieChart(
-                PieChartData(
-                  pieTouchData: PieTouchData(
-                      touchCallback: (FlTouchEvent event, pieTouchResponse) {
-                    setState(() {
-                      if (!event.isInterestedForInteractions ||
-                          pieTouchResponse == null ||
-                          pieTouchResponse.touchedSection == null) {
-                        touchedIndex = -1;
-                        return;
-                      }
-                      touchedIndex =
-                          pieTouchResponse.touchedSection!.touchedSectionIndex;
-                    });
-                  }),
-                  borderData: FlBorderData(
-                    show: false,
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: PieChart(
+                  PieChartData(
+                    pieTouchData: PieTouchData(
+                        touchCallback: (FlTouchEvent event, pieTouchResponse) {
+                      setState(() {
+                        if (!event.isInterestedForInteractions ||
+                            pieTouchResponse == null ||
+                            pieTouchResponse.touchedSection == null) {
+                          touchedIndex = -1;
+                          return;
+                        }
+                        touchedIndex =
+                            pieTouchResponse.touchedSection!.touchedSectionIndex;
+                      });
+                    }),
+                    borderData: FlBorderData(
+                      show: false,
+                    ),
+                    sectionsSpace: 0,
+                    centerSpaceRadius: 40,
+                    sections: getSections(),
                   ),
-                  sectionsSpace: 0,
-                  centerSpaceRadius: 40,
-                  sections: getSections(),
                 ),
               ),
             ),
@@ -325,7 +335,7 @@ class _DashboardState extends State<Dashboard> {
     return List.generate(4, (i) {
       final isTouched = i == touchedIndex;
       final fontSize = isTouched ? 25.0 : 16.0;
-      final radius = isTouched ? 60.0 : 50.0;
+      final radius = isTouched ? 80.0 : 70.0;
       switch (i) {
         case 0:
           return PieChartSectionData(

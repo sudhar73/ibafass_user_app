@@ -17,9 +17,13 @@ class _PayrollState extends State<Payroll> {
         backgroundColor: Colors.white,
         title: Text('Payroll',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
         centerTitle: true,
-        leading: Icon(Icons.arrow_back,color: Colors.black,),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back,color: Colors.black,)),
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.settings,color: Colors.black,)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.settings_outlined,color: Colors.black,)),
         ],
       ),
       body: DefaultTabController(
@@ -31,14 +35,14 @@ class _PayrollState extends State<Payroll> {
                 color: Colors.white,
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(40.0),bottomLeft: Radius.circular(40.0)),
               ),
-              height: MediaQuery.of(context).size.height/7,
+
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 20.0,right: 20,top: 5),
+                        padding: const EdgeInsets.only(left: 20.0,right: 20,bottom: 20),
                         child: CircleAvatar(
                             radius: 35,
                             child:ClipOval(
@@ -50,15 +54,18 @@ class _PayrollState extends State<Payroll> {
                             )
                         ),
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Welcome Mani',
-                            style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,color: HexColor('#0F46B3')),),
-                          SizedBox(height: 5,),
-                          Text('Good Morning',style: TextStyle(fontSize: 14,color: Colors.black),)
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 20),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Welcome Mani',
+                              style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,color: HexColor('#0F46B3')),),
+                            SizedBox(height: 5,),
+                            Text('Good Morning',style: TextStyle(fontSize: 14,color: Colors.black),)
+                          ],
+                        ),
                       )
                     ],
 
@@ -74,21 +81,27 @@ class _PayrollState extends State<Payroll> {
                 width: MediaQuery.of(context).size.width,
                 child: Scaffold(
                   backgroundColor: HexColor('#F0F4FD'),
-                  appBar: AppBar(
-                    automaticallyImplyLeading: false,
-                    centerTitle: true,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15.0),)),
-                    backgroundColor: Colors.white,
-                    title: TabBar(
+                  appBar:
+                  PreferredSize(
+                    preferredSize:Size.fromHeight(70),
 
-                      indicator: UnderlineTabIndicator( borderSide: BorderSide(color: HexColor('#0F46B3'),width: 3.0),
-                          insets: EdgeInsets.only(left: 15,right: 15)
+                    child: AppBar(
+                      automaticallyImplyLeading: false,
+                      centerTitle: true,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15.0),)),
+                      backgroundColor: Colors.white,
+                      title: TabBar(
+                        unselectedLabelColor: Colors.black,
+                        labelColor:HexColor('#0F46B3') ,
+                        indicator: UnderlineTabIndicator( borderSide: BorderSide(color: HexColor('#0F46B3'),width: 3.0),
+                            insets: EdgeInsets.only(left: 15,right: 15)
+                        ),
+                        tabs: [
+                          Tab(child:Text('Addition',style: TextStyle(fontSize:16,fontWeight:FontWeight.bold,),)),
+                          Tab(child:Text('Overtime',style: TextStyle(fontSize:16,fontWeight:FontWeight.bold,),)),
+                          Tab(child:Text('Deduction',style: TextStyle(fontSize:16,fontWeight:FontWeight.bold,),)),
+                        ],
                       ),
-                      tabs: [
-                        Tab(child:Text('Addition',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black),)),
-                        Tab(child:Text('Overtime',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black),)),
-                        Tab(child:Text('Deduction',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black),)),
-                      ],
                     ),
                   ),
                   body: SingleChildScrollView(
@@ -125,7 +138,7 @@ class _PayrollState extends State<Payroll> {
     return Column(
      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 20.0,),
+        SizedBox(height: 30.0,),
         Padding(
           padding: const EdgeInsets.only(left: 20.0),
           child: Text('Name:',style: TextStyle(fontSize:18,color: Colors.black,),),
@@ -137,6 +150,7 @@ class _PayrollState extends State<Payroll> {
             padding: const EdgeInsets.only(left: 20.0,right: 20.0,),
             child: TextFormField(
               decoration: InputDecoration(
+                suffixIcon: Icon(Icons.arrow_drop_down,color: Colors.black,),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(color: HexColor('#567DC9')),
@@ -162,6 +176,7 @@ class _PayrollState extends State<Payroll> {
             padding: const EdgeInsets.only(left: 20.0,right: 20.0,),
             child: TextFormField(
               decoration: InputDecoration(
+                suffixIcon: Icon(Icons.arrow_drop_down,color: Colors.black,),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(color: HexColor('#567DC9')),
@@ -207,7 +222,7 @@ class _PayrollState extends State<Payroll> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 20.0,),
+        SizedBox(height: 30.0,),
         Padding(
           padding: const EdgeInsets.only(left: 20.0),
           child: Text('Name:',style: TextStyle(fontSize:18,color: Colors.black,),),
@@ -219,6 +234,7 @@ class _PayrollState extends State<Payroll> {
             padding: const EdgeInsets.only(left: 20.0,right: 20.0,),
             child: TextFormField(
               decoration: InputDecoration(
+                suffixIcon: Icon(Icons.arrow_drop_down,color: Colors.black,),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(color: HexColor('#567DC9')),
@@ -244,6 +260,7 @@ class _PayrollState extends State<Payroll> {
             padding: const EdgeInsets.only(left: 20.0,right: 20.0,),
             child: TextFormField(
               decoration: InputDecoration(
+                suffixIcon: Icon(Icons.arrow_drop_down,color: Colors.black,),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(color: HexColor('#567DC9')),
@@ -289,7 +306,7 @@ class _PayrollState extends State<Payroll> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 20.0,),
+        SizedBox(height: 30.0,),
         Padding(
           padding: const EdgeInsets.only(left: 20.0),
           child: Text('Name:',style: TextStyle(fontSize:18,color: Colors.black,),),
@@ -301,6 +318,7 @@ class _PayrollState extends State<Payroll> {
             padding: const EdgeInsets.only(left: 20.0,right: 20.0,),
             child: TextFormField(
               decoration: InputDecoration(
+                suffixIcon: Icon(Icons.arrow_drop_down,color: Colors.black,),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(color: HexColor('#567DC9')),
