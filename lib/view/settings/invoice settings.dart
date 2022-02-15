@@ -19,7 +19,11 @@ class _invoiceSettingsState extends State<invoiceSettings> {
         ),),
         centerTitle: true,
         elevation: 0.0,
-        leading: Icon(Icons.arrow_back),
+        leading: IconButton(
+          onPressed: (){
+            Navigator.pop(context);
+          },
+            icon: Icon(Icons.arrow_back)),
         actions: [
           IconButton(onPressed:(){},
               icon: Icon(Icons.more_vert, color: Colors.white,))

@@ -20,7 +20,11 @@ class _EditProfileState extends State<EditProfile> {
         ),),
         centerTitle: true,
         elevation: 0.0,
-        leading: Icon(Icons.arrow_back,color: Colors.black,),
+        leading: IconButton(
+          onPressed: (){
+            Navigator.pop(context);
+          },
+            icon: Icon(Icons.arrow_back,color: Colors.black,)),
         actions: [
           IconButton(onPressed: (){}, icon: Icon(Icons.more_vert,color: Colors.black,))
         ],

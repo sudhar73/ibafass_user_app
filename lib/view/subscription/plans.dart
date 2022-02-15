@@ -25,7 +25,13 @@ class _SubscriptionPlansState extends State<SubscriptionPlans>  with TickerProvi
           backgroundColor: HexColor('#0F46B3'),
           title: Text('Subscription',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
           centerTitle: true,
-          leading: Icon(Icons.arrow_back,color: Colors.white,),
+          leading: IconButton(
+            onPressed: (){
+              onPressed(){
+                Navigator.pop(context);
+              }
+            },
+              icon: Icon(Icons.arrow_back,color: Colors.white,)),
           actions: [
             IconButton(onPressed: (){}, icon: Icon(Icons.more_vert,color: Colors.white,)),
           ],

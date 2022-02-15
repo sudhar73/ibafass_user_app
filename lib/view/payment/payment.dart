@@ -81,6 +81,7 @@ class _PaymentState extends State<Payment> {
                 left: 20.0,
                 right: 20.0,
               ),
+
               child: Card(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),

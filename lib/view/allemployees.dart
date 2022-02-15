@@ -24,9 +24,14 @@ class _AllEmployeesState extends State<AllEmployees> {
         child: AppBar(
             elevation: 0.0,
             backgroundColor:HexColor('#0F46B3'),
-            leading: Icon(
-              Icons.arrow_back,
-              color: Colors.white,
+            leading: IconButton(
+              onPressed: (){
+                Navigator.pop(context);
+                },
+              icon: Icon(
+                Icons.arrow_back,
+                color: Colors.white,
+              ),
             ),
             title:Text('All Employees',
               style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),

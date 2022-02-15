@@ -21,9 +21,14 @@ class KpiState extends State<Kpi> {
       appBar: AppBar(
         backgroundColor: HexColor('0F46B3'),
         elevation: 0.0,
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.white,
+        leading: IconButton(
+          onPressed: (){
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
         ),
         title: Text(
           'KPI',
