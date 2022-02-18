@@ -14,7 +14,7 @@ class _invoiceSettingsState extends State<invoiceSettings> {
       backgroundColor: HexColor('#0F46B3'),
       appBar: AppBar(
         backgroundColor: HexColor('#0F46B3'),
-        title: Text('Invoice settings', style: TextStyle(
+        title: Text('Invoice Settings', style: TextStyle(
             color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold
         ),),
         centerTitle: true,
@@ -42,32 +42,40 @@ class _invoiceSettingsState extends State<invoiceSettings> {
                 decoration: BoxDecoration(
                     color: HexColor('#DCF4F9'),
                     borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(50.0),
-                        topLeft: Radius.circular(50.0))),
+                        topRight: Radius.circular(40.0),
+                        topLeft: Radius.circular(40.0))),
                 child: Column(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.all(
-                              Radius.circular(50.0))),
+                              Radius.circular(40.0))),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(height: 20,),
+                          SizedBox(height: 30,),
                           Row(
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(left: 20),
-                                child: Text('InVoice Logo', style: TextStyle(
+                                child: Text('Invoice Logo', style: TextStyle(
                                     fontWeight:FontWeight.bold,color: Colors.black, fontSize: 18),),
                               ),
                             ],
                           ),
-                          SizedBox(height: 20,),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 20.0),
+                            child: Divider(
+                              thickness: 0.5,
+                              color: Colors.grey,
+                              indent: 20.0,
+                              endIndent: 20.0,
+                            ),
+                          ),
                           Padding(
                             padding: const EdgeInsets.only(left: 20.0),
-                            child: Text('Invoice prefix:', style: TextStyle(
+                            child: Text('Invoice Prefix:', style: TextStyle(
                                 color: Colors.grey, fontSize: 16),),
                           ),
 

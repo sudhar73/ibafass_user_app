@@ -30,9 +30,14 @@ class _TopupCreditcardState extends State<TopupCreditcard> {
                         child: Center(
                           child: Padding(
                             padding: const EdgeInsets.only(left: 10.0),
-                            child: Icon(
-                              Icons.arrow_back_sharp,
-                              color: Colors.white,
+                            child: IconButton(
+                              onPressed: (){
+                                Navigator.pop(context);
+                              },
+                              icon: Icon(
+                                Icons.arrow_back_sharp,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
@@ -65,19 +70,20 @@ class _TopupCreditcardState extends State<TopupCreditcard> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 10.0, left: 20.0),
+                                padding:
+                                const EdgeInsets.only(left: 20.0),
                                 child: Align(
                                   alignment: Alignment.topLeft,
                                   child: Text(
                                     'Credit card',
                                     style: TextStyle(
-                                        fontSize: 24,
+                                        fontSize: 19,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white),
                                   ),
                                 ),
                               ),
+                              SizedBox(height: 5,),
                               Padding(
                                 padding: const EdgeInsets.only(
                                   left: 20.0,
@@ -87,7 +93,7 @@ class _TopupCreditcardState extends State<TopupCreditcard> {
                                   child: Text(
                                     'Choose your credit card',
                                     style: TextStyle(
-                                        fontSize: 17,
+                                        fontSize: 13,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white),
                                   ),
@@ -97,18 +103,17 @@ class _TopupCreditcardState extends State<TopupCreditcard> {
                       ),
                       Spacer(),
                       Padding(
-                        padding: const EdgeInsets.only(right: 20.0, top: 10.0),
+                        padding: const EdgeInsets.only(right: 20.0, ),
                         child: Container(
                           decoration: BoxDecoration(
                             color: HexColor('#2483FF'),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(15.0)),
+                            borderRadius: BorderRadius.all(Radius.circular(10.0)),
                           ),
-                          height: 50,
-                          width: 50,
+                          height: 40,
+                          width: 40,
                           child: Icon(
                             Icons.add,
-                            size: 40,
+                            size: 30,
                             color: Colors.white,
                           ),
                         ),
@@ -135,6 +140,7 @@ class _TopupCreditcardState extends State<TopupCreditcard> {
                           child: Padding(
                             padding: const EdgeInsets.all(20.0),
                             child: Container(
+
                                 child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,

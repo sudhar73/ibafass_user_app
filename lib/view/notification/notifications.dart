@@ -66,10 +66,11 @@ class _NotificationsState extends State<Notifications> with TickerProviderStateM
                   controller: _tabcontroller,
                   tabs: [
                     Tab(
-                      text: '        All        ',
+                      text: '     All     ',
                     ),
                     Tab(
-                     text: '          Company Announcement        ',
+                     text: '     Company Announcement    ',
+
                     ),
                   ],
                 ),

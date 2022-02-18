@@ -25,9 +25,6 @@ class _NotificationSettingsState extends State<NotificationSettings> {
 
               ),
             ),
-            actions: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.more_vert))
-            ],
             leading: IconButton(
               onPressed: () {
 

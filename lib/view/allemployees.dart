@@ -20,7 +20,7 @@ class _AllEmployeesState extends State<AllEmployees> {
     return Scaffold(
       backgroundColor: HexColor('#0F46B3'),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
+        preferredSize: Size.fromHeight(65.0),
         child: AppBar(
             elevation: 0.0,
             backgroundColor:HexColor('#0F46B3'),
@@ -45,21 +45,24 @@ class _AllEmployeesState extends State<AllEmployees> {
           decoration: BoxDecoration(color:HexColor('#DCF4F9'),
               borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0),topRight: Radius.circular(30.0))),
           child: Column(children: [
-            SizedBox(height: 20,),
+            SizedBox(height: 30,),
             Center(
-              child: Container(
-                decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
+              child:Container(decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
+
                 height: 60,
                 width: MediaQuery.of(context).size.width/1.20,
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.only(left: 15,right: 15),
                   child: TextField(
                     decoration: InputDecoration(
-                        labelText: 'Employee Directory',
+                        labelText: 'Employee ID or Name',
+
                         focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                         enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                        suffixIcon: Padding(
-                          padding: const EdgeInsets.all(4.0),
+                        suffixIcon: Container(
+                          decoration: BoxDecoration( color: HexColor('E2E5FC'),borderRadius: BorderRadius.all(Radius.circular(10))),
+                          height: 5,
+                          width: 5,
                           child: IconButton(
                               onPressed: (){},
                               icon: Icon(Icons.search,color: Colors.black,)

@@ -124,8 +124,8 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                       child: TextFormField(
                         decoration: InputDecoration(
                           suffixIcon: Icon(
-                            Icons.download,
-                            color: Colors.black,
+                            Icons.camera_alt_outlined,
+                            color:HexColor('#0F46B3'),
                           ),
                           enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
@@ -140,7 +140,8 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.download))
+                    IconButton(onPressed: () {},
+                        icon: Icon(Icons.download,color: HexColor('#0F46B3'),))
                   ],
                 ),
               ),
@@ -162,7 +163,7 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                 child: Row(
                   children: [
                     Container(
-                      width: MediaQuery.of(context).size.width / 1.5,
+                      width: MediaQuery.of(context).size.width / 1.6,
                       child: TextFormField(
                         decoration: InputDecoration(
                           suffixIcon: Icon(
@@ -182,6 +183,8 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
+                    IconButton(onPressed: () {},
+                        icon: Icon(Icons.download,color: HexColor('#0F46B3'),))
                   ],
                 ),
               ),
@@ -203,12 +206,12 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                 child: Row(
                   children: [
                     Container(
-                      width: MediaQuery.of(context).size.width / 1.5,
+                      width: MediaQuery.of(context).size.width / 1.6,
                       child: TextFormField(
                         decoration: InputDecoration(
                           suffixIcon: Icon(
-                            Icons.camera,
-                            color: Colors.black,
+                            Icons.camera_alt_outlined,
+                            color: HexColor('#0F46B3'),
                           ),
                           enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
@@ -223,6 +226,8 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
+                    IconButton(onPressed: () {},
+                        icon: Icon(Icons.download,color: HexColor('#0F46B3'),))
                   ],
                 ),
               ),
@@ -244,12 +249,12 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                 child: Row(
                   children: [
                     Container(
-                      width: MediaQuery.of(context).size.width / 1.5,
+                      width: MediaQuery.of(context).size.width / 1.6,
                       child: TextFormField(
                         decoration: InputDecoration(
                           suffixIcon: Icon(
-                            Icons.camera,
-                            color: Colors.black,
+                            Icons.camera_alt_outlined,
+                            color: HexColor('#0F46B3'),
                           ),
                           enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
@@ -264,13 +269,16 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
+                    IconButton(onPressed: () {},
+                        icon: Icon(Icons.download,color: HexColor('#0F46B3'),))
                   ],
                 ),
               ),
               SizedBox(
                 height: 30,
               ),
-              Center(
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
                 child: Container(
                   height: 60,
                   width: MediaQuery.of(context).size.width / 1.30,
@@ -310,7 +318,7 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: Text(
-                  'Basic Proofs :',
+                  'Address Details :',
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -328,7 +336,7 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: Text(
-                  'Aadhar Card Number :',
+                  'Photo ID :',
                   style: TextStyle(color: Colors.grey, fontSize: 15),
                 ),
               ),
@@ -345,48 +353,6 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                         decoration: InputDecoration(
                           suffixIcon: Icon(
                             Icons.download,
-                            color: Colors.black,
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(10.0),
-                              ),
-                              borderSide: BorderSide(color: Colors.grey)),
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(10.0),
-                              ),
-                              borderSide: BorderSide(color: Colors.grey)),
-                        ),
-                      ),
-                    ),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.download))
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20.0),
-                child: Text(
-                  'PAN Card Number :',
-                  style: TextStyle(color: Colors.grey, fontSize: 15),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child: Row(
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width / 1.5,
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          suffixIcon: Icon(
-                            Icons.camera_alt_outlined,
                             color: HexColor('#0F46B3'),
                           ),
                           enabledBorder: OutlineInputBorder(
@@ -402,6 +368,9 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
+                    IconButton(onPressed: () {}, icon: Icon(Icons.download,
+                      color:  HexColor('#0F46B3'),
+                    ))
                   ],
                 ),
               ),
@@ -411,7 +380,7 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: Text(
-                  'Driving License :',
+                  'DOB :',
                   style: TextStyle(color: Colors.grey, fontSize: 15),
                 ),
               ),
@@ -420,30 +389,23 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child: Row(
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width / 1.5,
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          suffixIcon: Icon(
-                            Icons.camera,
-                            color: Colors.black,
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(10.0),
-                              ),
-                              borderSide: BorderSide(color: Colors.grey)),
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(10.0),
-                              ),
-                              borderSide: BorderSide(color: Colors.grey)),
-                        ),
-                      ),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    suffixIcon: Icon(
+                      Icons.calendar_today,
+                      color: HexColor('#0F46B3'),
                     ),
-                  ],
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10.0),
+                        ),
+                        borderSide: BorderSide(color: Colors.grey)),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10.0),
+                        ),
+                        borderSide: BorderSide(color: Colors.grey)),
+                  ),
                 ),
               ),
               SizedBox(
@@ -452,7 +414,7 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: Text(
-                  'Passport Number :',
+                  'Current Address :',
                   style: TextStyle(color: Colors.grey, fontSize: 15),
                 ),
               ),
@@ -461,36 +423,56 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child: Row(
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width / 1.5,
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          suffixIcon: Icon(
-                            Icons.camera,
-                            color: Colors.black,
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(10.0),
-                              ),
-                              borderSide: BorderSide(color: Colors.grey)),
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(10.0),
-                              ),
-                              borderSide: BorderSide(color: Colors.grey)),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10.0),
                         ),
-                      ),
-                    ),
-                  ],
+                        borderSide: BorderSide(color: Colors.grey)),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10.0),
+                        ),
+                        borderSide: BorderSide(color: Colors.grey)),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: Text(
+                  'Permanent Address :',
+                  style: TextStyle(color: Colors.grey, fontSize: 15),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10.0),
+                        ),
+                        borderSide: BorderSide(color: Colors.grey)),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10.0),
+                        ),
+                        borderSide: BorderSide(color: Colors.grey)),
+                  ),
                 ),
               ),
               SizedBox(
                 height: 30,
               ),
-              Center(
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
                 child: Container(
                   height: 60,
                   width: MediaQuery.of(context).size.width / 1.30,
@@ -703,7 +685,7 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Text(
-                    'Uploaded Documents :',
+                    'Course Details :',
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 18,
@@ -721,7 +703,7 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Text(
-                    'Type :',
+                    'Course Title :',
                     style: TextStyle(color: Colors.grey, fontSize: 15),
                   ),
                 ),
@@ -755,7 +737,7 @@ class _DocumentsState extends State<Documents> with TickerProviderStateMixin {
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Text(
-                    'ID Name :',
+                    'Course Type :',
                     style: TextStyle(color: Colors.grey, fontSize: 15),
                   ),
                 ),

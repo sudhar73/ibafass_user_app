@@ -17,7 +17,7 @@ class _ProjectsState extends State<Projects> {
     return Scaffold(
       backgroundColor: HexColor('#0F46B3'),
       appBar:PreferredSize(
-        preferredSize: Size.fromHeight(70.0),
+        preferredSize: Size.fromHeight(65.0),
         child: AppBar(
           elevation: 0.0,
           backgroundColor: HexColor('#0F46B3'),
@@ -48,10 +48,11 @@ class _ProjectsState extends State<Projects> {
                 height: 60,
                 width: MediaQuery.of(context).size.width/1.20,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 10,right: 10),
+                  padding: const EdgeInsets.only(left: 15,right: 15),
                   child: TextField(
                     decoration: InputDecoration(
                         labelText: 'Project Name',
+
                         focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                         enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                         suffixIcon: Container(
@@ -86,7 +87,6 @@ class _ProjectsState extends State<Projects> {
                     children: [
                       SizedBox(height: 5,),
                       Row(
-
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 20.0),
@@ -120,7 +120,7 @@ class _ProjectsState extends State<Projects> {
                           Spacer(),
                           Padding(
                             padding: const EdgeInsets.only(top: 5.0,right: 20.0),
-                            child: CircularPercentIndicator(radius: 30.0,
+                            child: CircularPercentIndicator(radius: 25.0,
                               backgroundColor: HexColor('#F8F1FF'),
                               progressColor: HexColor('#9C59D2'),
                               lineWidth: 5.0,
@@ -131,12 +131,12 @@ class _ProjectsState extends State<Projects> {
                           ),
                         ],
                       ),
-
+                      SizedBox(height: 5,),
                       Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: Text('Our Website company related services are...',style: TextStyle(color: Colors.grey,fontSize: 12),),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(height: 20,),
                       Row(
                         children: [
                           SizedBox(width: 20,),
@@ -161,14 +161,13 @@ class _ProjectsState extends State<Projects> {
               ),
               SizedBox(height: 20,),
               Container(
-                height: MediaQuery.of(context).size.height/3.5,
+
                 width: MediaQuery.of(context).size.width/1.20,
                 decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-
-
                   children: [
+                    SizedBox(height: 5,),
                     Row(
 
                       children: [
@@ -198,13 +197,13 @@ class _ProjectsState extends State<Projects> {
                           children: [
                             Text('Project Management',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 18)),
                             SizedBox(height: 5,),
-                            Text('Ocean software',style: TextStyle(color: Colors.black,fontSize: 14)),
+                            Text('Ocean Software',style: TextStyle(color: Colors.black,fontSize: 14)),
                           ],
                         ),
                         Spacer(),
                         Padding(
                           padding: const EdgeInsets.only(top: 5.0,right: 20.0),
-                          child: CircularPercentIndicator(radius: 40.0,
+                          child: CircularPercentIndicator(radius: 25.0,
                             backgroundColor: HexColor('#E4FFF5'),
                             progressColor: HexColor('#17D213'),
                             lineWidth: 5.0,
@@ -215,12 +214,13 @@ class _ProjectsState extends State<Projects> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 5,),
 
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Text('Our Website company related services are...',style: TextStyle(color: Colors.grey,fontSize: 12),),
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(height: 20,),
                     Row(
                       children: [
                         SizedBox(width: 20,),
@@ -237,20 +237,21 @@ class _ProjectsState extends State<Projects> {
                         ),
 
                       ],
-                    )
+                    ),
+                    SizedBox(height: 20,)
                   ],
                 ),
               ),
               SizedBox(height: 20.0,),
               Container(
-                height: MediaQuery.of(context).size.height/3.5,
+
                 width: MediaQuery.of(context).size.width/1.20,
                 decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    SizedBox(height: 5,),
                     Row(
-
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(left: 20.0),
@@ -276,15 +277,15 @@ class _ProjectsState extends State<Projects> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Video calling App',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 18)),
+                            Text('Video Calling App',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 18)),
                             SizedBox(height: 5,),
-                            Text('Ocean software',style: TextStyle(color: Colors.black,fontSize: 14)),
+                            Text('Ocean Software',style: TextStyle(color: Colors.black,fontSize: 14)),
                           ],
                         ),
                         Spacer(),
                         Padding(
                           padding: const EdgeInsets.only(top: 5.0,right: 20.0),
-                          child: CircularPercentIndicator(radius: 40.0,
+                          child: CircularPercentIndicator(radius: 25.0,
                             backgroundColor: HexColor('#F9D6D6'),
                             progressColor: HexColor('#DF3535'),
                             lineWidth: 5.0,
@@ -295,12 +296,13 @@ class _ProjectsState extends State<Projects> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 5,),
 
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Text('Our Website company related services are...',style: TextStyle(color: Colors.grey,fontSize: 12),),
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(height: 20,),
                     Row(
                       children: [
                         SizedBox(width: 20,),
@@ -317,7 +319,8 @@ class _ProjectsState extends State<Projects> {
                         ),
 
                       ],
-                    )
+                    ),
+                    SizedBox(height: 20,)
                   ],
                 ),
               ),

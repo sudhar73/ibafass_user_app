@@ -28,9 +28,13 @@ class _SaveMyCardState extends State<SaveMyCard> {
                     child: Center(
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10.0),
-                        child: Icon(
-                          Icons.arrow_back_sharp,
-                          color: Colors.white,
+                        child: IconButton(
+                          onPressed: (){
+                            Navigator.pop(context);                          },
+                          icon: Icon(
+                            Icons.arrow_back_sharp,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),

@@ -21,8 +21,10 @@ class _ScheduleState extends State<Schedule> {
         preferredSize: Size.fromHeight(60.0),
         child: AppBar(
          backgroundColor: HexColor('#0F46B3'),
-          leading: Icon(Icons.arrow_back,color: Colors.white,),
-          title: Text('Schedule',style: TextStyle(color: Colors.white),),
+          leading: IconButton(onPressed: (){
+            Navigator.pop(context);
+          },icon: Icon(Icons.arrow_back,color: Colors.white,)),
+          title: Text('Schedule',style: TextStyle(fontSize:20,color: Colors.white),),
           centerTitle: true,
           actions: [
             Icon(Icons.more_vert,color: Colors.white,),
@@ -32,9 +34,9 @@ class _ScheduleState extends State<Schedule> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 10,),
+          SizedBox(height: 20,),
           Center(child: Text('My Schedule',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),)),
-          SizedBox(height: 10,),
+          SizedBox(height: 20,),
           Center(
             child: Container(
               height: 70,
@@ -50,7 +52,7 @@ class _ScheduleState extends State<Schedule> {
               )
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 30,),
           Padding(
             padding: const EdgeInsets.only(left: 20.0),
             child: Text('Start time:',style: TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Colors.black),),
@@ -94,24 +96,24 @@ class _ScheduleState extends State<Schedule> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0,top: 8.0),
-                    child: Icon(Icons.circle,color: HexColor('#28B961'),size: 10,),
+                    child: Icon(Icons.circle,color: HexColor('#B5EAC9'),size: 10,),
                   ),
                   SizedBox(width: 10.0,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('09:30',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 21),),
-                      Text('Min Start Time',style: TextStyle(fontSize: 13,color: Colors.black),),
+                      Text('Max Start Time',style: TextStyle(fontSize: 13,color: Colors.black),),
                     ],
                   )
                 ],
               )
             ],
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 40,),
           Padding(
             padding: const EdgeInsets.only(left: 20.0),
-            child: Text('Start time:',style: TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Colors.black),),
+            child: Text('End time:',style: TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Colors.black),),
           ),
           SizedBox(height: 10,),
           Padding(
@@ -119,9 +121,9 @@ class _ScheduleState extends State<Schedule> {
             child: LinearPercentIndicator(
               percent: 0.5,
               lineHeight: 20,
-              progressColor: HexColor('#28B961'),
+              progressColor: HexColor('E95C6F'),
               linearStrokeCap: LinearStrokeCap.roundAll,
-              backgroundColor: HexColor('#B5EAC9'),
+              backgroundColor: HexColor('FFD7DC'),
 
             ),
           ),
@@ -134,7 +136,7 @@ class _ScheduleState extends State<Schedule> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0,top: 8.0),
-                    child: Icon(Icons.circle,color: HexColor('#28B961'),size: 10,),
+                    child: Icon(Icons.circle,color: HexColor('E95C6F'),size: 10,),
                   ),
                   SizedBox(width: 10.0,),
                   Column(
@@ -152,24 +154,24 @@ class _ScheduleState extends State<Schedule> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0,top: 8.0),
-                    child: Icon(Icons.circle,color: HexColor('#28B961'),size: 10,),
+                    child: Icon(Icons.circle,color: HexColor('FFD7DC'),size: 10,),
                   ),
                   SizedBox(width: 10.0,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('09:30',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 21),),
-                      Text('Min Start Time',style: TextStyle(fontSize: 13,color: Colors.black),),
+                      Text('Max End Time',style: TextStyle(fontSize: 13,color: Colors.black),),
                     ],
                   )
                 ],
               )
             ],
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 40,),
           Padding(
             padding: const EdgeInsets.only(left: 20.0),
-            child: Text('Start time:',style: TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Colors.black),),
+            child: Text('Break time:',style: TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Colors.black),),
           ),
           SizedBox(height: 10,),
           Padding(
@@ -177,9 +179,9 @@ class _ScheduleState extends State<Schedule> {
             child: LinearPercentIndicator(
               percent: 0.5,
               lineHeight: 20,
-              progressColor: HexColor('#28B961'),
+              progressColor: HexColor('FC7859'),
               linearStrokeCap: LinearStrokeCap.roundAll,
-              backgroundColor: HexColor('#B5EAC9'),
+              backgroundColor: HexColor('FED8D0'),
 
             ),
           ),
@@ -192,14 +194,14 @@ class _ScheduleState extends State<Schedule> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0,top: 8.0),
-                    child: Icon(Icons.circle,color: HexColor('#28B961'),size: 10,),
+                    child: Icon(Icons.circle,color: HexColor('FC7859'),size: 10,),
                   ),
                   SizedBox(width: 10.0,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('09:30',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 21),),
-                      Text('Min Start Time',style: TextStyle(fontSize: 13,color: Colors.black),),
+                      Text('Min Break Time',style: TextStyle(fontSize: 13,color: Colors.black),),
                     ],
                   )
                 ],
@@ -210,52 +212,61 @@ class _ScheduleState extends State<Schedule> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0,top: 8.0),
-                    child: Icon(Icons.circle,color: HexColor('#28B961'),size: 10,),
+                    child: Icon(Icons.circle,color: HexColor('FED8D0'),size: 10,),
                   ),
                   SizedBox(width: 10.0,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('09:30',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 21),),
-                      Text('Min Start Time',style: TextStyle(fontSize: 13,color: Colors.black),),
+                      Text('Max Break Time',style: TextStyle(fontSize: 13,color: Colors.black),),
                     ],
                   )
                 ],
               )
             ],
           ),
-          Row(
-            children: <Widget>[
-              Radio(
-                  activeColor: Colors.green,
-                  value: "Complete",
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      this.groupValue = value;
-                    });
-                  }),
-              Text(
-                'Complete',
-                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                width: 30,
-              ),
-              Radio(
-                  activeColor: Colors.red,
-                  value: "Pending",
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      this.groupValue = value;
-                    });
-                  }),
-              Text(
-                'Pending',
-                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
-              ),
-            ],
+          SizedBox(height: 40,),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: Text('Status:',style: TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Colors.black),),
+          ),
+          SizedBox(height: 10,),
+          Padding(
+            padding: const EdgeInsets.only(left: 30),
+            child: Row(
+              children: <Widget>[
+                Radio(
+                    activeColor: Colors.green,
+                    value: "Complete",
+                    groupValue: groupValue,
+                    onChanged: (value) {
+                      setState(() {
+                        this.groupValue = value;
+                      });
+                    }),
+                Text(
+                  'Complete',
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                Radio(
+                    activeColor: Colors.red,
+                    value: "Pending",
+                    groupValue: groupValue,
+                    onChanged: (value) {
+                      setState(() {
+                        this.groupValue = value;
+                      });
+                    }),
+                Text(
+                  'Pending',
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
           )
         ],
       ),

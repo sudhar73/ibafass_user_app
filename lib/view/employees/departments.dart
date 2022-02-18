@@ -23,7 +23,9 @@ class _DepartmentsState extends State<Departments> {
                 fontSize: 18,fontWeight: FontWeight.bold),),
             leading: IconButton(
               icon: Icon(Icons.arrow_back),
-              onPressed: (){},
+              onPressed: (){
+                Navigator.pop(context);
+              },
             ),
             actions: [
               IconButton(
@@ -47,7 +49,7 @@ class _DepartmentsState extends State<Departments> {
                   Align(
                     alignment: Alignment.topLeft,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 20, left: 10),
+                      padding: const EdgeInsets.only(top: 20, left: 20),
                       child: Text(
                         'List of Departments',
                         style: TextStyle(
@@ -61,7 +63,7 @@ class _DepartmentsState extends State<Departments> {
                   Align(
                     alignment: Alignment.topRight,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 20, right: 10),
+                      padding: const EdgeInsets.only(top: 20, right: 20),
                       child: Image(
                         image:
                         AssetImage('assets/departments/building icon.png'),
@@ -77,8 +79,8 @@ class _DepartmentsState extends State<Departments> {
               decoration: BoxDecoration(
                   color: HexColor('#DCF4F9'),
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(25),
-                      topRight: Radius.circular(25))),
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30))),
               height: MediaQuery.of(context).size.height / 1.30,
               width: MediaQuery.of(context).size.width,
               child: Column(
@@ -86,28 +88,29 @@ class _DepartmentsState extends State<Departments> {
                   SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(15),
-                        )),
-                    height: 50,
-                    width: MediaQuery.of(context).size.width / 1.15,
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                            labelText: 'Employee Directory',
-                            focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                            enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                            suffixIcon: Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: IconButton(
-                                  onPressed: (){},
-                                  icon: Icon(Icons.search,color: Colors.black,)
-                              ),
-                            )
+                  Center(
+                    child:Container(decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
+
+                      height: 60,
+                      width: MediaQuery.of(context).size.width/1.15,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15,right: 15),
+                        child: TextField(
+                          decoration: InputDecoration(
+                              labelText: 'Search...',
+
+                              focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                              enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                              suffixIcon: Container(
+                                decoration: BoxDecoration( color: HexColor('E2E5FC'),borderRadius: BorderRadius.all(Radius.circular(10))),
+                                height: 5,
+                                width: 5,
+                                child: IconButton(
+                                    onPressed: (){},
+                                    icon: Icon(Icons.search,color: Colors.black,)
+                                ),
+                              )
+                          ),
                         ),
                       ),
                     ),
@@ -128,56 +131,50 @@ class _DepartmentsState extends State<Departments> {
                         SizedBox(
                           height: 10,
                         ),
-                        InkWell(
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Designations()),
-                          ),
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0)),
-                            color: HexColor('#F5FFF8'),
-                            shadowColor: HexColor('#03B644'),
-                            elevation: 4,
-                            child: Container(
-                              height: 60,
-                              width: MediaQuery.of(context).size.width / 1.30,
-                              child: Row(children: [
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: HexColor('#4CD080'),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(12.0))),
-                                  height:45 ,
-                                  width: 45,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Image(
-                                      image: AssetImage(
-                                          'assets/departments/webdevelopment.png'),
-                                    ),
+                        Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)),
+                          color: HexColor('#F5FFF8'),
+                          shadowColor: HexColor('#03B644'),
+                          elevation: 4,
+                          child: Container(
+                            height: 60,
+                            width: MediaQuery.of(context).size.width / 1.30,
+                            child: Row(children: [
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: HexColor('#4CD080'),
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(12.0))),
+                                height:45 ,
+                                width: 45,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Image(
+                                    image: AssetImage(
+                                        'assets/departments/webdevelopment.png'),
                                   ),
                                 ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  'Web Development',
-                                  style: TextStyle(
-                                      fontSize: 14, fontWeight: FontWeight.bold),
-                                ),
-                                Spacer(),
-                                IconButton(
-                                    onPressed: () {},
-                                    icon: Icon(
-                                      Icons.arrow_forward_ios,
-                                      color: HexColor('#4CD080'),
-                                    )),
-                              ]),
-                            ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                'Web Development',
+                                style: TextStyle(
+                                    fontSize: 14, fontWeight: FontWeight.bold),
+                              ),
+                              Spacer(),
+                              IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: HexColor('#4CD080'),
+                                  )),
+                            ]),
                           ),
                         ),
                         SizedBox(

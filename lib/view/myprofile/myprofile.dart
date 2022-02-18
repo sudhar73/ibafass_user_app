@@ -65,7 +65,7 @@ class _ProfilePageState extends State<ProfilePage>
           ),
         ),
         body: Column(children: [Padding(
-            padding: const EdgeInsets.only(left: 40, top: 10),
+            padding: const EdgeInsets.only(left: 35, top: 10),
             child: Container(
               height: myheight / 20,
               width: mywidth,
@@ -90,17 +90,17 @@ class _ProfilePageState extends State<ProfilePage>
                   tabs: [
                     Tab(
                       child: Text(
-                        'Family',style: TextStyle(color: Colors.white,fontSize: 18,),
+                        'Family',style: TextStyle(color: Colors.white,fontSize: 15,),
                       ),
                     ),
                     Tab(
                       child: Text(
-                        'Documents',style: TextStyle(color: Colors.white,fontSize: 18,),
+                        'Documents',style: TextStyle(color: Colors.white,fontSize: 15,),
                       ),
                     ),
                     Tab(
                       child: Text(
-                        'Team',style: TextStyle(color: Colors.white,fontSize: 18,),
+                        'Team',style: TextStyle(color: Colors.white,fontSize: 15,),
                       ),
                     ),
                   ],
@@ -135,9 +135,9 @@ class _ProfilePageState extends State<ProfilePage>
           color: BackgroundColor,
           child: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.only(left: 20,right: 20,top: 30,bottom: 20),
               child: Container(
-                height: myheight,
+
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(40))),
@@ -153,7 +153,7 @@ class _ProfilePageState extends State<ProfilePage>
                       child: Row(
                         children: [
                           SizedBox(width: 20,),
-                          Text("Family Members",
+                          Text("FAMILY MEMBERS",
                             style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,color: Colors.white), ),
                           Spacer(),
                           Icon(
@@ -300,7 +300,6 @@ class _ProfilePageState extends State<ProfilePage>
             child: Padding(
               padding: EdgeInsets.all(20),
               child: Container(
-                height: myheight,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(40))),
@@ -380,15 +379,7 @@ class _ProfilePageState extends State<ProfilePage>
                         ),
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(width: mywidth/12,),
-                        Text("EMERGENCY CONTACT :",
-                          style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,color: Colors.black),
-                        ),
-                      ],
-                    ),
+
                     //
                     Padding(
                       padding: EdgeInsets.all(20),

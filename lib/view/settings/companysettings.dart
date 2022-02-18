@@ -110,13 +110,14 @@ class _CompanySettingsState extends State<CompanySettings> {
                         SizedBox(height: 20,),
                         Padding(
                           padding: const EdgeInsets.only(left: 20.0),
-                          child: Text('County:',style: TextStyle(color: Colors.grey,fontSize: 16),),
+                          child: Text('Country:',style: TextStyle(color: Colors.grey,fontSize: 16),),
                         ),
                         SizedBox(height: 10,),
                         Padding(
                           padding: const EdgeInsets.only(left: 20.0,right: 20.0),
                           child: TextFormField(
                             decoration: InputDecoration(
+                              suffixIcon: Icon(Icons.arrow_drop_down,color: Colors.black,),
                               enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                                   borderSide: BorderSide(color: Colors.grey)),
@@ -136,6 +137,7 @@ class _CompanySettingsState extends State<CompanySettings> {
                           padding: const EdgeInsets.only(left: 20.0,right: 20.0),
                           child: TextFormField(
                             decoration: InputDecoration(
+                              suffixIcon: Icon(Icons.arrow_drop_down,color: Colors.black,),
                               enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                                   borderSide: BorderSide(color: Colors.grey)),
@@ -155,6 +157,7 @@ class _CompanySettingsState extends State<CompanySettings> {
                           padding: const EdgeInsets.only(left: 20.0,right: 20.0),
                           child: TextFormField(
                             decoration: InputDecoration(
+                              suffixIcon: Icon(Icons.arrow_drop_down,color: Colors.black,),
                               enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                                   borderSide: BorderSide(color: Colors.grey)),
@@ -205,7 +208,7 @@ class _CompanySettingsState extends State<CompanySettings> {
                         SizedBox(height: 20,),
                         Padding(
                           padding: const EdgeInsets.only(left: 20.0),
-                          child: Text('mobile number:',style: TextStyle(color: Colors.grey,fontSize: 16),),
+                          child: Text('Phone number:',style: TextStyle(color: Colors.grey,fontSize: 16),),
                         ),
                         SizedBox(height: 10,),
                         Padding(

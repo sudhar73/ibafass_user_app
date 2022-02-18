@@ -34,14 +34,14 @@ class _NotificationAllState extends State<NotificationAll> {
               ],
             ),
           ),
-          SizedBox(height: 10.0,),
+          SizedBox(height: 20.0,),
           Padding(
               padding: const EdgeInsets.only(
                 left: 10.0,
                 right: 10.0,
               ),
               child: Container(
-                height: 100,
+                height: 95,
                 width: MediaQuery.of(context).size.width/1.10,
                 child: ListTile(
                   shape: RoundedRectangleBorder(
@@ -79,7 +79,7 @@ class _NotificationAllState extends State<NotificationAll> {
                 right: 10.0,
               ),
               child: Container(
-                height: 100,
+                height: 95,
                 width: MediaQuery.of(context).size.width/1.10,
                 child: ListTile(
                   shape: RoundedRectangleBorder(
@@ -117,7 +117,7 @@ class _NotificationAllState extends State<NotificationAll> {
                 right: 10.0,
               ),
               child: Container(
-                height: 100,
+                height: 95,
                 width: MediaQuery.of(context).size.width/1.10,
                 child: ListTile(
                   shape: RoundedRectangleBorder(
@@ -165,14 +165,14 @@ class _NotificationAllState extends State<NotificationAll> {
               ],
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 20,),
           Padding(
               padding: const EdgeInsets.only(
                 left: 10.0,
                 right: 10.0,
               ),
               child: Container(
-                height: 100,
+                height: 95,
                 width: MediaQuery.of(context).size.width/1.10,
                 child: ListTile(
                   shape: RoundedRectangleBorder(
@@ -210,7 +210,7 @@ class _NotificationAllState extends State<NotificationAll> {
                 right: 10.0,
               ),
               child: Container(
-                height: 100,
+                height: 95,
                 width: MediaQuery.of(context).size.width/1.10,
                 child: ListTile(
                   shape: RoundedRectangleBorder(
@@ -246,7 +246,7 @@ class _NotificationAllState extends State<NotificationAll> {
               padding: const EdgeInsets.only(
                  left: 10.0, right: 10.0),
               child: Container(
-                height: 100,
+                height: 95,
                 width: MediaQuery.of(context).size.width/1.10,
                 child: ListTile(
                   shape: RoundedRectangleBorder(

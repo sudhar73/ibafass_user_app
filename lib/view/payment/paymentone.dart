@@ -20,7 +20,7 @@ class _PaymentOneState extends State<PaymentOne> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 50,
+                    height: 40,
                   ),
                   Align(
                     alignment: Alignment.topCenter,
@@ -29,7 +29,7 @@ class _PaymentOneState extends State<PaymentOne> {
                         Flexible(
                           flex: 0,
                           child: Padding(
-                            padding: const EdgeInsets.only(left:10.0),
+                            padding: const EdgeInsets.only(left:5.0),
                             child: IconButton(
                               onPressed: (){
                                 Navigator.pop(context);
@@ -44,19 +44,24 @@ class _PaymentOneState extends State<PaymentOne> {
                         Flexible(
                           flex: 2,
                           child: Center(
-                            child: Text(
-                              'Transfer with bank',
-                              style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
+                            child: Container(
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 10),
+                                child: Text(
+                                  'Transfer with bank',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                              ),
                             ),
                           ),
                         ),
                         Flexible(
                           flex: 0,
                           child: Padding(
-                            padding: const EdgeInsets.only(right:10.0),
+                            padding: const EdgeInsets.only(right:5.0),
                             child: Icon(
                               Icons.more_vert,
                               color: Colors.white,
@@ -107,6 +112,7 @@ class _PaymentOneState extends State<PaymentOne> {
                           horizontal: 30, vertical: 10),
                       child: TextFormField(
                         decoration: const InputDecoration(
+                          suffixIcon: Icon(Icons.arrow_drop_down,color: Colors.black,),
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.black),
                           ),
@@ -127,6 +133,7 @@ class _PaymentOneState extends State<PaymentOne> {
                             labelStyle: TextStyle(color: Colors.black)),
                       ),
                     ),
+                    SizedBox(height: 20,),
                     Padding(
                       padding: const EdgeInsets.only(
                         top: 10.0,
@@ -142,7 +149,7 @@ class _PaymentOneState extends State<PaymentOne> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 30.0, top: 10.0),
+                      padding: const EdgeInsets.only(left: 30.0, top: 15.0),
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: Text(
@@ -243,26 +250,24 @@ class _PaymentOneState extends State<PaymentOne> {
                         ),
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 90.0),
-                      child: Container(
-                        height: 60,
-                        width: MediaQuery.of(context).size.width / 1.15,
-                        child: RaisedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ConfirmTransfer()),
-                            );
-                          },
-                          color: HexColor('#0F46B3'),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18)),
-                          child: Text(
-                            "Continue",
-                            style: TextStyle(fontSize: 20, color: Colors.white),
-                          ),
+                    SizedBox(height: MediaQuery.of(context).size.height/10,),
+                    Container(
+                      height: 60,
+                      width: MediaQuery.of(context).size.width / 1.15,
+                      child: RaisedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ConfirmTransfer()),
+                          );
+                        },
+                        color: HexColor('#0F46B3'),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18)),
+                        child: Text(
+                          "Continue",
+                          style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                       ),
                     )

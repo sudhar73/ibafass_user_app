@@ -19,7 +19,7 @@ class _ApplyLeaveState extends State<ApplyLeave> {
     return Scaffold(
       backgroundColor: HexColor('#F0F4FD'),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(80.0),
+        preferredSize: Size.fromHeight(90.0),
         child: AppBar(
           elevation: 0.0,
           backgroundColor: HexColor('#0F46B3'),
@@ -29,7 +29,7 @@ class _ApplyLeaveState extends State<ApplyLeave> {
           leading: Icon(
             Icons.arrow_back,
             color: Colors.white,
-            size: myheight/25,
+
           ),
           centerTitle: true,
           actions: [
@@ -62,7 +62,7 @@ class _ApplyLeaveState extends State<ApplyLeave> {
             SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.only(left: 20.0),
-              child: Text('leave Type:',style: TextStyle(color: HexColor('#0F46B3'),fontSize: 18,fontWeight: FontWeight.bold),),
+              child: Text('Leave Type:',style: TextStyle(color: HexColor('#0F46B3'),fontSize: 18,fontWeight: FontWeight.bold),),
             ),
             SizedBox(height: 10,),
             Center(

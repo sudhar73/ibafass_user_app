@@ -29,11 +29,13 @@ class _TimeSheetState extends State<TimeSheet> {
             elevation: 0.0,
             centerTitle:true,
             backgroundColor: HexColor('#0F46B3'),
-            title: Text('TimeSheet',style: TextStyle(color: Colors.white,
+            title: Text('Timesheet',style: TextStyle(color: Colors.white,
                 fontWeight: FontWeight.bold),),
             leading: IconButton(
               icon: Icon(Icons.arrow_back),
-              onPressed: (){},
+              onPressed: (){
+                Navigator.pop(context);
+              },
             ),
             actions: [
               IconButton(
@@ -54,7 +56,7 @@ class _TimeSheetState extends State<TimeSheet> {
                 color: Colors.white,
                 child: Center(
                   child: Text(
-                    'Time sheet Details',
+                    'Timesheet Details',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
@@ -156,7 +158,6 @@ class _TimeSheetState extends State<TimeSheet> {
                     ),
                      SizedBox(height: 20,),
                      Container(
-                       height: MediaQuery.of(context).size.height/3,
                        width: MediaQuery.of(context).size.width/1.10,
                        decoration: BoxDecoration(color: Colors.white,
                            borderRadius: BorderRadius.all(Radius.circular(20.0))),
@@ -200,7 +201,7 @@ class _TimeSheetState extends State<TimeSheet> {
                         children: [
                           SizedBox(width: 20,),
                           Container(
-                            height: 50,
+                            height: 40,
                             width: 4,
                             color: HexColor('FF4928'),
                           ),
@@ -210,7 +211,8 @@ class _TimeSheetState extends State<TimeSheet> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text('New web page Ui design Project',style:
-                              TextStyle(color: HexColor('FF4928'),fontWeight: FontWeight.bold,fontSize: 18),),
+                              TextStyle(color: HexColor('FF4928'),
+                                  fontWeight: FontWeight.bold,fontSize: 18),),
                               SizedBox(height: 5,),
                               Text(
                                 "UI design for \$100",style: TextStyle(color: Colors.grey,fontSize: 12,),
@@ -230,17 +232,16 @@ class _TimeSheetState extends State<TimeSheet> {
                           SizedBox(width: 30,),
                           Icon(Icons.person,color: Colors.black,size: 20,),
                           SizedBox(width: 5,),
-                          Text('2Persons',style:
+                          Text('2 PERSONS',style:
                           TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold),)
                         ],
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(height: 20,),
                   ],
                 ),
                      ),
-                    SizedBox(height: 20,),
+                    SizedBox(height: 30,),
                     Container(
-                      height: MediaQuery.of(context).size.height/3,
                       width: MediaQuery.of(context).size.width/1.10,
                       decoration: BoxDecoration(color: Colors.white,
                           borderRadius: BorderRadius.all(Radius.circular(20.0))),
@@ -286,7 +287,7 @@ class _TimeSheetState extends State<TimeSheet> {
                             children: [
                               SizedBox(width: 20,),
                               Container(
-                                height: 50,
+                                height: 40,
                                 width: 4,
                                 color: HexColor('12A73E'),
                               ),
@@ -316,12 +317,12 @@ class _TimeSheetState extends State<TimeSheet> {
                               SizedBox(width: 30,),
                               Icon(Icons.person,color: Colors.black,size: 20,),
                               SizedBox(width: 5,),
-                              Text('2Persons',style:
+                              Text('2 PERSONS',style:
                               TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold),)
 
                             ],
                           ),
-                          SizedBox(height: 10,),
+                          SizedBox(height: 20,),
                         ],
                       ),
                     ),

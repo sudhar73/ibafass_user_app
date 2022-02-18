@@ -17,6 +17,23 @@ class _LeaveappliedSuccessfullyState extends State<LeaveappliedSuccessfully> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor('#F0F4FD'),
+      appBar: AppBar(
+        elevation: 0.0,
+        centerTitle: true,
+        backgroundColor: HexColor('#0F46B3'),
+        leading: IconButton(
+          onPressed: (){
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back,
+          ),
+        ),
+        title: Text('Leaves',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22,color: Colors.white),),
+        actions: [
+          Icon(Icons.more_vert,)
+        ],
+      ),
       body: Column(
         children: [
           Container(
@@ -25,52 +42,9 @@ class _LeaveappliedSuccessfullyState extends State<LeaveappliedSuccessfully> {
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(40),
                     bottomRight: Radius.circular(40))),
-            height: MediaQuery.of(context).size.height / 2.50,
             width: MediaQuery.of(context).size.width,
             child: Column(
               children: [
-                SizedBox(
-                  height: 40,
-                ),
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: Row(
-                    children: [
-                      Flexible(
-                        flex: 0,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
-                          child: Icon(
-                            Icons.arrow_back_sharp,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      Flexible(
-                        flex: 2,
-                        child: Center(
-                          child: Text(
-                            'Leaves',
-                            style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                        ),
-                      ),
-                      Flexible(
-                        flex: 0,
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 10.0),
-                          child: Icon(
-                            Icons.more_vert,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
                 SizedBox(
                   height: 20,
                 ),
@@ -107,10 +81,11 @@ class _LeaveappliedSuccessfullyState extends State<LeaveappliedSuccessfully> {
                     ),
                   ),
                 ),
+                SizedBox(height: 20,),
               ],
             ),
           ),
-          SizedBox(height: 20,),
+          SizedBox(height: 40,),
           Stack(
             children: [
               Padding(
@@ -134,7 +109,7 @@ class _LeaveappliedSuccessfullyState extends State<LeaveappliedSuccessfully> {
                       child: Column(
                         children: [
                           Text(
-                            'Leave applied',
+                            'Leave Applied',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 26,

@@ -23,8 +23,13 @@ class _EmployeePerformanceState extends State<EmployeePerformance> {
           backgroundColor: HexColor('#0F46B3'),
           title: Text('Performance',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
           centerTitle: true,
-          leading: Icon(
-            Icons.arrow_back,
+          leading: IconButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+            ),
           ),
           actions: [
             Icon(Icons.more_vert),

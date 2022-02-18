@@ -9,9 +9,12 @@ class Employeprofile extends StatefulWidget {
   _EmployeprofileState createState() => _EmployeprofileState();
 }
 
-class _EmployeprofileState extends State<Employeprofile> {
+class _EmployeprofileState extends State<Employeprofile> with TickerProviderStateMixin  {
   @override
   Widget build(BuildContext context) {
+    TabController _tabcontroller = new TabController(length: 3, vsync: this);
+    final myheight=MediaQuery.of(context).size.height;
+    final mywidth=MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: HexColor('#0F46B3'),
       appBar: PreferredSize(
@@ -21,10 +24,12 @@ class _EmployeprofileState extends State<Employeprofile> {
           centerTitle:true,
           backgroundColor: HexColor('#0F46B3'),
           title: Text('Employer Profile',style: TextStyle(color: Colors.white,
-              fontSize: 18,fontWeight: FontWeight.bold),),
+              fontSize: 20,fontWeight: FontWeight.bold),),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
-            onPressed: (){},
+            onPressed: (){
+              Navigator.pop(context);
+            },
           ),
           actions: [
             IconButton(
@@ -36,139 +41,137 @@ class _EmployeprofileState extends State<Employeprofile> {
           ],
         ),
       ),
-      body: Column(
-        children: [
-          Container(
-            color: HexColor('#0F46B3'),
-            child: Column(
-              children: [
-                CircleAvatar(
-                  radius: 45,
-                  child: ClipOval(
-                    child: Image(
-                      image: AssetImage('assets/payment/profilepic.jpg'),
-                      fit: BoxFit.cover,
-                      height: 90,
-                      width: 90,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Center(
-                  child: Text(
-                    'Mani',
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Center(
-                  child: Text(
-                    'UI Designer',
-                    style: TextStyle(
-                      fontSize: 13,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 20,),
-              ],
-            ),
-          ),
-           Expanded(
-             child: Container(
-               decoration: BoxDecoration(
-                   color: HexColor('#DCF4F9'),
-                   borderRadius: BorderRadius.only(
-                     topRight: Radius.circular(25),
-                     topLeft: Radius.circular(25),
-                   )),
-               height: MediaQuery.of(context).size.height,
-               width: MediaQuery.of(context).size.width,
-               child: Padding(
-                 padding: const EdgeInsets.all(20.0),
-                 child: DefaultTabController(
-                   length: 3,
-                   child: Scaffold(
-                     backgroundColor: HexColor('#DCF4F9'),
-                     appBar: PreferredSize(
-                       preferredSize: Size.fromHeight(60.0),
-                       child: AppBar(
-                         automaticallyImplyLeading: false,
-                         centerTitle: true,
-                         shape: RoundedRectangleBorder(
-                             borderRadius:
-                             BorderRadius.all(Radius.circular(40))),
-                         backgroundColor: Colors.white,
-                         title: TabBar(
-                           indicator: BoxDecoration(
-                               shape: BoxShape.circle,
-                               color: HexColor('#0F46B3')),
-                           tabs: [
-                             Tab(
-                                 child: Center(
-                                   child: Icon(
-                                     Icons.person,
-                                     color: Colors.black,
-                                     size: 30,
-                                   ),
-                                 )),
-                             Tab(
-                               child: Center(
+       body: Column(
+         children: [
+           Container(
+             color: HexColor('#0F46B3'),
+             child: Column(
+               children: [
+                 CircleAvatar(
+                   radius: 45,
+                   child: ClipOval(
+                     child: Image(
+                       image: AssetImage('assets/payment/profilepic.jpg'),
+                       fit: BoxFit.cover,
+                       height: 90,
+                       width: 90,
+                     ),
+                   ),
+                 ),
+                 SizedBox(
+                   height: 10,
+                 ),
+                 Center(
+                   child: Text(
+                     'Mani',
+                     style: TextStyle(
+                       fontSize: 22,
+                       color: Colors.white,
+                       fontWeight: FontWeight.bold,
+                     ),
+                   ),
+                 ),
+                 Center(
+                   child: Text(
+                     'UI Designer',
+                     style: TextStyle(
+                       fontSize: 13,
+                       color: Colors.white,
+                     ),
+                   ),
+                 ),
+                 SizedBox(height: 20,),
+               ],
+             ),
+           ),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                    color: HexColor('#DCF4F9'),
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(25),
+                      topLeft: Radius.circular(25),
+                    )),
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  children: [
+               Padding(
+                     padding: const EdgeInsets.only(left: 20.0,right: 20.0,top: 20),
+                     child: DefaultTabController(
+                       length: 3,
+                       child: Container(
+                         decoration: BoxDecoration(
+                           color: Colors.white,
+                           borderRadius:BorderRadius.all(Radius.circular(30)),
+                         ),
+                         height: myheight/11,
+                         width: mywidth/1.10,
+                         child: Padding(
+                           padding: const EdgeInsets.all(10.0),
+                           child: TabBar(
+                             controller: _tabcontroller,
+                             unselectedLabelColor: Colors.black,
+                             labelColor: Colors.white,
+                             indicator: BoxDecoration(
+                                 shape: BoxShape.circle,
+                                 color: HexColor('#0F46B3')),
+                             tabs: [
+                               Tab( child: Center(
+                                 child: Icon(
+                                   Icons.person,
+                                   color: Colors.black,
+                                   size: 30,
+                                 ),
+                               )),
+                               Tab(child: Center(
                                  child: Icon(
                                    Icons.school,
                                    color: Colors.black,
                                    size: 30,
                                  ),
-                               ),
-                             ),
-                             Tab(
-                               child: Center(
+                               ),),
+                               Tab( child: Center(
                                  child: Icon(
                                    Icons.note_add,
                                    color: Colors.black,
                                    size: 30,
                                  ),
-                               ),
-                             )
-                           ],
-                         ),
-                       ),
-                     ),
-                     body: SingleChildScrollView(
-                       child: Padding(
-                         padding: const EdgeInsets.only(top: 20),
-                         child: Center(
-                           child: Container(
-                             decoration: BoxDecoration(
-                                 color: Colors.white,
-                                 borderRadius:
-                                 BorderRadius.all(Radius.circular(30))),
-                             height:
-                             MediaQuery.of(context).size.height / 2.50,
-                             width: MediaQuery.of(context).size.width / 0.90,
-                             child: TabBarView(
-                               children: [
-                                 PersonalInformation(),
-                                 EducationInformation(),
-                                 CareerExperience(),
-                               ],
-                             ),
+                               ),)
+                             ],
                            ),
                          ),
                        ),
                      ),
-                   ),
-                 ),
                ),
-             ),
-           ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20,right: 20,top: 20,bottom: 20),
+                      child: DefaultTabController(
+                        length: 3,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius:
+                              BorderRadius.all(Radius.circular(30))),
+
+                          height: myheight/2.5,
+                          child: TabBarView( controller: _tabcontroller,
+                              children:[
+                                PersonalInformation(),
+                                EducationInformation(),
+                                CareerExperience(),
+                              ]
+                          ),
+                        ),
+                      ),
+                    ),
+           ],
+                ),
+              ),
+            ),
+
          ],
-      ),
+       ),
     );
   }
 
@@ -183,7 +186,7 @@ class _EmployeprofileState extends State<Employeprofile> {
           child: Align(
             alignment: Alignment.topLeft,
             child: Text(
-              'personal Information',
+              'Personal Information',
               style: TextStyle(
                   color: HexColor('#0F46B3'),
                   fontSize: 22,
@@ -231,7 +234,7 @@ class _EmployeprofileState extends State<Employeprofile> {
           ],
         ),
         SizedBox(
-          height: 10,
+          height: 15,
         ),
         Row(
           children: [
@@ -263,7 +266,7 @@ class _EmployeprofileState extends State<Employeprofile> {
           ],
         ),
         SizedBox(
-          height: 10,
+          height: 15,
         ),
         Row(
           children: [
@@ -295,7 +298,7 @@ class _EmployeprofileState extends State<Employeprofile> {
           ],
         ),
         SizedBox(
-          height: 10,
+          height: 15,
         ),
         Row(
           children: [
@@ -327,7 +330,7 @@ class _EmployeprofileState extends State<Employeprofile> {
           ],
         ),
         SizedBox(
-          height: 10,
+          height: 15,
         ),
         Row(
           children: [

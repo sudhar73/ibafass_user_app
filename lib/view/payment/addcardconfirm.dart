@@ -19,7 +19,7 @@ class _AddCardConfirmState extends State<AddCardConfirm> {
         children: [
           Container(
             child: Padding(
-              padding: const EdgeInsets.only(top: 40.0),
+              padding: const EdgeInsets.only(top: 45.0),
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Text(

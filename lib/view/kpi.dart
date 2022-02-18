@@ -54,7 +54,7 @@ class KpiState extends State<Kpi> {
                 color: HexColor('0F46B3'),
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(40.0),bottomLeft: Radius.circular(40.0)),
               ),
-              height: MediaQuery.of(context).size.height/7,
+              height: MediaQuery.of(context).size.height/8,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
@@ -165,7 +165,7 @@ class KpiState extends State<Kpi> {
                             'Reporting duty on time',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(
@@ -181,7 +181,7 @@ class KpiState extends State<Kpi> {
                             'Implementation of cleaning schedule > 70%',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(
@@ -197,7 +197,7 @@ class KpiState extends State<Kpi> {
                             'Implementation of check lists > 70%',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(
@@ -213,7 +213,7 @@ class KpiState extends State<Kpi> {
                             'Training hours(20 mins/ trg.20 staff per week)',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(
@@ -229,7 +229,7 @@ class KpiState extends State<Kpi> {
                             'Staff duty rota availability > 90%',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(
@@ -245,7 +245,7 @@ class KpiState extends State<Kpi> {
                             'Staff grooming standard > 87%',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(
@@ -261,7 +261,7 @@ class KpiState extends State<Kpi> {
                             'Executive site visit',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(
@@ -277,7 +277,7 @@ class KpiState extends State<Kpi> {
                             'Operations meeting',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(
@@ -293,7 +293,7 @@ class KpiState extends State<Kpi> {
                             'Projects vacancy filling 85% and above',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(
@@ -309,7 +309,7 @@ class KpiState extends State<Kpi> {
                             'Projects vacancy filling 85% and above',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(
@@ -325,7 +325,7 @@ class KpiState extends State<Kpi> {
                             'Staff attendance daily update',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(
@@ -341,7 +341,7 @@ class KpiState extends State<Kpi> {
                             'Reporting duty on time',
                             style: TextStyle(
                                 fontSize: 15,
-                                fontWeight: FontWeight.bold,
+
                                 color: Colors.black),
                           ),
                           trailing: Text(

@@ -53,7 +53,7 @@ class _EmailSettingsState extends State<EmailSettings> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(left: 20.0),
-                                child: Text('PHP Mail',style: TextStyle(color: Colors.black,fontSize: 20),),
+                                child: Text('PHP Mail',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
                               ),
                               SizedBox(width: 10,),
                               GFToggle(onChanged: (val){},
@@ -63,7 +63,7 @@ class _EmailSettingsState extends State<EmailSettings> {
                                 type: GFToggleType.ios,
                               ),
                               Spacer(),
-                              Text('SMTP',style: TextStyle(color: Colors.black,fontSize: 20),),
+                              Text('SMTP',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
                               SizedBox(width: 10,),
                               Padding(
                                 padding: const EdgeInsets.only(right: 20.0),
@@ -85,15 +85,15 @@ class _EmailSettingsState extends State<EmailSettings> {
                               endIndent: 20.0,
                             ),
                           ),
-                          SizedBox(height: 20,),
+
                           Padding(
                             padding: const EdgeInsets.only(left: 20.0),
-                            child: Text('PHP EMAIL SETTINGS',style: TextStyle(color: Colors.black,fontSize: 20),),
+                            child: Text('PHP EMAIL SETTINGS',style: TextStyle(color: Colors.black,fontSize: 17,fontWeight: FontWeight.bold),),
                           ),
                           SizedBox(height: 20,),
                           Padding(
                             padding: const EdgeInsets.only(left: 20.0),
-                            child: Text('Email From address:',style: TextStyle(color: Colors.grey,fontSize: 16),),
+                            child: Text('Email From Address:',style: TextStyle(color: Colors.grey,fontSize: 16),),
                           ),
                           SizedBox(height: 10,),
                           Padding(
@@ -131,7 +131,7 @@ class _EmailSettingsState extends State<EmailSettings> {
                           SizedBox(height: 30,),
                           Padding(
                             padding: const EdgeInsets.only(left: 20.0),
-                            child: Text('SMTP SETTINGS',style: TextStyle(color: Colors.black,fontSize: 20),),
+                            child: Text('SMTP SETTINGS',style: TextStyle(color: Colors.black,fontSize: 17,fontWeight: FontWeight.bold),),
                           ),
                           SizedBox(height: 20,),
                           Padding(
@@ -264,7 +264,7 @@ class _EmailSettingsState extends State<EmailSettings> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         child: Text(
-                          "Save&Update",
+                          "Save & Update",
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                       ),

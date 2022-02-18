@@ -12,13 +12,18 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: HexColor('#E9F8FC'),
+      backgroundColor: HexColor('E9F8FC'),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
+        preferredSize: Size.fromHeight(65.0),
         child: AppBar(
           backgroundColor: HexColor('#0F46B3'),
-          leading: Icon(
-            Icons.arrow_back,color:Colors.white,
+          leading: IconButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,color:Colors.white,
+            ),
           ),
           title: Row(
             mainAxisSize: MainAxisSize.min,

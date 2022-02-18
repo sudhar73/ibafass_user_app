@@ -42,7 +42,7 @@ class _PaymentState extends State<Payment> {
       Container(
         child: Column(children: [
           SizedBox(
-            height: 50,
+            height: 20,
           ),
           Padding(
             padding:
@@ -72,9 +72,10 @@ class _PaymentState extends State<Payment> {
                 topRight: Radius.circular(40),
                 topLeft: Radius.circular(40),
               )),
-          height: MediaQuery.of(context).size.height / 1.40,
+          height: MediaQuery.of(context).size.height / 1.30,
           width: MediaQuery.of(context).size.width,
           child: Column(children: [
+            SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.only(
                 top: 10.0,
@@ -82,41 +83,50 @@ class _PaymentState extends State<Payment> {
                 right: 20.0,
               ),
 
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0)),
-                shadowColor: Colors.grey,
-                elevation: 5,
-                child: Container(
-                  height: 60,
-                  child: Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                        child: Image(
-                          image: AssetImage('assets/payment/bank transfer.png'),
-                          height: 40,
-                          width: 40,
+              child: InkWell(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => PaymentOne(),),
+                  );
+                },
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0)),
+                  shadowColor: Colors.grey,
+                  elevation: 5,
+                  child: Container(
+                    height: 60,
+                    child: Row(children: [
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          child: Image(
+                            image: AssetImage('assets/payment/bank transfer.png'),
+                            height: 40,
+                            width: 40,
+                          ),
                         ),
                       ),
-                    ),
-                    Text(
-                      'Bank Transfer',
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                    ),
-                    Spacer(),
-                    IconButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => PaymentOne()),
-                          );
-                        },
-                        icon: Icon(Icons.arrow_forward_ios)),
-                  ]),
+                      Text(
+                        'Bank Transfer',
+                        style:
+                            TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => PaymentOne()),
+                            );
+                          },
+                          icon: Icon(Icons.arrow_forward_ios)),
+                    ]),
+                  ),
                 ),
               ),
             ),
@@ -126,41 +136,46 @@ class _PaymentState extends State<Payment> {
                 left: 20.0,
                 right: 20.0,
               ),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0)),
-                shadowColor: Colors.grey,
-                elevation: 5,
-                child: Container(
-                  height: 60,
-                  child: Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                        child: Image(
-                          image: AssetImage('assets/payment/creditcard.png'),
-                          height: 40,
-                          width: 40,
+              child: InkWell(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Creditcard()),
+                  );
+                },
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0)),
+                  shadowColor: Colors.grey,
+                  elevation: 5,
+                  child: Container(
+                    height: 60,
+                    child: Row(children: [
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          child: Image(
+                            image: AssetImage('assets/payment/creditcard.png'),
+                            height: 40,
+                            width: 40,
+                          ),
                         ),
                       ),
-                    ),
-                    Text(
-                      'Credit Card',
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                    ),
-                    Spacer(),
-                    IconButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Creditcard()),
-                          );
-                        },
-                        icon: Icon(Icons.arrow_forward_ios)),
-                  ]),
+                      Text(
+                        'Credit Card',
+                        style:
+                            TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      IconButton(
+                          onPressed: () {
+
+                          },
+                          icon: Icon(Icons.arrow_forward_ios)),
+                    ]),
+                  ),
                 ),
               ),
             ),
@@ -170,41 +185,46 @@ class _PaymentState extends State<Payment> {
                 left: 20.0,
                 right: 20.0,
               ),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0)),
-                shadowColor: Colors.grey,
-                elevation: 5,
-                child: Container(
-                  height: 60,
-                  child: Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                        child: Image(
-                          image: AssetImage('assets/payment/upi.png'),
-                          height: 40,
-                          width: 40,
+              child: InkWell(
+                onTap: (){
+                  showMaterialModalBottomSheet(
+                      shape:RoundedRectangleBorder( borderRadius:
+                      BorderRadius.only(topLeft: Radius.circular(40),topRight: Radius.circular(40)),),
+                      context: context,
+                      builder: (context) =>UPI()
+                  );
+                },
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0)),
+                  shadowColor: Colors.grey,
+                  elevation: 5,
+                  child: Container(
+                    height: 60,
+                    child: Row(children: [
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          child: Image(
+                            image: AssetImage('assets/payment/upi.png'),
+                            height: 40,
+                            width: 40,
+                          ),
                         ),
                       ),
-                    ),
-                    Text(
-                      'UPI',
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                    ),
-                    Spacer(),
-                    IconButton(
-                        onPressed: () {
-                          showMaterialModalBottomSheet(
-                            shape:RoundedRectangleBorder( borderRadius:
-                            BorderRadius.only(topLeft: Radius.circular(40),topRight: Radius.circular(40)),),
-                            context: context,
-                            builder: (context) =>UPI()
-                          );
-                        }, icon: Icon(Icons.arrow_forward_ios)),
-                  ]),
+                      Text(
+                        'UPI',
+                        style:
+                            TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      IconButton(
+                          onPressed: () {
+
+                          }, icon: Icon(Icons.arrow_forward_ios)),
+                    ]),
+                  ),
                 ),
               ),
             ),

@@ -21,8 +21,13 @@ class _ChatsState extends State<Chats> {
           backgroundColor: HexColor('#0F46B3'),
           title: Text('Chats',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
           centerTitle: true,
-          leading: Icon(
-            Icons.menu,
+          leading: IconButton(
+            onPressed: (){
+
+            },
+            icon: Icon(
+              Icons.menu,
+            ),
           ),
           actions: [
             Padding(
@@ -37,8 +42,8 @@ class _ChatsState extends State<Chats> {
         children: [
           Container(
             width:  MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height/13,
-            color: HexColor('#DCF4F9'),
+            height: MediaQuery.of(context).size.height/14,
+            color:  HexColor('#DCF4F9'),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -108,82 +113,80 @@ class _ChatsState extends State<Chats> {
           Expanded(
             child: Container(
               height: MediaQuery.of(context).size.height,
-              child: ListView.builder(
-                  scrollDirection: Axis.vertical,
-                  itemCount: 8,
-                  itemBuilder: (BuildContext context, int index)
-                  {
-                    return  InkWell(onTap: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const ChatScreen()),
-                      );
-                    },
-                      child: Container(
-                        padding:
-                        EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
-                        child: Column(
-                          children: [
-                            Row(
+              child:
+                  ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      itemCount: 12,
+                      itemBuilder: (BuildContext context, int index)
+                      {
+                        return  InkWell(onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const ChatScreen()),
+                          );
+                        },
+                          child: Container(
+                            padding:
+                            EdgeInsets.symmetric(horizontal: 20.0,vertical: 5 ),
+                            child: Column(
                               children: [
-                                CircleAvatar(
-                                  radius: 25.0,
-                                  backgroundImage: AssetImage('assets/payment/profilepic.jpg'),
-                                ),
-                                SizedBox(
-                                  width: 15.0,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+
+                                Row(
                                   children: [
+                                    CircleAvatar(
+                                      radius: 25.0,
+                                      backgroundImage: AssetImage('assets/payment/profilepic.jpg'),
+                                    ),
+                                    SizedBox(
+                                      width: 15.0,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'vijay',
+                                          style: TextStyle(
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black),
+                                        ),
+                                        SizedBox(
+                                          height: 5.0,
+                                        ),
+                                        Container(
+                                          child: Text(
+                                            'hii',
+                                            style: TextStyle(
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.normal,
+                                                color: Colors.grey),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    Spacer(),
                                     Text(
-                                      'vijay',
+                                      '10:30',
                                       style: TextStyle(
-                                          fontSize: 13.0,
+                                          fontSize: 10.0,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.black),
                                     ),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-                                    Container(
-                                      child: Text(
-                                        'hii',
-                                        style: TextStyle(
-                                            fontSize: 13.0,
-                                            fontWeight: FontWeight.normal,
-                                            color: Colors.grey),
-                                      ),
-                                    )
                                   ],
                                 ),
-                                Spacer(),
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 10.0),
-                                  child: Text(
-                                    '10:30',
-                                    style: TextStyle(
-                                        fontSize: 10.0,
-                                        fontWeight: FontWeight.normal,
-                                        color: Colors.black),
+                                SizedBox(height: 5,),
+                                Divider(
+                                    color: Colors.grey,
+                                    thickness: 0.5,
                                   ),
-                                ),
+
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 10.0,right: 10.0),
-                              child: Divider(
-                                  color: Colors.grey,
-                                  thickness: 0.5,
-                                ),
-                            ),
+                          ),
+                        );
 
-                          ],
-                        ),
-                      ),
-                    );
+                      }
 
-                  }
               ),
             ),
           ),

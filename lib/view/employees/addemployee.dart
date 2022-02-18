@@ -23,7 +23,11 @@ class _AddEmployeeState extends State<AddEmployee> {
           actions: [
             Icon(Icons.more_vert),
           ],
-          leading: Icon(Icons.arrow_back),
+          leading: IconButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+              icon: Icon(Icons.arrow_back)),
           title: Text('AddEmployee',style:TextStyle(color: Colors.white),),
 
         ),

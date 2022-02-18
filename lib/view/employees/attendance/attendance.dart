@@ -23,7 +23,11 @@ class _AttendanceState extends State<Attendance> {
            color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold
        ),),
        centerTitle: true,
-       leading: Icon(Icons.arrow_back),
+       leading: IconButton(
+         onPressed: (){
+           Navigator.pop(context);
+         },
+           icon: Icon(Icons.arrow_back)),
        actions: [
          IconButton(onPressed: (){
            Navigator.push(
@@ -53,7 +57,6 @@ class _AttendanceState extends State<Attendance> {
           overflow: Overflow.visible,
           children: [
             Container(
-              height: myheight,
               width: mywidth,
               decoration: BoxDecoration( color: HexColor('#DCF4F9'),
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(40.0),topRight: Radius.circular(40.0))),
@@ -61,12 +64,15 @@ class _AttendanceState extends State<Attendance> {
                 children: [
                   SizedBox(height: myheight*0.18,),
                   Container(
-                    height: myheight/3.5,
+                    height: myheight/2.5,
                     width: mywidth/1.20,
                     decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(25.0))),
                     child: Column(
                       children: [
-                        Text('Total working hours :',style: TextStyle(fontWeight:FontWeight.bold,color: HexColor('#0F46B3'),fontSize: 20),),
+                        Center(child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text('Total working hours :',style: TextStyle(fontWeight:FontWeight.bold,color: HexColor('#0F46B3'),fontSize: 20),),
+                        )),
                       ],
                     ),
                   ),
@@ -76,33 +82,35 @@ class _AttendanceState extends State<Attendance> {
                     children: [
 
                       Container(
-                        height: myheight/7,
+                        height: myheight/8,
                         width: mywidth/3,
                         decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(25.0))),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('Break Time',style: TextStyle(color: Colors.black,fontSize: 16),),
-                            Text('01.30 hrs',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 18),),
+                            Text('01.30 hrs',style: TextStyle(fontWeight:FontWeight.bold,color: HexColor('#0F46B3'),fontSize: 18),),
                           ],
                         ),
                       ),
                       SizedBox(height: 10,),
                       Container(
-                        height: myheight/7,
+                        height: myheight/8,
                         width: mywidth/3,
                         decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(25.0))),
                         child:Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('Over Time',style: TextStyle(color: Colors.black,fontSize: 16),),
-                            Text('01.30 hrs',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 18),),
+                            Text('01.30 hrs',style: TextStyle(fontWeight:FontWeight.bold,color: HexColor('#0F46B3'),fontSize: 18),),
+
                           ],
                         ),
                       ),
 
                     ],
-                  )
+                  ),
+                  SizedBox(height:10)
                 ],)
 
             ),
@@ -125,8 +133,9 @@ class _AttendanceState extends State<Attendance> {
                           ),
                         ),
                       ),
+                      SizedBox(height:10),
                       Text('Punch in',style: TextStyle(color: Colors.black,fontSize: 14),),
-                      Text('10.00 A.M',style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.bold),),
+                      Text('10.00 A.M',style: TextStyle(color: HexColor('#0F46B3'),fontSize: 15,fontWeight: FontWeight.bold),),
                     ],
                   ),
                 )),
@@ -149,8 +158,9 @@ class _AttendanceState extends State<Attendance> {
                         ),
                       ),
                     ),
-                    Text('Punch out',style: TextStyle(color: Colors.black,fontSize: 14),),
-                    Text('6.00 P.M',style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.bold),),
+                    SizedBox(height:10),
+                    Text('Punch out',style: TextStyle(color: Colors.blue,fontSize: 14),),
+                    Text('6.00 P.M',style: TextStyle(color: HexColor('#0F46B3'), fontSize: 15,fontWeight: FontWeight.bold),),
                   ],
                 ),
               ),

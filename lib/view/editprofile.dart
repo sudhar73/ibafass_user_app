@@ -16,7 +16,7 @@ class _EditProfileState extends State<EditProfile> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text('Edit Profile',style: TextStyle(
-            color: HexColor('#0F46B3'),fontSize: 20,fontWeight: FontWeight.bold
+            color: HexColor('#0F46B3'),fontWeight: FontWeight.bold
         ),),
         centerTitle: true,
         elevation: 0.0,
@@ -85,7 +85,7 @@ class _EditProfileState extends State<EditProfile> {
             ),
             SizedBox(height: 20,),
             Container(
-              height: 90,
+
               width: MediaQuery.of(context).size.width/1.15,
               decoration: BoxDecoration(color: Colors.white,
                borderRadius: BorderRadius.all(Radius.circular(15.0)) ,
@@ -102,7 +102,7 @@ class _EditProfileState extends State<EditProfile> {
                   SizedBox(height: 10,),
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
-                    child: Text('FullName:',style: TextStyle(fontSize: 18,color: Colors.grey),),
+                    child: Text('FullName:',style: TextStyle(fontSize: 16,color: Colors.grey),),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -116,14 +116,14 @@ class _EditProfileState extends State<EditProfile> {
                         ),
                       ),
                     ),
-                  )
-
+                  ),
+                  SizedBox(height: 10,),
                 ],
               ),
             ),
             SizedBox(height: 20,),
             Container(
-              height: 90,
+
               width: MediaQuery.of(context).size.width/1.15,
               decoration: BoxDecoration(color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(15.0)) ,
@@ -140,7 +140,7 @@ class _EditProfileState extends State<EditProfile> {
                   SizedBox(height: 10,),
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
-                    child: Text('Phone Nummber:',style: TextStyle(fontSize: 18,color: Colors.grey),),
+                    child: Text('Phone Nummber:',style: TextStyle(fontSize: 16,color: Colors.grey),),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -154,14 +154,13 @@ class _EditProfileState extends State<EditProfile> {
                         ),
                       ),
                     ),
-                  )
-
+                  ),
+                  SizedBox(height: 10,),
                 ],
               ),
             ),
             SizedBox(height: 20,),
             Container(
-              height: 90,
               width: MediaQuery.of(context).size.width/1.15,
               decoration: BoxDecoration(color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(15.0)) ,
@@ -178,10 +177,10 @@ class _EditProfileState extends State<EditProfile> {
                   SizedBox(height: 10,),
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
-                    child: Text('Email ID:',style: TextStyle(fontSize: 18,color: Colors.grey),),
+                    child: Text('Email ID:',style: TextStyle(fontSize: 16,color: Colors.grey),),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0,),
                     child: TextField(
                       decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
@@ -193,7 +192,7 @@ class _EditProfileState extends State<EditProfile> {
                       ),
                     ),
                   ),
-
+                  SizedBox(height: 10,),
                 ],
               ),
             ),

@@ -43,29 +43,44 @@ class _UPIState extends State<UPI> {
               Container(
                 height: myheight/7,
                 width: mywidth/4,
-                decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.all(Radius.circular(15))),
+                decoration: BoxDecoration( boxShadow: [BoxShadow(
+                  offset: Offset(0,3.0),
+                  blurRadius: 6,
+                  color: Colors.grey,
+                )],
+                    color: HexColor('C6F9DE'),borderRadius: BorderRadius.all(Radius.circular(15))),
                 child: Image(
-                  image: AssetImage('assets/payment/gpay.png'), height: 0,
-                  width: 0,
+                  image: AssetImage('assets/payment/gpay.png'), height: 50,
+                  width: 50 ,
                 ),
               ),
               Container(
                 height: myheight/7,
                 width: mywidth/4,
-                decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.all(Radius.circular(15))),
+                decoration: BoxDecoration(
+                  boxShadow: [BoxShadow(
+                    offset: Offset(0,3.0),
+                    blurRadius: 6,
+                    color: Colors.grey,
+                  )],
+                    color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(15))),
                 child: Image(
                   image: AssetImage('assets/payment/paytm.png'),
-                  height: 0,
-                  width: 0,
                 ),
               ),
               Container(
                 height: myheight/7,
                 width: mywidth/4,
-                decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.all(Radius.circular(15))),
+                decoration: BoxDecoration(
+                    boxShadow: [BoxShadow(
+                      offset: Offset(0,3.0),
+                      blurRadius: 6,
+                      color: Colors.grey,
+                    )],
+                    color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(15))),
                 child: Image(
-                  image: AssetImage('assets/payment/phnpe.png'), height: 0,
-                  width: 0,
+                  image: AssetImage('assets/payment/phnpe.png'), height: 50,
+                  width: 50,
                 ),
               ),
 

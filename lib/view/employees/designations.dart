@@ -23,7 +23,9 @@ class _DesignationsState extends State<Designations> {
                 fontSize: 18,fontWeight: FontWeight.bold),),
             leading: IconButton(
               icon: Icon(Icons.arrow_back),
-              onPressed: (){},
+              onPressed: (){
+                Navigator.pop(context);
+              },
             ),
             actions: [
               IconButton(
@@ -47,7 +49,7 @@ class _DesignationsState extends State<Designations> {
                   Align(
                     alignment: Alignment.topLeft,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 20, left: 10),
+                      padding: const EdgeInsets.only(top: 20, left: 20),
                       child: Text(
                         'List of Designations',
                         style: TextStyle(
@@ -77,37 +79,38 @@ class _DesignationsState extends State<Designations> {
               decoration: BoxDecoration(
                   color: HexColor('#DCF4F9'),
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(25),
-                      topRight: Radius.circular(25))),
-              height: MediaQuery.of(context).size.height/1.3 ,
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30))),
+              height: MediaQuery.of(context).size.height ,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
                   SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(15),
-                        )),
-                    height: 50,
-                    width: MediaQuery.of(context).size.width / 1.15,
-                    child:  Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                            labelText: 'Employee Directory',
-                            focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                            enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                            suffixIcon: Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: IconButton(
-                                  onPressed: (){},
-                                  icon: Icon(Icons.search,color: Colors.black,)
-                              ),
-                            )
+                  Center(
+                    child:Container(decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20))),
+
+                      height: 60,
+                      width: MediaQuery.of(context).size.width/1.15,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15,right: 15),
+                        child: TextField(
+                          decoration: InputDecoration(
+                              labelText: 'Search for...',
+
+                              focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                              enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                              suffixIcon: Container(
+                                decoration: BoxDecoration( color: HexColor('E2E5FC'),borderRadius: BorderRadius.all(Radius.circular(10))),
+                                height: 5,
+                                width: 5,
+                                child: IconButton(
+                                    onPressed: (){},
+                                    icon: Icon(Icons.search,color: Colors.black,)
+                                ),
+                              )
+                          ),
                         ),
                       ),
                     ),
@@ -121,7 +124,6 @@ class _DesignationsState extends State<Designations> {
                         borderRadius: BorderRadius.all(
                           Radius.circular(20),
                         )),
-                    height: MediaQuery.of(context).size.height / 1.65,
                     width: MediaQuery.of(context).size.width / 1.15,
                     child: Column(
                       children: [
@@ -455,6 +457,7 @@ class _DesignationsState extends State<Designations> {
                             ]),
                           ),
                         ),
+                        SizedBox(height:20),
                       ],
                     ),
                   ),

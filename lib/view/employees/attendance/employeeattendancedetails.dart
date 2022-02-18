@@ -22,19 +22,38 @@ class _EmployeeAttendancePerformanceState extends State<EmployeeAttendancePerfor
             color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold
         ),),
         centerTitle: true,
-        leading: Icon(Icons.arrow_back),
+        leading: IconButton(
+          onPressed: (){
+            Navigator.pop(context);
+          },
+            icon: Icon(Icons.arrow_back)),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-              height: myheight/4 ,
+              height: myheight/6.3,
               width: mywidth,
               color: HexColor('#0F46B3'),
               child:Column(
                 children: [
-                  Center(child: Text('28 October, 2019',
-                    style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.white),)),
+                  Row(
+                    children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Text('28 October, 2019',
+                          style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.white),),
+                        ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20),
+                        child: Icon(
+                          Icons.calendar_today,
+                          color: Colors.white,
+                        ),
+                      )
+                      ],
+                  ),
                 ],
               ),
             ),
@@ -47,6 +66,7 @@ class _EmployeeAttendancePerformanceState extends State<EmployeeAttendancePerfor
                 children: [
                   SizedBox(height: 20.0,),
                   Container(
+
                     height: myheight/2.5,
                     width: mywidth/1.20,
                     decoration: BoxDecoration( color:Colors.white,borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -87,7 +107,8 @@ class _EmployeeAttendancePerformanceState extends State<EmployeeAttendancePerfor
                         SizedBox(height: 10.0,),
                         Padding(
                           padding: const EdgeInsets.only(left: 20.0),
-                          child: Text('Total Activity',style: TextStyle(fontSize: 20,color: Colors.black),),
+                          child: Text('Total Activity',style:
+                          TextStyle(fontWeight:FontWeight.bold,fontSize: 18,color: Colors.black),),
                         ),
                         SizedBox(height: 10,),
                         Row(
@@ -95,11 +116,11 @@ class _EmployeeAttendancePerformanceState extends State<EmployeeAttendancePerfor
                           children: [
                             Icon(Icons.circle_outlined,color: HexColor('#0F46B3'),size: 11,),
                             SizedBox(width: 10,),
-                            Text('punch in at',style:TextStyle(color: Colors.grey,fontSize: 14),),
+                            Text('Punch in at',style:TextStyle(color: Colors.grey,fontSize: 14),),
                             SizedBox(width: 20,),
                             Icon(Icons.timer,color: Colors.black,size: 20,),
                             SizedBox(width: 5,),
-                            Text('10.00 A.M',style:TextStyle(color: Colors.black,fontSize: 14),),
+                            Text('10.00 A.M',style:TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold),),
                           ],
                         ),
                         SizedBox(height: 10,),
@@ -108,11 +129,11 @@ class _EmployeeAttendancePerformanceState extends State<EmployeeAttendancePerfor
                           children: [
                             Icon(Icons.circle_outlined,color: HexColor('#0F46B3'),size: 11,),
                             SizedBox(width: 10,),
-                            Text('punch in at',style:TextStyle(color: Colors.grey,fontSize: 14),),
+                            Text('Punch in at',style:TextStyle(color: Colors.grey,fontSize: 14),),
                             SizedBox(width: 20,),
                             Icon(Icons.timer,color: Colors.black,size: 20,),
                             SizedBox(width: 5,),
-                            Text('10.00 A.M',style:TextStyle(color: Colors.black,fontSize: 14),),
+                            Text('10.00 A.M',style:TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold),),
                           ],
                         ),
                         SizedBox(height: 10,),
@@ -121,11 +142,12 @@ class _EmployeeAttendancePerformanceState extends State<EmployeeAttendancePerfor
                           children: [
                             Icon(Icons.circle_outlined,color: HexColor('#0F46B3'),size: 11,),
                             SizedBox(width: 10,),
-                            Text('punch in at',style:TextStyle(color: Colors.grey,fontSize: 14),),
+                            Text('Punch in at',style:TextStyle(color: Colors.grey,fontSize: 14),),
                             SizedBox(width: 20,),
                             Icon(Icons.timer,color: Colors.black,size: 20,),
                             SizedBox(width: 5,),
-                            Text('10.00 A.M',style:TextStyle(color: Colors.black,fontSize: 14),),
+                            Text('10.00 A.M',style:
+                            TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold),),
                           ],
                         ),
                         SizedBox(height: 10,),
@@ -134,11 +156,12 @@ class _EmployeeAttendancePerformanceState extends State<EmployeeAttendancePerfor
                           children: [
                             Icon(Icons.circle_outlined,color: HexColor('#0F46B3'),size: 11,),
                             SizedBox(width: 10,),
-                            Text('punch in at',style:TextStyle(color: Colors.grey,fontSize: 14),),
+                            Text('Punch in at',style:TextStyle(color: Colors.grey,fontSize: 14),),
                             SizedBox(width: 20,),
                             Icon(Icons.timer,color: Colors.black,size: 20,),
                             SizedBox(width: 5,),
-                            Text('10.00 A.M',style:TextStyle(color: Colors.black,fontSize: 14),),
+                            Text('10.00 A.M',style:
+                            TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold),),
                           ],
                         ),
                         SizedBox(height: 10,),
@@ -147,11 +170,12 @@ class _EmployeeAttendancePerformanceState extends State<EmployeeAttendancePerfor
                           children: [
                             Icon(Icons.circle_outlined,color: HexColor('#0F46B3'),size: 11,),
                             SizedBox(width: 10,),
-                            Text('punch in at',style:TextStyle(color: Colors.grey,fontSize: 14),),
+                            Text('Punch in at',style:TextStyle(color: Colors.grey,fontSize: 14),),
                             SizedBox(width: 20,),
                             Icon(Icons.timer,color: Colors.black,size: 20,),
                             SizedBox(width: 5,),
-                            Text('10.00 A.M',style:TextStyle(color: Colors.black,fontSize: 14),),
+                            Text('10.00 A.M',style:TextStyle
+                              (color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold),),
                           ],
                         )
                       ],
@@ -164,13 +188,14 @@ class _EmployeeAttendancePerformanceState extends State<EmployeeAttendancePerfor
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        height: myheight/7,
+                        height: myheight/7.5,
                         width: mywidth/3,
                         decoration: BoxDecoration( color:Colors.white,borderRadius: BorderRadius.all(Radius.circular(20.0)),),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text('Break time',style: TextStyle(fontSize: 16,color: Colors.black),),
+                          SizedBox(height: 5,),
                           Text('01.30 hrs',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 19,color:HexColor('#0F46B3')),),
                         ],
                       ),
@@ -178,20 +203,21 @@ class _EmployeeAttendancePerformanceState extends State<EmployeeAttendancePerfor
 
                       SizedBox(width: 10.0,),
                       Container(
-                        height: myheight/7,
+                        height: myheight/7.5,
                         width: mywidth/3,
                           decoration: BoxDecoration( color:Colors.white,borderRadius: BorderRadius.all(Radius.circular(20.0)),),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('over time',style: TextStyle(fontSize: 16,color: Colors.black),),
+                            Text('Over time',style: TextStyle(fontSize: 16,color: Colors.black),),
+                            SizedBox(height: 5,),
                             Text('00.00 hrs',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 19,color:HexColor('#0F46B3')),),
                           ],
                         ),
                       )
                     ],
                   ),
-                  SizedBox(height: 30.0,),
+                  SizedBox(height: 20.0,),
                   Container(
                     height: 70,
                     width: MediaQuery.of(context).size.width / 1.15,

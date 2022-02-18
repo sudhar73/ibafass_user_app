@@ -20,9 +20,14 @@ class _ExpensesState extends State<Expenses> {
           elevation: 0.0,
           backgroundColor: HexColor('#0F46B3'),
           title: Text('Expenses',style: TextStyle(color: Colors.white),),
-          leading: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
+          leading: IconButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            ),
           ),
           centerTitle: true,
           actions: [

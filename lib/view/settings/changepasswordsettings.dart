@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:getwidget/components/checkbox/gf_checkbox.dart';
+import 'package:getwidget/getwidget.dart';
+import 'package:getwidget/types/gf_checkbox_type.dart';
 import 'package:hexcolor/hexcolor.dart';
 class ChangePassword extends StatefulWidget {
   const ChangePassword({Key? key}) : super(key: key);
@@ -9,6 +12,7 @@ class ChangePassword extends StatefulWidget {
 
 class _ChangePasswordState extends State<ChangePassword> {
   bool _isHiddenPassword = true;
+  bool Selected=true;
   @override
   Widget build(BuildContext context) {
 
@@ -37,12 +41,10 @@ class _ChangePasswordState extends State<ChangePassword> {
           child: Column(
             children: [
               Container(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height,
+
                 decoration: BoxDecoration(
-                    color: HexColor('#DCF4F9'),
+
+                    color:Colors.red,
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(40.0),
                         topLeft: Radius.circular(40.0))),
@@ -78,7 +80,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(10.0)),
-                                    borderSide: BorderSide(color: Colors.grey)),
+                                    borderSide: BorderSide(color: HexColor('#0F46B3'))),
                               ),
                             ),
                           ),
@@ -93,7 +95,10 @@ class _ChangePasswordState extends State<ChangePassword> {
                             padding: const EdgeInsets.only(
                                 left: 20.0, right: 20.0),
                             child: TextFormField(
+                              obscureText: _isHiddenPassword,
                               decoration: InputDecoration(
+                                suffixIcon: IconButton(onPressed: passwordView,
+                                    icon: Icon(_isHiddenPassword?Icons.visibility:Icons.visibility_off)),
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(10.0)),
@@ -101,7 +106,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(10.0)),
-                                    borderSide: BorderSide(color: Colors.grey)),
+                                    borderSide: BorderSide(color: HexColor('#0F46B3'))),
                               ),
                             ),
                           ),
@@ -116,7 +121,10 @@ class _ChangePasswordState extends State<ChangePassword> {
                             padding: const EdgeInsets.only(
                                 left: 20.0, right: 20.0),
                             child: TextFormField(
+                              obscureText: _isHiddenPassword,
                               decoration: InputDecoration(
+                                suffixIcon: IconButton(onPressed: passwordView,
+                                    icon: Icon(_isHiddenPassword?Icons.visibility:Icons.visibility_off)),
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(10.0)),
@@ -124,11 +132,33 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(10.0)),
-                                    borderSide: BorderSide(color: Colors.grey)),
+                                    borderSide: BorderSide(color: HexColor('#0F46B3'))),
                               ),
                             ),
                           ),
                           SizedBox(height: 20,),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20),
+                                child: GFCheckbox(
+                                  size: GFSize.SMALL,
+                                  activeBorderColor: Colors.green,
+                                  inactiveBorderColor: HexColor('#0F46B3'),
+                                  type: GFCheckboxType.basic,
+                                  activeBgColor: Colors.green,
+                                  inactiveBgColor: HexColor('#E9F5FF'),
+                                  onChanged: (val)=>setState(() {
+                                    this.Selected=!this.Selected;
+                                  }), value: Selected,),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 10),
+                                child: Text('Sign out of all devices',style: TextStyle(fontSize: 14 ,color: Colors.grey),),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height:30),
                         ],
                       ),
                     ),

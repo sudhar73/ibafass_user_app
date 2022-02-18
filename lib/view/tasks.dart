@@ -36,7 +36,7 @@ class _TasksState extends State<Tasks> with TickerProviderStateMixin {
           elevation: 0.0,
           centerTitle:true,
           backgroundColor: HexColor('#0F46B3'),
-          title: Text('Tasks',style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+          title: Text('Tasks',style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: (){
@@ -246,9 +246,9 @@ return Expanded(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(height: 20,),
-              Text('Arun',style: TextStyle(color: HexColor('#FA2634'),fontWeight:FontWeight.bold,fontSize: 22),),
-              SizedBox(height: 5,),
-              Text('Flutter Developer',style: TextStyle(color: Colors.grey,fontSize: 14,fontWeight: FontWeight.bold),),
+              Text('Balaji',style: TextStyle(color: HexColor('#FA2634'),fontWeight:FontWeight.bold,fontSize: 22),),
+
+              Text('UI Designer',style: TextStyle(color: Colors.grey,fontSize: 14,fontWeight: FontWeight.bold),),
   
             ],
           ),
@@ -271,8 +271,8 @@ return Expanded(
         children: [
           SizedBox(width: 20,),
           Container(
-            height: 60,
-            width: 5,
+            height: 50,
+            width: 4,
             color: HexColor('#FA2634'),
           ),
           SizedBox(width: 10,),
@@ -280,7 +280,8 @@ return Expanded(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text('New web page Ui design Project',style: TextStyle(color: HexColor('#FA2634'),fontWeight: FontWeight.bold,fontSize: 16),),
+              Text('New web page Ui design Project',style:
+              TextStyle(color: HexColor('#FA2634'),fontWeight: FontWeight.bold,fontSize: 18),),
              SizedBox(height: 5,),
               Text(
                "UI design for \$100",style: TextStyle(color: Colors.grey,fontSize: 16,),
@@ -308,7 +309,7 @@ return Expanded(
           Spacer(),
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
-            child: Text('30%',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 18),),
+            child: Text('30%',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 14),),
           ),
         ],
       ),
@@ -386,7 +387,7 @@ return Expanded(
                 children: [
                   SizedBox(height: 20,),
                   Text('Arun',style: TextStyle(color: HexColor('#2B9D2F'),fontWeight:FontWeight.bold,fontSize: 22),),
-                  SizedBox(height: 5,),
+
                   Text('Flutter Developer',style: TextStyle(color: Colors.grey,fontSize: 14,fontWeight: FontWeight.bold),),
 
                 ],
@@ -410,8 +411,8 @@ return Expanded(
             children: [
               SizedBox(width: 20,),
               Container(
-                height: 60,
-                width: 5,
+                height: 50,
+                width: 4,
                 color: HexColor('#2B9D2F'),
               ),
               SizedBox(width: 10,),
@@ -419,7 +420,8 @@ return Expanded(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('New web page Ui design Project',style: TextStyle(color: HexColor('#2B9D2F'),fontWeight: FontWeight.bold,fontSize: 16),),
+                  Text('New web page Ui design Project',style:
+                  TextStyle(color: HexColor('#2B9D2F'),fontWeight: FontWeight.bold,fontSize: 18),),
                   SizedBox(height: 5,),
                   Text(
                     "UI design for \$100",style: TextStyle(color: Colors.grey,fontSize: 16,),
@@ -438,7 +440,7 @@ return Expanded(
                   child: LinearProgressIndicator(
                     backgroundColor: Colors.grey.withOpacity(0.3),
                     minHeight: 5,
-                    value: 0.5,
+                    value: 1,
                     color:HexColor('#2B9D2F') ,
 
                   ),
@@ -447,7 +449,7 @@ return Expanded(
               Spacer(),
               Padding(
                 padding: const EdgeInsets.only(right: 20.0),
-                child: Text('30%',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 18),),
+                child: Text('100%',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 14),),
               ),
             ],
           ),
@@ -472,7 +474,7 @@ return Expanded(
                     color: HexColor('#2B9D2F').withOpacity(0.3),borderRadius: BorderRadius.all(Radius.circular(5.0))),
                 height: 25,
                 width: 60,
-                child: Center(child: Text('Low',style: TextStyle(fontSize: 14,fontWeight:FontWeight.bold,color: HexColor('#2B9D2F')),)),
+                child: Center(child: Text('High',style: TextStyle(fontSize: 14,fontWeight:FontWeight.bold,color: HexColor('#2B9D2F')),)),
 
 
               ),
@@ -524,7 +526,7 @@ return Expanded(
                 children: [
                   SizedBox(height: 20,),
                   Text('Arun',style: TextStyle(color: HexColor('#0F46B3'),fontWeight:FontWeight.bold,fontSize: 22),),
-                  SizedBox(height: 5,),
+
                   Text('Flutter Developer',style: TextStyle(color: Colors.grey,fontSize: 14,fontWeight: FontWeight.bold),),
 
                 ],
@@ -548,8 +550,8 @@ return Expanded(
             children: [
               SizedBox(width: 20,),
               Container(
-                height: 60,
-                width: 5,
+                height: 50,
+                width: 4,
                 color: HexColor('#0F46B3'),
               ),
               SizedBox(width: 10,),
@@ -557,7 +559,8 @@ return Expanded(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('New web page Ui design Project',style: TextStyle(color: HexColor('#0F46B3'),fontWeight: FontWeight.bold,fontSize: 16),),
+                  Text('New web page Ui design Project',style:
+                  TextStyle(color: HexColor('#0F46B3'),fontWeight: FontWeight.bold,fontSize: 18),),
                   SizedBox(height: 5,),
                   Text(
                     "UI design for \$100",style: TextStyle(color: Colors.grey,fontSize: 16,),
@@ -576,7 +579,7 @@ return Expanded(
                   child: LinearProgressIndicator(
                     backgroundColor: Colors.grey.withOpacity(0.3),
                     minHeight: 5,
-                    value: 0.5,
+                    value: 0.7,
                     color:HexColor('#0F46B3') ,
 
                   ),
@@ -585,7 +588,7 @@ return Expanded(
               Spacer(),
               Padding(
                 padding: const EdgeInsets.only(right: 20.0),
-                child: Text('30%',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 18),),
+                child: Text('70%',style: TextStyle(fontWeight:FontWeight.bold,color: Colors.black,fontSize: 14),),
               ),
             ],
           ),

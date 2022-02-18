@@ -28,21 +28,27 @@ class _AddNewCardState extends State<AddNewCard> {
                   Align(
                     alignment: Alignment.topCenter,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Flexible(
-                          flex: 0,
+                        Container(
+                          width: 50,
                           child: Center(
                             child: Padding(
                               padding: const EdgeInsets.only(left: 10.0),
-                              child: Icon(
-                                Icons.arrow_back_sharp,
-                                color: Colors.white,
+                              child: IconButton(
+                                onPressed: (){
+                                  Navigator.pop(context);
+                                },
+                                icon: Icon(
+                                  Icons.arrow_back_sharp,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           ),
                         ),
-                        Flexible(
-                          flex: 2,
+                        Container(
                           child: Center(
                             child: Text(
                               'Add New Card',
@@ -80,7 +86,7 @@ class _AddNewCardState extends State<AddNewCard> {
                       topRight: Radius.circular(40),
                       topLeft: Radius.circular(40),
                     )),
-                height: MediaQuery.of(context).size.height / 1.30,
+                height: MediaQuery.of(context).size.height / 1.35,
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   children: [
@@ -93,7 +99,7 @@ class _AddNewCardState extends State<AddNewCard> {
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.black),
                           ),
-                          labelText: 'Card holder name',
+                          labelText: 'Card Holder Name',
                           labelStyle: TextStyle(color: Colors.grey),
                         ),
                       ),
@@ -107,7 +113,7 @@ class _AddNewCardState extends State<AddNewCard> {
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.black),
                           ),
-                          labelText: 'Card number',
+                          labelText: 'Card Number',
                           labelStyle: TextStyle(color: Colors.black),
                         ),
                       ),
@@ -184,7 +190,7 @@ class _AddNewCardState extends State<AddNewCard> {
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          'or',
+                          'Or',
                           style: TextStyle(fontSize: 20),
                         ),
                       ),
@@ -196,7 +202,7 @@ class _AddNewCardState extends State<AddNewCard> {
                       decoration: BoxDecoration(
                           color: HexColor('#CBFFCF'),
                           borderRadius:
-                              BorderRadius.all(Radius.circular(15.0))),
+                          BorderRadius.all(Radius.circular(15.0))),
                       height: MediaQuery.of(context).size.height / 10,
                       width: MediaQuery.of(context).size.width / 1.10,
                       child: Row(children: [
@@ -210,8 +216,8 @@ class _AddNewCardState extends State<AddNewCard> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            'Scan your card',
-                            style: TextStyle(fontSize: 20),
+                            'Scan Your Card',
+                            style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
                           ),
                         ),
                         Spacer(),

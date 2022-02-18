@@ -23,13 +23,17 @@ class _EmployeeAttendanceState extends State<EmployeeAttendance> {
             color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold
         ),),
         centerTitle: true,
-        leading: Icon(Icons.arrow_back),
+        leading: IconButton(
+          onPressed: (){
+            Navigator.pop(context);
+          },
+            icon: Icon(Icons.arrow_back)),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-              height: myheight/3.5 ,
+              height: myheight/3.7,
               width: mywidth,
               color: HexColor('#0F46B3'),
               child:Column(
@@ -42,7 +46,7 @@ class _EmployeeAttendanceState extends State<EmployeeAttendance> {
               overflow: Overflow.visible,
               children: [
                 Container(
-                  height: myheight,
+
                   width: mywidth,
                   decoration: BoxDecoration( color: HexColor('#DCF4F9'),
                       borderRadius: BorderRadius.only(topLeft: Radius.circular(40.0),topRight: Radius.circular(40.0))),
@@ -88,7 +92,36 @@ class _EmployeeAttendanceState extends State<EmployeeAttendance> {
                             ),
                           ),
                         ),
-                      )
+                      ),
+
+                      SizedBox(height: 20,),
+                      Center(
+                        child: Container(
+                          height: 100,
+                          width: mywidth/1.20,
+                          decoration: BoxDecoration( color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                          child: Center(
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                radius: 20,
+                                child: ClipOval(
+                                  child: Image(
+                                    image: AssetImage('assets/payment/profilepic.jpg'),
+                                    fit: BoxFit.cover,
+                                    height: 40,
+                                    width: 40,
+                                  ),
+                                ),
+                              ),
+                              title: Text('Mani',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
+                              subtitle:Text('UI Designer',
+                                style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,color: Colors.grey),),
+                              trailing: Icon(Icons.more_vert,color: Colors.black,),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 20,),
                     ],
                   ),
                 ),

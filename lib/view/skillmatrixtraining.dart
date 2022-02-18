@@ -33,10 +33,12 @@ class _SkillMatrixTrainingState extends State<SkillMatrixTraining> {
           title: Text('Skill Matrix Training',
             style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
           centerTitle: true,
-          leading: Icon(Icons.arrow_back,color: Colors.white,),
-          actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.more_vert,color: Colors.white,)),
-          ],
+          leading: IconButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+              icon: Icon(Icons.arrow_back,color: Colors.white,)),
+
         ),
       ),
       body: SingleChildScrollView(
@@ -47,7 +49,7 @@ class _SkillMatrixTrainingState extends State<SkillMatrixTraining> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 20,),
+              SizedBox(height: 30,),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: Text('Employee Name :',style: TextStyle(color: HexColor('#0F46B3'),
@@ -288,7 +290,7 @@ class _data1State extends State<data1> {
     final mywidth=MediaQuery.of(context).size.width;
     return Column(
       children: [
-        SizedBox(height:myheight*0.04,),
+        SizedBox(height:myheight*0.03,),
             Text('Health & Safety',style: TextStyle(color: HexColor('#0F46B3'),
             fontSize: 19,fontWeight: FontWeight.bold),),
         SizedBox(height:myheight*0.03,),
@@ -325,7 +327,7 @@ class _data1State extends State<data1> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('Site Induction',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -354,7 +356,7 @@ class _data1State extends State<data1> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('HSE Induction',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -383,7 +385,7 @@ class _data1State extends State<data1> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('Emergency Responce',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -426,15 +428,15 @@ class _data2State extends State<data2> {
     final mywidth=MediaQuery.of(context).size.width;
     return Column(
       children: [
-        SizedBox(height:myheight*0.04,),
-        Text('Health & Safety',style: TextStyle(color: HexColor('#0F46B3'),
+        SizedBox(height:myheight*0.03,),
+        Text('Cleaning',style: TextStyle(color: HexColor('#0F46B3'),
             fontSize: 19,fontWeight: FontWeight.bold),),
         SizedBox(height:myheight*0.03,),
         Row(
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('Chemical Knowledge',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -463,7 +465,7 @@ class _data2State extends State<data2> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('Equipment Knowledge',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -492,7 +494,7 @@ class _data2State extends State<data2> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('Customer Care',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -521,7 +523,7 @@ class _data2State extends State<data2> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('Toilet Cleaning',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -550,7 +552,7 @@ class _data2State extends State<data2> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('Glass Cleaning',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -594,15 +596,15 @@ class _data3State extends State<data3> {
     final mywidth=MediaQuery.of(context).size.width;
     return Column(
       children: [
-        SizedBox(height:myheight*0.04,),
-        Text('Health & Safety',style: TextStyle(color: HexColor('#0F46B3'),
+        SizedBox(height:myheight*0.03,),
+        Text('Electrical',style: TextStyle(color: HexColor('#0F46B3'),
             fontSize: 19,fontWeight: FontWeight.bold),),
         SizedBox(height:myheight*0.03,),
         Row(
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('Electrical PPM',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -631,7 +633,7 @@ class _data3State extends State<data3> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('DG Operation',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -660,7 +662,7 @@ class _data3State extends State<data3> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('Pump Operation',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -689,7 +691,7 @@ class _data3State extends State<data3> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('Elevator Rescue',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),
@@ -718,7 +720,7 @@ class _data3State extends State<data3> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
-              child: Text('Manual Handling',style: TextStyle(color:Colors.black,
+              child: Text('Basic Troubleshooting',style: TextStyle(color:Colors.black,
                   fontSize: 15),),
             ),
             Spacer(),

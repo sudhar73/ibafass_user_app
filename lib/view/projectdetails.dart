@@ -16,11 +16,11 @@ class _ProjectDetailsState extends State<ProjectDetails> {
     return Scaffold(
       backgroundColor: HexColor('#0F46B3'),
     appBar:PreferredSize(
-    preferredSize: Size.fromHeight(70.0),
+    preferredSize: Size.fromHeight(65.0),
     child: AppBar(
     elevation: 0.0,
     backgroundColor: HexColor('#0F46B3'),
-    title: Text('ProjectsDetails',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+    title: Text('Project Details',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
     centerTitle: true,
     leading: IconButton(
       onPressed: () {
@@ -34,7 +34,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
       body: SingleChildScrollView(
         child:         Container(
             decoration: BoxDecoration(color: Colors.white,
-                borderRadius: BorderRadius.only(topRight: Radius.circular(30.0),topLeft: Radius.circular(30.0))),
+                borderRadius: BorderRadius.only(topRight: Radius.circular(40.0),topLeft: Radius.circular(40.0))),
             width: MediaQuery.of(context).size.width,
 
 
@@ -45,7 +45,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
 
             children: [
 
-                SizedBox(height: 20,),
+                SizedBox(height: 30,),
 
         Padding(
 
@@ -120,7 +120,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
 
                 ),
 
-                SizedBox(height: 10,),
+                SizedBox(height: 5,),
 
                 Row(
 
@@ -162,7 +162,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
 
                 Padding(
 
-                  padding: const EdgeInsets.only(left: 20.0,top: 10.0),
+                  padding: const EdgeInsets.only(left: 20.0,top: 15.0),
 
                   child: CircleAvatar(
 
@@ -200,7 +200,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
 
                 ),
 
-                SizedBox(height: 10,),
+                SizedBox(height: 15,),
 
                 Row(
 
@@ -218,7 +218,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
 
                     ),
 
-                    SizedBox(width: 5,),
+                    SizedBox(width: 8,),
 
                     CircleAvatar(
 
@@ -230,7 +230,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
 
                     ),
 
-                    SizedBox(width: 5,),
+                    SizedBox(width: 8,),
 
                     CircleAvatar(
 
@@ -242,7 +242,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
 
                     ),
 
-                    SizedBox(width: 5,),
+                    SizedBox(width: 8,),
 
                     CircleAvatar(
 
@@ -255,7 +255,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                       ),
 
                     ),
-                    SizedBox(width: 5,),
+                    SizedBox(width: 8,),
                     SizedBox(
                       height: 40.0,
                       width: 40.0,

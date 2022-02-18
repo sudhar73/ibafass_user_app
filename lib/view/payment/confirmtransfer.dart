@@ -43,21 +43,16 @@ class _ConfirmTransferState extends State<ConfirmTransfer> {
               children: [
 
                 SizedBox(
-                  height: 30,
+                  height:MediaQuery.of(context).size.height/15,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 10.0,
-                  ),
-                  child: CircleAvatar(
-                    radius: 35,
-                    child: ClipOval(
-                      child: Image(
-                        image: AssetImage('assets/payment/profilepic.jpg'),
-                        fit: BoxFit.cover,
-                        height: 70,
-                        width: 70,
-                      ),
+                CircleAvatar(
+                  radius: 35,
+                  child: ClipOval(
+                    child: Image(
+                      image: AssetImage('assets/payment/profilepic.jpg'),
+                      fit: BoxFit.cover,
+                      height: 70,
+                      width: 70,
                     ),
                   ),
                 ),
@@ -87,7 +82,7 @@ class _ConfirmTransferState extends State<ConfirmTransfer> {
                   ),
                 ),
                 SizedBox(
-                  height: 40,
+                  height:MediaQuery.of(context).size.height/15,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 10.0),
@@ -95,27 +90,39 @@ class _ConfirmTransferState extends State<ConfirmTransfer> {
                     '\$90.00',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 40,
+                        fontSize: 50,
                         color: Colors.white),
                   ),
                 ),
-                Container(
-                color: Color(0xFF0E3311).withOpacity(0.1),
-                  height: 50,
-                  child: Row(
-                    children: const [
-                      Icon(
-                        Icons.error_outlined,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        'Transfer made to bank account could take a few minutes',
-                        style: TextStyle(fontSize: 10, color: Colors.white),
-                      ),
-                    ],
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white10,
+                        borderRadius: BorderRadius.circular(10)),
+                    height: 80,
+                    child: Row(
+                      children:[
+
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Icon(
+                            Icons.error_outlined,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width:MediaQuery.of(context).size.width/1.3,
+                          child: Text(
+                            'Transfer made to bank account could take a few minutes',
+                            style: TextStyle(fontSize: 16, color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 )
               ],
@@ -133,11 +140,11 @@ class _ConfirmTransferState extends State<ConfirmTransfer> {
                       topLeft: Radius.circular(40),
                       topRight: Radius.circular(40),
                     )),
-                height: MediaQuery.of(context).size.height / 4.50,
+                height: MediaQuery.of(context).size.height / 5.5,
                 width: MediaQuery.of(context).size.width,
                 child: Column(children: [
                   SizedBox(
-                    height: 40,
+                    height:MediaQuery.of(context).size.height/18,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),

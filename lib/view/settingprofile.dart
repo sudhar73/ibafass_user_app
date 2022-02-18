@@ -31,24 +31,31 @@ class _SettingProfileState extends State<SettingProfile> {
          icon:Icon(Icons.arrow_back,color: Colors.black,),
       ),),
         body: SingleChildScrollView(
-      child: Column(
-        children: [
-          ListTile(
-            leading: ClipRRect(
-                borderRadius: BorderRadius.circular(50.0),
-                child: Image.asset(
-                  'assets/drawer/person.jpg',
-                  height: 60,
-                  width: 60,
-                  fit: BoxFit.fill,
-                )),
-            title: Text(
-              "Mani",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-            ),
-            subtitle: Text("@mani95"),
+             child: Column(
+               children: [
+                 Row(
 
-          ),
+                   children: [
+                     SizedBox(width: 15,),
+                     CircleAvatar(
+                       radius: 30,
+                       backgroundImage: AssetImage('assets/payment/profilepic.jpg'),
+                     ),
+                     SizedBox(width: 10,),
+                     Column(
+                       crossAxisAlignment: CrossAxisAlignment.start,
+                       children: [
+                         Text(
+                           "Mani",
+                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                         ),
+                         Text("@mani95"),
+
+                       ],
+                     )
+                   ],
+                 ),
+          SizedBox(height: 10,),
           Padding(
             padding: EdgeInsets.only(left: 20.0, right: 20.0),
             child: Divider(
@@ -56,6 +63,7 @@ class _SettingProfileState extends State<SettingProfile> {
               color: Colors.grey,
             ),
           ),
+          SizedBox(height: 5,),
           Center(
             child: ListTile(
               onTap: (){
@@ -131,7 +139,7 @@ class _SettingProfileState extends State<SettingProfile> {
                 );
               },
               title: Text(
-                'Edit profile',
+                'Edit Profile',
                 style: TextStyle(
                   fontSize: 20,
                 ),
@@ -331,7 +339,7 @@ class _SettingProfileState extends State<SettingProfile> {
           Center(
             child: ExpansionTile(
               title: Text(
-                'about us',
+                'About Us',
                 style: TextStyle(
                   fontSize: 20,
                 ),
@@ -374,9 +382,9 @@ class _SettingProfileState extends State<SettingProfile> {
             ),
           ),
           Center(
-            child: ExpansionTile(
+            child: ListTile(
               title: Text(
-                'Logout',
+                'Log out',
                 style: TextStyle(
                   fontSize: 20,
                 ),

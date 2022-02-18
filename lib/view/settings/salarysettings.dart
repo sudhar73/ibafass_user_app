@@ -23,9 +23,9 @@ class _SalarySettingsState extends State<SalarySettings> {
         elevation: 0.0,
         leading: IconButton(
             onPressed: (){
-              onPressed(){
+
                 Navigator.pop(context);
-              }
+
             },
             icon: Icon(Icons.arrow_back)),
         actions: [
@@ -55,7 +55,8 @@ class _SalarySettingsState extends State<SalarySettings> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(left: 20.0),
-                                child: Text('DA&HRA Settings',style: TextStyle(color: Colors.black,fontSize: 17),),
+                                child: Text('DA & HRA Settings',style: TextStyle(color: Colors.black,fontSize: 17,
+                                    fontWeight: FontWeight.bold),),
                               ),
                               Spacer(),
                               Padding(
@@ -138,7 +139,7 @@ class _SalarySettingsState extends State<SalarySettings> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(left: 20.0),
-                                child: Text('PROVIDED FUND Settings',style: TextStyle(color: Colors.black,fontSize: 17),),
+                                child: Text('PROVIDENT FUND Settings',style: TextStyle(color: Colors.black,fontSize: 17, fontWeight: FontWeight.bold),),
                               ),
                               Spacer(),
                               Padding(
@@ -221,7 +222,7 @@ class _SalarySettingsState extends State<SalarySettings> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(left: 20.0),
-                                child: Text('ESI Settings',style: TextStyle(color: Colors.black,fontSize: 17),),
+                                child: Text('ESI Settings',style: TextStyle(color: Colors.black,fontSize: 17, fontWeight: FontWeight.bold),),
                               ),
                               Spacer(),
                               Padding(
